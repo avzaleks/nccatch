@@ -1,0 +1,43 @@
+<% content_for :body_content_title do %>
+  <%= @sponsor_in_footer.name %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Name</h1>
+    <p>
+      <%=raw @sponsor_in_footer.name %>
+    </p>
+  </section>
+  <section>
+    <h1>Link</h1>
+    <p>
+      <%=raw @sponsor_in_footer.link %>
+    </p>
+  </section>
+  <section>
+    <h1>Image</h1>
+    <p>
+      <% if @sponsor_in_footer.image.present? %>
+        <%= link_to 'image', @sponsor_in_footer.image.url %>
+      <% else %>
+        image
+      <% end %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="sponsor_in_footers">
+      <% @sponsor_in_footers.each do |sponsor_in_footer| %>
+        <li>
+          <%= link_to sponsor_in_footer.name, refinery.sponsor_in_footers_sponsor_in_footer_path(sponsor_in_footer) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

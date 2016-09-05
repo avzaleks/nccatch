@@ -1,0 +1,154 @@
+<%#= render '/refinery/content_page' %>
+
+<main class="nc-catch-main">
+    <section class="main-banner cont">
+    <%= image_tag 'banner-images.png', alt: "Banner image"%>
+  </section>
+  <div class="main-content cont">
+    <section class="main-content-main">
+      <div class="main-content-events">
+        <div class="title events-title">
+          <h4 class="title-text">Upcoming Events</h4>
+          <a class="title-link" href="#">View Event Calendar</a>
+        </div>
+        <div class="main-content-event">
+          <%= image_tag "event-thumbnail.png", class: "main-content-event-image", alt: "Thumbnail" %>
+            <div class="main-content-event-block">
+            <div class="main-content-event-title">
+              Seafood Throwdown Set For 2 PM Saturday, September 17, 2016
+            </div>
+            <div class="main-content-event-text">
+              The freshness and flavor of our seafood inspires chefs and home cooks alike. During Day at the Docks there are several small...
+              <a href="" class="main-content-event-readmore">READ MORE</a>
+            </div>
+          </div>
+        </div>
+        <div class="main-content-event">
+          <%= image_tag "thumbnail-2.png", class: "main-content-event-image", alt: "Thumbnail" %>
+          <div class="main-content-event-block">
+            <div class="main-content-event-title">
+              Piedmont brings the Lowcountry & Bayou together for a celebration of NC Shrimp
+            </div>
+            <div class="main-content-event-text">
+              On August 24th, Piedmont’s new Executive Chef John May – formerly of Chef & The Farmer – welcomes Chef...
+              <a href="" class="main-content-event-readmore">READ MORE</a>
+            </div>
+          </div>
+        </div>
+        <div class="main-content-event">
+          <%= image_tag "thumbnail-3.png", class: "main-content-event-image", alt: "Thumbnail" %>
+          <div class="main-content-event-block">
+            <div class="main-content-event-title">
+              Seafood Throwdown Set For 2 PM Saturday, September 17, 2016
+            </div>
+            <div class="main-content-event-text">
+              The freshness and flavor of our seafood inspires chefs and home cooks alike. During Day at the Docks there are several small...
+              <a href="" class="main-content-event-readmore">READ MORE</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-content-media">
+        <div class="title media-title">
+          <h4 class="title-text">Featured Media</h4>
+          <a class="title-link" href="#">View Media Gallery</a>
+        </div>
+        <iframe class="main-content-media-video" src="https://www.youtube.com/embed/S-EXNounv-U" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="main-content-news">
+        <div class="title news-title">
+          <h4 class="title-text">Featured Media</h4>
+          <a class="title-link" href="#">View All News Articles</a>
+        </div>
+        <div class="main-content-news-single">
+          <div class="main-content-news-data">
+            APR 20
+          </div>
+          <div class="main-content-news-title">
+            Pied host a Late Spring Bacbecue with Sustainable NC Seafood
+          </div>
+        </div>
+        <div class="main-content-news-single">
+          <div class="main-content-news-data">
+            MAY 8
+          </div>
+          <div class="main-content-news-title">
+            Aquaculture and Seafood Industry Education Day
+          </div>
+        </div>
+        <div class="main-content-news-single">
+          <div class="main-content-news-data">
+            SEP 20
+          </div>
+          <div class="main-content-news-title">
+            Z. Smith Reynolds Foundation awards $40,000 to NC Catch
+          </div>
+        </div>
+        <div class="main-content-news-single">
+          <div class="main-content-news-data">
+            DEC 15
+          </div>
+          <div class="main-content-news-title">
+            NCDEQ Secretary van der Vaart to Participate in NC Catch Summit
+          </div>
+        </div>
+      </div>
+      <div class="main-cooking-book">
+        <%= image_tag "seafood-guide.png", alt: "Seafood Guide", class: "main-cooking-book-img"%>
+        <div class="main-cooking-book-content">
+          <header class="main-cooking-book-title">
+            What's Cooking?
+          </header>
+          <p class="main-cooking-book-text">
+            Freshness comes from local waters and our friends at North Carolina Sea Grant have created a seafood availability guide featuring seasonal choices. Summer brings to North Carolina docks the world’s finest shrimp. And there’s plenty of finfish to round out seasonal menus.
+          </p>
+          <p class="main-cooking-book-text">
+            Dining out? Be sure to ask your server for <a href="#" class="main-cooking-book-text-link">"Local Catch"</a> selections.
+          </p>
+          <footer class="main-cooking-book-footer">
+            <a href="#">Click here to download the Guide</a>
+          </footer>
+        </div>
+      </div>
+    </section>
+    <aside class="main-content-additional">
+      <div class="main-content-mailing">
+        <div class="title mailing-title">
+          <h4 class="title-text">Join our mailing list!</h4>
+        </div>
+        <form class="main-content-mailing-text">
+          <p>
+            Submit your email address to receive our monthly e-newseltter with events, recipes, special offers and more!
+          </p>
+          <input class="default-input" placeholder="Full Name" type="text">
+          <input class="default-input" placeholder="Email" type="email">
+          <input class="default-button main-content-mailing-submit" type="submit" value="Submit">
+        </form>
+      </div>
+      <div class="main-content-additional-banner">
+        <header class="title recipe-title">
+          <h4 class="title-text">Recipe of the Week</h4>
+          <a class="title-link" href="#">View All</a>
+        </header>
+        <%= image_tag "recipe-photo.png", alt: "Recipe photo"%>
+     </div>
+      <div class="main-content-additional-banner multiple-banners">
+        <header class="title explore-title">
+          <h4 class="title-text">Explore Regional NC Fishing</h4>
+        </header>
+        <%= image_tag "brunswick-catch.png", alt: "Recipe photo"%>
+        <a href="#" class="main-banner-link">Visit BrunswickCatch.com</a>
+        <%= image_tag "cartaret-catch.png", alt: "Recipe photo"%>
+
+        <a href="#" class="main-banner-link">Visit CarteretCatch.org</a>
+        <%= image_tag "outer-banks-catch.png", alt: "Recipe photo"%>
+
+        <a href="#" class="main-banner-link">Visit OuterBanksCatch.com</a>
+        <%= image_tag "ocracoke-fresh.png", alt: "Recipe photo"%>
+
+        <a href="#" class="main-banner-link">Visit OcracokeSeafood.com</a>
+      </div>
+    </aside>
+  </div>
+
+</main>

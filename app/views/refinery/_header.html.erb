@@ -1,0 +1,57 @@
+<header class="main-header cont">
+  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+    <span class="sr-only">Toggle navigation</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <div class="main-header-logo">
+    <div></div>
+    <div class="main-header-logo-img">
+      <%= image_tag "nc-catch-logo.png", alt: "Nc catch logo" %>
+    </div>
+    <form class="main-header-logo-search">
+      <div class="default-text-input">
+        <input type="text" placeholder="Site Search">
+      </div>
+      <input type="button" value="GO" class="default-submit">
+    </form>
+  </div>
+  <div aria-expanded="false" id="navbar" class="navbar-collapse collapse main-header-collapse">
+    <nav class="main-header-menu big-cont">
+      <ul class="main-header-menu-nav">
+        <% if @menu_items %>
+            <% @menu_items.each do |root_item| %>
+                <li class="main-header-menu-nav-element">
+                  <%= link_to root_item.title, refinery.page_path(root_item) %>
+                  <% child_items = root_item.children.where(show_in_menu: true) %>
+                  <% if child_items.present? %>
+                      <ul class="main-header-submenu">
+                        <% child_items.each do |child_item| %>
+                            <li>
+                              <%= link_to child_item.title, refinery.page_path(child_item) %>
+                            </li>
+                        <% end %>
+                      </ul>
+                  <% end %>
+                </li>
+            <% end %>
+        <% end %>
+      </ul>
+      <div class="main-header-menu-socials">
+        <a href="#">
+          <%= image_tag "facebook.png", alt: "facebook-icon" %>
+        </a>
+        <a href="#">
+          <%= image_tag "youtube.png", alt: "youtube-icon" %>
+        </a>
+        <a href="#">
+          <%= image_tag "twitter.png", alt: "twitter-icon" %>
+        </a>
+        <a href="#">
+          <%= image_tag "google.png", alt: "google-icon" %>
+        </a>
+      </div>
+    </nav>
+  </div>
+</header>

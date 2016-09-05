@@ -1,0 +1,29 @@
+fr:
+  refinery:
+    plugins:
+      sponsor_in_footers:
+        title: Sponsor In Footers
+    sponsor_in_footers:
+      admin:
+        sponsor_in_footers:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Sponsor In Footer
+            reorder: Réordonner les Sponsor In Footers
+            reorder_done: Fin de réordonnancement des Sponsor In Footers
+          records:
+            title: Sponsor In Footers
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Sponsor In Footer. Cliquer sur "Créer un(e) nouve(au/l/lle) Sponsor In Footer" pour créer votre premi(er/ère) sponsor in footer.'
+          sponsor_in_footer:
+            view_live_html: Voir ce(t/tte) sponsor in footer <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) sponsor in footer
+            delete: Supprimer définitivement ce(t/tte) sponsor in footer
+      sponsor_in_footers:
+        show:
+          other: Autres Sponsor In Footers
+  activerecord:
+    attributes:
+      'refinery/sponsor_in_footers/sponsor_in_footer':
+        name: Name
+        link: Link
+        image: Image

@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <ul id="sponsor_in_footers">
+    <% @sponsor_in_footers.each do |sponsor_in_footer| %>
+      <li>
+        <%= link_to sponsor_in_footer.name, refinery.sponsor_in_footers_sponsor_in_footer_path(sponsor_in_footer) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

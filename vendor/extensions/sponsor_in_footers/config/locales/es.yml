@@ -1,0 +1,30 @@
+es:
+  refinery:
+    plugins:
+      sponsor_in_footers:
+        title: Sponsor In Footers
+#        article: masculino/femenino
+    sponsor_in_footers:
+      admin:
+        sponsor_in_footers:
+          actions:
+            create_new: Crear nuevo sponsor in footer
+            reorder: Reordenar sponsor in footers
+            reorder_done: Reordenación de sponsor in footers completada
+          records:
+            title: Sponsor In Footers
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay sponsor in footers todavía. Pulsa en "Crear nuevo Sponsor In Footer" para crear tu primer sponsor in footer.
+          sponsor_in_footer:
+            view_live_html: Ver este sponsor in footer como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este sponsor in footer
+            delete: Borrar este sponsor in footer para siempre
+      sponsor_in_footers:
+        show:
+          other: Otros sponsor in footers
+  activerecord:
+    attributes:
+      'refinery/sponsor_in_footers/sponsor_in_footer':
+        name: Name
+        link: Link
+        image: Image

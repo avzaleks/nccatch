@@ -1,0 +1,29 @@
+tr:
+  refinery:
+    plugins:
+      sponsor_in_footers:
+        title: Sponsor In Footers
+    sponsor_in_footers:
+      admin:
+        sponsor_in_footers:
+          actions:
+            create_new: Yeni Ekle Sponsor In Footer
+            reorder: Tekrar sirala Sponsor In Footers
+            reorder_done: Tekrar siralama tamamlandiSponsor In Footers
+          records:
+            title: Sponsor In Footers
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Sponsor In Footers yok henuz.  Tikla "Yeni Ekle Sponsor In Footer" eklemek senin ilk sponsor in footer.
+          sponsor_in_footer:
+            view_live_html: Bunu canlu sponsor in footer goruntule <br/><em>(yeni bir pencerede acar)</em>
+            edit: Bunu Duzenle sponsor in footer
+            delete: Bunu Sil sponsor in footer sonsuza dek
+      sponsor_in_footers:
+        show:
+          other: Diger Sponsor In Footers
+  activerecord:
+    attributes:
+      'refinery/sponsor_in_footers/sponsor_in_footer':
+        name: Name
+        link: Link
+        image: Image

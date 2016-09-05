@@ -1,0 +1,29 @@
+it:
+  refinery:
+    plugins:
+      sponsor_in_footers:
+        title: Sponsor In Footers
+    sponsor_in_footers:
+      admin:
+        sponsor_in_footers:
+          actions:
+            create_new: Aggiungi Nuovo Sponsor In Footer
+            reorder: Riordina Sponsor In Footers
+            reorder_done: Termina il Riordino di Sponsor In Footers
+          records:
+            title: Sponsor In Footers
+            sorry_no_results: "Spiacenti! Nessun risultato trovato"
+            no_items_yet: Non ci sono ancora Sponsor In Footers. Clicca "Aggiungi Nuovo Sponsor In Footer" per aggiungere il tuo primo sponsor in footer.
+          sponsor_in_footer:
+            view_live_html: Guarda live questo sponsor in footer <br/><em>(apre una nuova finestra)</em>
+            edit: Modifica questo sponsor in footer
+            delete: Rimuovi per sempre questo sponsor in footer
+      sponsor_in_footers:
+        show:
+          other: Altri Sponsor In Footers
+  activerecord:
+    attributes:
+      'refinery/sponsor_in_footers/sponsor_in_footer':
+        name: Name
+        link: Link
+        image: Image

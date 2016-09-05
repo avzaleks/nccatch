@@ -1,0 +1,29 @@
+sk:
+  refinery:
+    plugins:
+      sponsor_in_footers:
+        title: Sponsor In Footers
+    sponsor_in_footers:
+      admin:
+        sponsor_in_footers:
+          actions:
+            create_new: Pridať Sponsor In Footer
+            reorder: Preusporiadať Sponsor In Footers
+            reorder_done: Koniec radenia Sponsor In Footers
+          records:
+            title: Sponsor In Footers
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Sponsor In Footers. Kliknite na "Pridať Sponsor In Footer" pre pridanie prvého sponsor in footer.
+          sponsor_in_footer:
+            view_live_html: Zobraziť náhľad sponsor in footer<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť sponsor in footer
+            delete: Zmazať sponsor in footer
+      sponsor_in_footers:
+        show:
+          other: Daľšie Sponsor In Footers
+  activerecord:
+    attributes:
+      'refinery/sponsor_in_footers/sponsor_in_footer':
+        name: Name
+        link: Link
+        image: Image

@@ -1,0 +1,64 @@
+.default-text-input{
+	display: inline-block;
+	position: relative;
+}
+
+.default-text-input:after{
+	content: "";
+	display: inline-block;
+	width: 16px;
+	height: 14px;
+	position: absolute;
+	top: 7px;
+	right: 14px;
+	background-image: url(../../img/magnifying-glass-icon-copy.png);
+	background-repeat: no-repeat;
+}
+
+.default-text-input input{
+	border: none;
+	font-size: 10px;
+	font-style: italic;
+	padding: 7px 8px 6px;
+	width: 170px;
+}
+
+.default-submit{
+	border: 1px solid #919191;
+	padding: 7px 8px 5px;
+	font-size: 10px;
+	color: #353535;
+}
+
+.default-input{
+	border: none;
+	width: 100%;
+	margin-bottom: 5px;
+	padding: 5px 8px;
+	font-size: 14px;
+}
+
+.default-button{
+	border:none;
+}
+
+.default-button.main-content-mailing-submit{
+	color:#fff;
+	float: right;
+	background-color: #2a95ff;
+	padding:3px 15px;
+	margin-top: 5px;
+}
+
+@media(max-width: 1020px){
+	.default-input{
+		font-size: 12.5px;
+		padding: 4px 6px;
+	}
+
+	.default-button{
+		font-size: 12.5px;
+		padding: 2px 12px;
+	}
+
+}
