@@ -45,6 +45,29 @@ group :development do
   gem 'spring'
 end
 
+group :poduction do
+  # Use the Unicorn app server
+  gem 'unicorn', '5.1.0'
+end
+
+group :development do
+  # An IRB alternative and runtime developer console
+  gem 'pry', '0.10.3'
+
+  # for executing commands in parallel on multiple remote machines
+  gem 'capistrano', '3.4.0'
+
+  gem 'capistrano-rvm', '0.1.2'
+
+  # rails specific capistrano funcitons
+  gem 'capistrano-rails', '1.1.6'
+
+  # integrate bundler with capistrano
+  gem 'capistrano-bundler', '1.1.4'
+
+  # Capistrano 3.x plugin that integrates Unicorn server tasks
+  gem 'capistrano3-unicorn', '0.2.1'
+end
 
 # Refinery CMS
 gem 'refinerycms', '~> 3.0'
