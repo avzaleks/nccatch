@@ -1,8 +1,0 @@
-development:
-  adapter: postgresql
-  encoding: unicode
-  database: nc_development
-  pool: 5
-  username: alex
-  password: lilia
-  min_messages: warning

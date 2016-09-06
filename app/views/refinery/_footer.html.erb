@@ -1,48 +1,48 @@
 <div class="main-sponsors cont">
   <% @footer_sponsors.each do |sponsor|  %>
       <div class="main-sponsors-single">
-					<span class="main-sponsors-centrer">
-						<%= link_to image_tag(sponsor.image.url, alt: "Sea Grunt" ), sponsor.link %>
-							<%#= image_tag "sea.png", alt: "Sea Grunt"%>
+          <span class="main-sponsors-centrer">
+            <%= link_to image_tag(sponsor.image.url, alt: "Sea Grunt" ), sponsor.link %>
+              <%#= image_tag "sea.png", alt: "Sea Grunt"%>
 
-					</span>
+          </span>
       </div>
 <% end %>
   <!--<div class="main-sponsors-single">-->
-					<!--<span class="main-sponsors-centrer">-->
-						<!--<a href="#">-->
-							<!--<%#= image_tag "sea.png", alt: "Sea Grunt"%>-->
-						<!--</a>-->
-					<!--</span>-->
+          <!--<span class="main-sponsors-centrer">-->
+            <!--<a href="#">-->
+              <!--<%#= image_tag "sea.png", alt: "Sea Grunt"%>-->
+            <!--</a>-->
+          <!--</span>-->
   <!--</div>-->
   <div class="main-sponsors-single">
-					<span class="main-sponsors-centrer">
-						<a href="#">
-							<%= image_tag "resource.png", alt: "Resourceful Communities"%>
+          <span class="main-sponsors-centrer">
+            <a href="#">
+              <%= image_tag "resource.png", alt: "Resourceful Communities"%>
 
-  					</a>
-					</span>
+            </a>
+          </span>
   </div>
   <div class="main-sponsors-single">
-					<span class="main-sponsors-centrer">
-						<a href="#">
-							<%= image_tag "country_of_dare.png", alt: "Country of dare"%>
-						</a>
-					</span>
+          <span class="main-sponsors-centrer">
+            <a href="#">
+              <%= image_tag "country_of_dare.png", alt: "Country of dare"%>
+            </a>
+          </span>
   </div>
   <div class="main-sponsors-single">
-					<span class="main-sponsors-centrer">
-						<a href="#">
-								<%= image_tag "gtb_seafood.png", alt: "NC seafood"%>
-						</a>
-					</span>
+          <span class="main-sponsors-centrer">
+            <a href="#">
+                <%= image_tag "gtb_seafood.png", alt: "NC seafood"%>
+            </a>
+          </span>
   </div>
   <div class="main-sponsors-single">
-					<span class="main-sponsors-centrer">
-						<a href="#">
-							<%= image_tag "saltwinter.png", alt: "Saltwinter connections"%>
-					</a>
-					</span>
+          <span class="main-sponsors-centrer">
+            <a href="#">
+              <%= image_tag "saltwinter.png", alt: "Saltwinter connections"%>
+          </a>
+          </span>
   </div>
 </div>
 <footer class="main-footer cont">
@@ -54,47 +54,11 @@
       <p class="main-footer-content-copyright-text">Copyright © 2016 | Privacy Policy</p>
     </div>
     <div class="main-footer-list">
-      <a href="#" class="main-footer-list-element">
-        About NC Catch
-      </a>
-      <a href="#" class="main-footer-list-element">
-        Our Board
-      </a>
-      <a href="#" class="main-footer-list-element">
-        Our Funders & Partners
-      </a>
-      <a href="#" class="main-footer-list-element">
-        Become a sponsor
-      </a>
-      <a href="#" class="main-footer-list-element">
-        Follow our Blog
-      </a>
-      <a class="main-footer-list-element">
-        Video Gallery
-      </a>
-      <a href="#" class="main-footer-list-element">
-        Outreach Programs
-      </a>
-    </div>
-    <div class="main-footer-list">
-      <a href="#" class="main-footer-list-element">
-        Why Buy NC Seafood
-      </a>
-      <a href="#" class="main-footer-list-element">
-        What's in Season
-      </a>
-      <a href="#" class="main-footer-list-element">
-        Quality Counts
-      </a>
-      <a href="#" class="main-footer-list-element">
-        Seafood Safety
-      </a>
-      <a href="#" class="main-footer-list-element">
-        By Species
-      </a>
-      <a href="#" class="main-footer-list-element">
-        Fishing Regulations
-      </a>
+      <% @footer_links.each do |link| %>
+        <a href="#" class="main-footer-list-element">
+          <%= link_to link.title, page_path(link), class: "main-footer-list-element" %>
+        </a>
+      <% end %>
     </div>
     <div class="main-footer-list">
       <a href="#" class="main-footer-list-element">
