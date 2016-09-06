@@ -1,8 +1,13 @@
-development:
+login: &login
   adapter: postgresql
-  encoding: unicode
-  database: nc_development
+  host: localhost
+  port: 5432
+  encoding: utf8
   pool: 5
-  username: alex
-  password: lilia
-  min_messages: warning
+  timeout: 5000
+  database: nc_development
+  username: unit
+  password: unit237942
+
+development:
+  <<: *login
