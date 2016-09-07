@@ -136,17 +136,14 @@
         <header class="title explore-title">
           <h4 class="title-text">Explore Regional NC Fishing</h4>
         </header>
-        <%= image_tag "brunswick-catch.png", alt: "Recipe photo"%>
-        <a href="#" class="main-banner-link">Visit BrunswickCatch.com</a>
-        <%= image_tag "cartaret-catch.png", alt: "Recipe photo"%>
-
-        <a href="#" class="main-banner-link">Visit CarteretCatch.org</a>
-        <%= image_tag "outer-banks-catch.png", alt: "Recipe photo"%>
-
-        <a href="#" class="main-banner-link">Visit OuterBanksCatch.com</a>
-        <%= image_tag "ocracoke-fresh.png", alt: "Recipe photo"%>
-
-        <a href="#" class="main-banner-link">Visit OcracokeSeafood.com</a>
+        <% unless @explore_regional.blank? %>
+          <% @explore_regional.each do |partner| %>
+            <% unless partner.image.nil? || partner.link.nil? %>
+              <%= link_to image_tag( partner.image.url ), partner.link, alt: 'Recipe photo' %>
+              <%= link_to "Visit #{ remove_http(partner.link) }", partner.link, class: "main-banner-link" %>
+            <% end %>
+          <% end %>
+        <% end %>
       </div>
     </aside>
   </div>

@@ -1,0 +1,31 @@
+zh-CN:
+  refinery:
+    plugins:
+      explore_regional_nc_fishings:
+        title: Explore Regional Nc Fishings
+    explore_regional_nc_fishings:
+      admin:
+        explore_regional_nc_fishings:
+          actions:
+            create_new: 建立新的 Explore Regional Nc Fishing
+            reorder: 对 Explore Regional Nc Fishings 重新排序
+            reorder_done: 对 Explore Regional Nc Fishings 的重新排序结束
+          records:
+            title: Explore Regional Nc Fishings
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Explore Regional Nc Fishings yet. Click "Add New Explore Regional Nc Fishing" to add your first explore regional nc fishing.
+            no_items_yet: 目前没有 Explore Regional Nc Fishings . 点击 "Add New Explore Regional Nc Fishing" 创建一个explore regional nc fishing.
+          explore_regional_nc_fishing:
+            view_live_html: 查看 explore regional nc fishing 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 explore regional nc fishing
+            delete: 永久删除 explore regional nc fishing
+      explore_regional_nc_fishings:
+        show:
+          other: 其他 Explore Regional Nc Fishings
+  activerecord:
+    attributes:
+      'refinery/explore_regional_nc_fishings/explore_regional_nc_fishing':
+        link: Link
+        add_to_home_page: Add To Home Page
+        image: Image
