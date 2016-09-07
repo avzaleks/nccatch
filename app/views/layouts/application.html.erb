@@ -7,10 +7,12 @@
   </head>
   <body id="<%= canonical_id @page %>">
     <%= site_bar -%>
+      <main class="nc-catch-main">
         <%= render "/refinery/header" -%>
-      <section id="page">
-        <%= yield %>
-      </section>
+        <section id="page">
+          <%= yield %>
+        </section>
         <%= render "/refinery/footer" -%>
+      </main>
   </body>
 </html>

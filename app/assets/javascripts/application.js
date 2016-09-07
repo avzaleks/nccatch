@@ -14,3 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+	$('.main-banner').parallax({imageSrc: '/assets/banner-images-ce3638aea62793592344b391ac607355d908f57d76462189a7120b42465f81ed.png', zIndex:1, bleed:30, naturalWidth:1400, naruralHeight:900});
+})

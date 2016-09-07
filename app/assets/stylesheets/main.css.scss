@@ -1,0 +1,58 @@
+.nc-catch-main{
+	background-image: asset_url("water-backgound.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin:auto;
+	width: 100%;
+	padding-bottom: 2%;
+}
+
+.cont{
+	width:960px;
+	margin:auto;
+}
+
+.big-cont{
+	width: 1023px;
+	margin-left: -30px;
+}
+
+@media (max-width: 1020px){
+	.cont{
+		width:760px;
+		margin:auto;
+	}
+
+	.big-cont{
+		width: 820px;
+		margin-left: -25px;
+	}
+}
+
+@media (max-width: 820px){
+	.cont{
+		width:680px;
+		margin:auto;
+	}
+
+	.big-cont{
+		width: 720px;
+		margin-left: -25px;
+	}
+}
+
+@media(max-width: 768px){
+	.nc-catch-main{
+		width: 100%;
+		padding:10px 15px;
+	}
+	.cont{
+		width:100%;
+		margin:auto;
+	}
+
+	.big-cont{
+		width: 100%;
+		margin-left: 0px;
+	}
+}

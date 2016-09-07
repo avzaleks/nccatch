@@ -6,6 +6,8 @@
 	display: flex;
 	padding: 5px 25px;
 	background-color: #fff;
+	position: relative;
+	z-index: 2;
 }
 
 .main-content-main{
