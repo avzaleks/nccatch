@@ -17,7 +17,7 @@ Refinery::Images.configure do |config|
   # config.user_image_sizes = {:small=>"110x110>", :medium=>"225x255>", :large=>"450x450>"}
 
   # Configure white-listed mime types for validation
-  # config.whitelisted_mime_types = ["image/jpeg", "image/png", "image/gif", "image/tiff"]
+  config.whitelisted_mime_types = ["image/jpeg", "image/png", "image/gif", "image/tiff"]
 
   # Configure image view options
   # config.image_views = [:grid, :list]

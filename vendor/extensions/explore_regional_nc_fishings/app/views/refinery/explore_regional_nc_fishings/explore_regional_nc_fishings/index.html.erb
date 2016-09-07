@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <ul id="explore_regional_nc_fishings">
+    <% @explore_regional_nc_fishings.each do |explore_regional_nc_fishing| %>
+      <li>
+        <%= link_to explore_regional_nc_fishing.link, refinery.explore_regional_nc_fishings_explore_regional_nc_fishing_path(explore_regional_nc_fishing) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

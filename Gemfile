@@ -82,3 +82,4 @@ gem 'refinerycms-authentication-devise', '~> 1.0'
 #  gem 'refinerycms-page-images', ['~> 3.0', '>= 3.0.0']
 
 gem 'refinerycms-sponsor_in_footers', path: 'vendor/extensions'
+gem 'refinerycms-explore_regional_nc_fishings', path: 'vendor/extensions'

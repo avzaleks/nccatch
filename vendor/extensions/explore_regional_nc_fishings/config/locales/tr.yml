@@ -1,0 +1,29 @@
+tr:
+  refinery:
+    plugins:
+      explore_regional_nc_fishings:
+        title: Explore Regional Nc Fishings
+    explore_regional_nc_fishings:
+      admin:
+        explore_regional_nc_fishings:
+          actions:
+            create_new: Yeni Ekle Explore Regional Nc Fishing
+            reorder: Tekrar sirala Explore Regional Nc Fishings
+            reorder_done: Tekrar siralama tamamlandiExplore Regional Nc Fishings
+          records:
+            title: Explore Regional Nc Fishings
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Explore Regional Nc Fishings yok henuz.  Tikla "Yeni Ekle Explore Regional Nc Fishing" eklemek senin ilk explore regional nc fishing.
+          explore_regional_nc_fishing:
+            view_live_html: Bunu canlu explore regional nc fishing goruntule <br/><em>(yeni bir pencerede acar)</em>
+            edit: Bunu Duzenle explore regional nc fishing
+            delete: Bunu Sil explore regional nc fishing sonsuza dek
+      explore_regional_nc_fishings:
+        show:
+          other: Diger Explore Regional Nc Fishings
+  activerecord:
+    attributes:
+      'refinery/explore_regional_nc_fishings/explore_regional_nc_fishing':
+        link: Link
+        add_to_home_page: Add To Home Page
+        image: Image

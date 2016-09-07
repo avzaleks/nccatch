@@ -1,0 +1,15 @@
+<li class='clearfix record <%= cycle("on", "on-hover") %>' id="<%= dom_id(explore_regional_nc_fishing) -%>">
+  <span class='title'>
+    <%= explore_regional_nc_fishing.link %>
+  </span>
+
+  <span class='preview'></span>
+
+  <span class='actions'>
+    <%= action_icon(:preview, refinery.explore_regional_nc_fishings_explore_regional_nc_fishing_path(explore_regional_nc_fishing), t('.view_live_html')) %>
+    <%= action_icon(:edit,    refinery.edit_explore_regional_nc_fishings_admin_explore_regional_nc_fishing_path(explore_regional_nc_fishing), t('.edit') ) %>
+    <%= action_icon(:delete,  refinery.explore_regional_nc_fishings_admin_explore_regional_nc_fishing_path(explore_regional_nc_fishing), t('.delete'),
+      { class: "cancel confirm-delete",
+        data: {confirm: t('message',  scope: 'refinery.admin.delete', title: explore_regional_nc_fishing.link)}}  ) %>
+  </span>
+</li>

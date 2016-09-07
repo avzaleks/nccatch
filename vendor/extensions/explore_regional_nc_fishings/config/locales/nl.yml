@@ -1,0 +1,29 @@
+nl:
+  refinery:
+    plugins:
+      explore_regional_nc_fishings:
+        title: Explore Regional Nc Fishings
+    explore_regional_nc_fishings:
+      admin:
+        explore_regional_nc_fishings:
+          actions:
+            create_new: Nieuwe Explore Regional Nc Fishing toevoegen
+            reorder: De volgorde van de Explore Regional Nc Fishings wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Explore Regional Nc Fishing-volgorde
+          records:
+            title: Explore Regional Nc Fishings
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Explore Regional Nc Fishings. Druk op 'Nieuwe Explore Regional Nc Fishing toevoegen' om de eerste toe te voegen.
+          explore_regional_nc_fishing:
+            view_live_html: Deze explore regional nc fishing op de website bekijken <br/><em>(opent in een nieuw venster)</em>
+            edit: Bewerk deze explore regional nc fishing
+            delete: Deze explore regional nc fishing definitief verwijderen
+      explore_regional_nc_fishings:
+        show:
+          other: Andere Explore Regional Nc Fishings
+  activerecord:
+    attributes:
+      'refinery/explore_regional_nc_fishings/explore_regional_nc_fishing':
+        link: Link
+        add_to_home_page: Add To Home Page
+        image: Image

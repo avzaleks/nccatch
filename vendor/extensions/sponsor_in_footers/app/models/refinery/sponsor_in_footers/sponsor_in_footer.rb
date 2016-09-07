@@ -10,12 +10,14 @@ module Refinery
 
       before_save :check_link
 
+      private
+
       def check_link
         link = self.link
         unless link.blank? || link.include?('http')
           self.link = 'http://' + link
         else
-          self.link = '/'
+          self.link
         end
       end
       # To enable admin searching, add acts_as_indexed on searchable fields, for example:

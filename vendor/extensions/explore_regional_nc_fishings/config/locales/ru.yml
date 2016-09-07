@@ -1,0 +1,29 @@
+ru:
+  refinery:
+    plugins:
+      explore_regional_nc_fishings:
+        title: Explore Regional Nc Fishings
+    explore_regional_nc_fishings:
+      admin:
+        explore_regional_nc_fishings:
+          actions:
+            create_new: Добавить Explore Regional Nc Fishing
+            reorder: Изменить порядок Explore Regional Nc Fishings
+            reorder_done: Закончить изменять порядок Explore Regional Nc Fishings
+          records:
+            title: Explore Regional Nc Fishings
+            sorry_no_results: "Извините, поиск не дал результатов."
+            no_items_yet: Записей "Explore Regional Nc Fishings" не найдено. Нажмите "Добавить Explore Regional Nc Fishing" чтобы создать explore regional nc fishing.
+          explore_regional_nc_fishing:
+            view_live_html: Просмотреть explore regional nc fishing вживую <br/><em>(в новом окне)</em>
+            edit: Редактировать explore regional nc fishing
+            delete: Удалить explore regional nc fishing навсегда
+      explore_regional_nc_fishings:
+        show:
+          other: Другие Explore Regional Nc Fishings
+  activerecord:
+    attributes:
+      'refinery/explore_regional_nc_fishings/explore_regional_nc_fishing':
+        link: Link
+        add_to_home_page: Add To Home Page
+        image: Image

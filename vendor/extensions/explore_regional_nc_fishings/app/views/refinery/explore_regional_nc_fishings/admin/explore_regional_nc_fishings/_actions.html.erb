@@ -1,0 +1,20 @@
+<ul>
+  <% if ::Refinery::ExploreRegionalNcFishings::Admin::ExploreRegionalNcFishingsController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.explore_regional_nc_fishings_admin_explore_regional_nc_fishings_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= action_label :add, refinery.new_explore_regional_nc_fishings_admin_explore_regional_nc_fishing_path, t('.create_new') %>
+  </li>
+<% if !searching? && ::Refinery::ExploreRegionalNcFishings::Admin::ExploreRegionalNcFishingsController.sortable? && ::Refinery::ExploreRegionalNcFishings::ExploreRegionalNcFishing.many? %>
+  <li>
+    <%= action_label :reorder,
+                     refinery.explore_regional_nc_fishings_admin_explore_regional_nc_fishings_path,
+                     t('.reorder', what:  "Explore Regional Nc Fishings"), id: 'reorder_action'%>
+    <%= action_label :reorder_done,
+                     refinery.explore_regional_nc_fishings_admin_explore_regional_nc_fishings_path,
+                      t('.reorder_done', what: "Explore Regional Nc Fishings"), id: 'reorder_action_done', class: 'hidden'%>
+  </li>
+<% end %>
+</ul>
