@@ -2,7 +2,7 @@ module Refinery
   class PagesController < ::ApplicationController
     include Pages::RenderOptions
 
-    before_action :find_page, :set_canonical, :find_menu_items, :find_sponsors
+    before_action :find_page, :set_canonical
     before_action :error_404, :unless => :current_user_can_view_page?
 
     # Save whole Page after delivery
@@ -26,14 +26,6 @@ module Refinery
     end
 
   protected
-
-    def find_sponsors
-      @footer_sponsors = Refinery::SponsorInFooters::SponsorInFooter.all.limit(5)
-    end
-
-    def find_menu_items
-      @menu_items = Refinery::Page.where(show_in_menu: true).roots.includes(:children)
-    end
 
     def requested_friendly_id
       if ::Refinery::Pages.scope_slug_by_parent

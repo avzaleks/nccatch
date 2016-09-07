@@ -1,50 +1,15 @@
 <div class="main-sponsors cont">
   <% @footer_sponsors.each do |sponsor|  %>
-      <div class="main-sponsors-single">
-          <span class="main-sponsors-centrer">
-            <%= link_to image_tag(sponsor.image.url, alt: "Sea Grunt" ), sponsor.link %>
-              <%#= image_tag "sea.png", alt: "Sea Grunt"%>
-
-          </span>
-      </div>
-<% end %>
-  <!--<div class="main-sponsors-single">-->
-          <!--<span class="main-sponsors-centrer">-->
-            <!--<a href="#">-->
-              <!--<%#= image_tag "sea.png", alt: "Sea Grunt"%>-->
-            <!--</a>-->
-          <!--</span>-->
-  <!--</div>-->
-  <div class="main-sponsors-single">
-          <span class="main-sponsors-centrer">
-            <a href="#">
-              <%= image_tag "resource.png", alt: "Resourceful Communities"%>
-
-            </a>
-          </span>
-  </div>
-  <div class="main-sponsors-single">
-          <span class="main-sponsors-centrer">
-            <a href="#">
-              <%= image_tag "country_of_dare.png", alt: "Country of dare"%>
-            </a>
-          </span>
-  </div>
-  <div class="main-sponsors-single">
-          <span class="main-sponsors-centrer">
-            <a href="#">
-                <%= image_tag "gtb_seafood.png", alt: "NC seafood"%>
-            </a>
-          </span>
-  </div>
-  <div class="main-sponsors-single">
-          <span class="main-sponsors-centrer">
-            <a href="#">
-              <%= image_tag "saltwinter.png", alt: "Saltwinter connections"%>
-          </a>
-          </span>
-  </div>
+    <% unless sponsor.image.blank? %>
+        <div class="main-sponsors-single">
+            <span class="main-sponsors-centrer">
+              <%= link_to image_tag(sponsor.image.url, alt: "Sea Grunt" ), sponsor.link %>
+            </span>
+        </div>
+      <% end %>
+  <% end %>
 </div>
+
 <footer class="main-footer cont">
   <div class="main-footer-top-header big-cont">
   </div>
