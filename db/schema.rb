@@ -11,10 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160908125745) do
+ActiveRecord::Schema.define(version: 20160908133040) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "refinery_articles", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "image_id"
+    t.text     "body"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "refinery_authentication_devise_roles", force: :cascade do |t|
     t.string "title"

@@ -22,3 +22,6 @@ Refinery::Videos::Engine.load_seed
 
 # Added by Refinery CMS WhatCookingBlocks extension
 Refinery::WhatCookingBlocks::Engine.load_seed
+
+# Added by Refinery CMS Articles extension
+Refinery::Articles::Engine.load_seed

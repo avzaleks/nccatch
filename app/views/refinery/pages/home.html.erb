@@ -59,40 +59,21 @@
       <div class="main-content-news">
         <div class="title news-title">
           <h4 class="title-text">Featured Media</h4>
-          <a class="title-link" href="#">View All News Articles</a>
+          <%= link_to "View All News Articles", refinery.articles_articles_path, class:"title-link" %>
         </div>
-        <div class="main-content-news-single">
-          <div class="main-content-news-data">
-            APR 20
-          </div>
-          <div class="main-content-news-title">
-            Pied host a Late Spring Bacbecue with Sustainable NC Seafood
-          </div>
-        </div>
-        <div class="main-content-news-single">
-          <div class="main-content-news-data">
-            MAY 8
-          </div>
-          <div class="main-content-news-title">
-            Aquaculture and Seafood Industry Education Day
-          </div>
-        </div>
-        <div class="main-content-news-single">
-          <div class="main-content-news-data">
-            SEP 20
-          </div>
-          <div class="main-content-news-title">
-            Z. Smith Reynolds Foundation awards $40,000 to NC Catch
-          </div>
-        </div>
-        <div class="main-content-news-single">
-          <div class="main-content-news-data">
-            DEC 15
-          </div>
-          <div class="main-content-news-title">
-            NCDEQ Secretary van der Vaart to Participate in NC Catch Summit
-          </div>
-        </div>
+        <% unless @articles.blank? %>
+          <% @articles.each do |article| %>
+            <div class="main-content-news-single">
+              <div class="main-content-news-data">
+                <%= article.created_at.strftime('%b').upcase %><br>
+                <%= article.created_at.strftime('%d') %>
+              </div>
+              <div class="main-content-news-title">
+                <%= article.title %>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
       </div>
       <div class="main-cooking-book">
         <% unless @what_cooking_block.blank? %>

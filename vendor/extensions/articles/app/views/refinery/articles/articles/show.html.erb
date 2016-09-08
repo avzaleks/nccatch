@@ -1,0 +1,30 @@
+<div class='main-content cont'>
+  <div class="container">
+    <% content_for :body_content_title do %>
+      <h1><%= @article.title %></h1>
+    <% end %>
+
+    <% content_for :body do %>
+      <section class='article_body'>
+        <p>
+          <%=raw @article.body %>
+        </p>
+      </section>
+    <% end %>
+
+    <% content_for :side_body do %>
+      <aside>
+        <h2><%= t('.other') %></h2>
+        <ul id="articles">
+          <% @articles.each do |article| %>
+            <li>
+              <%= link_to article.title, refinery.articles_article_path(article) %>
+            </li>
+          <% end %>
+        </ul>
+      </aside>
+    <% end %>
+
+    <%= render '/refinery/content_page' %>
+  </div>
+</div>

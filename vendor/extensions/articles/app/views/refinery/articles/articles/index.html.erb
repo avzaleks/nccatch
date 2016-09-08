@@ -1,0 +1,21 @@
+<div class='main-content cont'>
+	<div class="container videos">
+		<% content_for :body do %>
+		  <ul id="articles">
+		    <% @articles.each do |article| %>
+		      <li>
+		        <h3><%= link_to article.title, refinery.articles_article_path(article) %></h3>
+		        <p>
+			    	<%= truncate( article.body.html_safe, length: 150, escape: false, :omission => ""){ link_to "...read more", refinery.articles_article_path(article) } %>
+			    </p>
+		      </li>
+		    <% end %>
+		  </ul>
+		  <div class="pagination">
+		  	<%= will_paginate @articles %>
+		  </div>
+		<% end %>
+
+		<%= render '/refinery/content_page' %>
+	</div>
+</div>
