@@ -30,10 +30,10 @@ ul#recipes{
 	float:left;
 	margin-right: 10px;
 }
-
-.recipe_body{
-
+.article_body{
+	text-indent: 30px;
 }
+
 .recipe_body p{
 	text-indent: 30px;
 }
@@ -46,4 +46,8 @@ ul#recipes{
 	float:left;
 	margin: 5%;
 	text-align:center;
+}
+
+ul#articles{
+    list-style-type: none;
 }

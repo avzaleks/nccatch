@@ -22,7 +22,7 @@ module Refinery
     protected
 
       def find_all_recipes
-        @recipes = Recipe.paginate(:page => params[:page], :per_page => 3).order('position ASC')
+        @recipes = Recipe.paginate(:page => params[:page], :per_page => 3).order('created_at DESC')
       end
 
       def find_page
