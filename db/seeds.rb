@@ -14,3 +14,5 @@ Refinery::SponsorInFooters::Engine.load_seed
 
 # Added by Refinery CMS ExploreRegionalNcFishings extension
 Refinery::ExploreRegionalNcFishings::Engine.load_seed
+# Added by Refinery CMS Recipes extension
+Refinery::Recipes::Engine.load_seed

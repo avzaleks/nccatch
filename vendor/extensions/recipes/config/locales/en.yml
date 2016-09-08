@@ -1,0 +1,30 @@
+en:
+  refinery:
+    plugins:
+      recipes:
+        title: Recipes
+    recipes:
+      admin:
+        recipes:
+          actions:
+            create_new: Add New Recipe
+            reorder: Reorder Recipes
+            reorder_done: Done Reordering Recipes
+          records:
+            title: Recipes
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Recipes yet. Click "Add New Recipe" to add your first recipe.
+          recipe:
+            view_live_html: View this recipe live <br/><em>(opens in a new window)</em>
+            edit: Edit this recipe
+            delete: Remove this recipe forever
+      recipes:
+        show:
+          other: Other Recipes
+  activerecord:
+    attributes:
+      'refinery/recipes/recipe':
+        title: Title
+        image: Image
+        body: Body
+        recipe_of_the_week: Recipe Of The Week

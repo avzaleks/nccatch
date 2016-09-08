@@ -1,0 +1,2 @@
+<%= will_paginate @recipes if Refinery::Recipes::Admin::RecipesController.pageable? %>
+<%= render 'sortable_list' %>
