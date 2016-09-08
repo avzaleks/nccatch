@@ -10,9 +10,16 @@
       <main class="nc-catch-main">
         <%= render "/refinery/header" -%>
         <section id="page">
+          <section class="main-banner cont">
+          </section>
           <%= yield %>
         </section>
         <%= render "/refinery/footer" -%>
       </main>
   </body>
 </html>
+<script>
+  <% unless @banner.nil? || @banner.image.blank? %>
+    $('.main-banner').parallax({imageSrc: "<%= @banner.image.url %>", zIndex:1, bleed:30, naturalWidth:1400, naruralHeight:900});
+  <% end %>
+</script>
