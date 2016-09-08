@@ -22,7 +22,7 @@
       <% @footer_links.each_slice(6) do |group| %>
         <div class="main-footer-list">
           <% group.each do |link| %>
-              <%= link_to link.title, page_path(link), class: "main-footer-list-element" %>
+            <%= link_to link.title, refinery.page_path(link), class: "main-footer-list-element" %>
           <% end %>
         </div>
       <% end %>

@@ -1,0 +1,33 @@
+<div class='main-content cont'>
+  <div class="container">
+    <% content_for :body_content_title do %>
+      <h1><%= @recipe.title.upcase %></h1>
+    <% end %>
+
+    <% content_for :body do %>
+      <section>
+        <p>
+            <%= image_fu @recipe.image, nil, class: "recipe_image" %>
+          <div class="recipe_body">
+            <%= @recipe.body.html_safe %>
+          </div>
+        </p>
+      </section>
+    <% end %>
+
+    <% content_for :side_body do %>
+      <aside>
+        <h2><%= t('.other') %></h2>
+        <ul id="recipes">
+          <% @recipes.each do |recipe| %>
+            <li>
+              <%= link_to recipe.title, refinery.recipes_recipe_path(recipe) %>
+            </li>
+          <% end %>
+        </ul>
+      </aside>
+    <% end %>
+
+    <%= render '/refinery/content_page' %>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+it:
+  refinery:
+    plugins:
+      recipes:
+        title: Recipes
+    recipes:
+      admin:
+        recipes:
+          actions:
+            create_new: Aggiungi Nuovo Recipe
+            reorder: Riordina Recipes
+            reorder_done: Termina il Riordino di Recipes
+          records:
+            title: Recipes
+            sorry_no_results: "Spiacenti! Nessun risultato trovato"
+            no_items_yet: Non ci sono ancora Recipes. Clicca "Aggiungi Nuovo Recipe" per aggiungere il tuo primo recipe.
+          recipe:
+            view_live_html: Guarda live questo recipe <br/><em>(apre una nuova finestra)</em>
+            edit: Modifica questo recipe
+            delete: Rimuovi per sempre questo recipe
+      recipes:
+        show:
+          other: Altri Recipes
+  activerecord:
+    attributes:
+      'refinery/recipes/recipe':
+        title: Title
+        image: Image
+        body: Body
+        recipe_of_the_week: Recipe Of The Week

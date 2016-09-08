@@ -1,0 +1,30 @@
+ru:
+  refinery:
+    plugins:
+      recipes:
+        title: Recipes
+    recipes:
+      admin:
+        recipes:
+          actions:
+            create_new: Добавить Recipe
+            reorder: Изменить порядок Recipes
+            reorder_done: Закончить изменять порядок Recipes
+          records:
+            title: Recipes
+            sorry_no_results: "Извините, поиск не дал результатов."
+            no_items_yet: Записей "Recipes" не найдено. Нажмите "Добавить Recipe" чтобы создать recipe.
+          recipe:
+            view_live_html: Просмотреть recipe вживую <br/><em>(в новом окне)</em>
+            edit: Редактировать recipe
+            delete: Удалить recipe навсегда
+      recipes:
+        show:
+          other: Другие Recipes
+  activerecord:
+    attributes:
+      'refinery/recipes/recipe':
+        title: Title
+        image: Image
+        body: Body
+        recipe_of_the_week: Recipe Of The Week

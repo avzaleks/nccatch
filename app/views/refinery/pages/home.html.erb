@@ -127,9 +127,13 @@
       <div class="main-content-additional-banner">
         <header class="title recipe-title">
           <h4 class="title-text">Recipe of the Week</h4>
-          <a class="title-link" href="#">View All</a>
+          <%= link_to "View All", recipes_recipes_path ,class: "title-link" %>
         </header>
-        <%= image_tag "recipe-photo.png", alt: "Recipe photo"%>
+          <% @recipe.each do |recipe| %>
+            <% unless recipe.image.blank? %>
+              <%= link_to image_tag( recipe.image.url ), refinery.recipes_recipe_path(recipe), alt: "Recipe photo"%>
+            <% end %>
+          <% end %>
      </div>
       <div class="main-content-additional-banner multiple-banners">
         <header class="title explore-title">

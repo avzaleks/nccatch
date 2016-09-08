@@ -1,0 +1,31 @@
+es:
+  refinery:
+    plugins:
+      recipes:
+        title: Recipes
+#        article: masculino/femenino
+    recipes:
+      admin:
+        recipes:
+          actions:
+            create_new: Crear nuevo recipe
+            reorder: Reordenar recipes
+            reorder_done: Reordenación de recipes completada
+          records:
+            title: Recipes
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay recipes todavía. Pulsa en "Crear nuevo Recipe" para crear tu primer recipe.
+          recipe:
+            view_live_html: Ver este recipe como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este recipe
+            delete: Borrar este recipe para siempre
+      recipes:
+        show:
+          other: Otros recipes
+  activerecord:
+    attributes:
+      'refinery/recipes/recipe':
+        title: Title
+        image: Image
+        body: Body
+        recipe_of_the_week: Recipe Of The Week
