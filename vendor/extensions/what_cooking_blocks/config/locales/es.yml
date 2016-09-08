@@ -1,0 +1,32 @@
+es:
+  refinery:
+    plugins:
+      what_cooking_blocks:
+        title: What Cooking Blocks
+#        article: masculino/femenino
+    what_cooking_blocks:
+      admin:
+        what_cooking_blocks:
+          actions:
+            create_new: Crear nuevo what cooking block
+            reorder: Reordenar what cooking blocks
+            reorder_done: Reordenación de what cooking blocks completada
+          records:
+            title: What Cooking Blocks
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay what cooking blocks todavía. Pulsa en "Crear nuevo What Cooking Block" para crear tu primer what cooking block.
+          what_cooking_block:
+            view_live_html: Ver este what cooking block como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este what cooking block
+            delete: Borrar este what cooking block para siempre
+      what_cooking_blocks:
+        show:
+          other: Otros what cooking blocks
+  activerecord:
+    attributes:
+      'refinery/what_cooking_blocks/what_cooking_block':
+        title: Title
+        image: Image
+        file: File
+        body: Body
+        add_to_home_page: Add To Home Page

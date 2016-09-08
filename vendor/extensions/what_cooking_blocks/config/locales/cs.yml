@@ -1,0 +1,31 @@
+cs:
+  refinery:
+    plugins:
+      what_cooking_blocks:
+        title: What Cooking Blocks
+    what_cooking_blocks:
+      admin:
+        what_cooking_blocks:
+          actions:
+            create_new: Přidat What Cooking Block
+            reorder: Řadit What Cooking Blocks
+            reorder_done: Konec řazení What Cooking Blocks
+          records:
+            title: What Cooking Blocks
+            sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
+            no_items_yet: Zatím nebyly vytvořeny žádné What Cooking Blocks. Zvolte "Přidat What Cooking Block" pro přidání prvního what cooking block.
+          what_cooking_block:
+            view_live_html: Zobrazit náhled what cooking block<br/><em>(otevře se v novém okně)</em>
+            edit: Upravit what cooking block
+            delete: Smazat what cooking block
+      what_cooking_blocks:
+        show:
+          other: Další What Cooking Blocks
+  activerecord:
+    attributes:
+      'refinery/what_cooking_blocks/what_cooking_block':
+        title: Title
+        image: Image
+        file: File
+        body: Body
+        add_to_home_page: Add To Home Page

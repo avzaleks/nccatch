@@ -1,0 +1,20 @@
+<ul>
+  <% if ::Refinery::WhatCookingBlocks::Admin::WhatCookingBlocksController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.what_cooking_blocks_admin_what_cooking_blocks_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= action_label :add, refinery.new_what_cooking_blocks_admin_what_cooking_block_path, t('.create_new') %>
+  </li>
+<% if !searching? && ::Refinery::WhatCookingBlocks::Admin::WhatCookingBlocksController.sortable? && ::Refinery::WhatCookingBlocks::WhatCookingBlock.many? %>
+  <li>
+    <%= action_label :reorder,
+                     refinery.what_cooking_blocks_admin_what_cooking_blocks_path,
+                     t('.reorder', what:  "What Cooking Blocks"), id: 'reorder_action'%>
+    <%= action_label :reorder_done,
+                     refinery.what_cooking_blocks_admin_what_cooking_blocks_path,
+                      t('.reorder_done', what: "What Cooking Blocks"), id: 'reorder_action_done', class: 'hidden'%>
+  </li>
+<% end %>
+</ul>

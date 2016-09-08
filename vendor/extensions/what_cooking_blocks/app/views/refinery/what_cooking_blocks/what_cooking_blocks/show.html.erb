@@ -1,0 +1,55 @@
+<% content_for :body_content_title do %>
+  <%= @what_cooking_block.title %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Title</h1>
+    <p>
+      <%=raw @what_cooking_block.title %>
+    </p>
+  </section>
+  <section>
+    <h1>Image</h1>
+    <p>
+      <%= image_fu @what_cooking_block.image, nil %>
+    </p>
+  </section>
+  <section>
+    <h1>File</h1>
+    <p>
+      <% if @what_cooking_block.file.present? %>
+        <%= link_to 'file', @what_cooking_block.file.url %>
+      <% else %>
+        file
+      <% end %>
+    </p>
+  </section>
+  <section>
+    <h1>Body</h1>
+    <p>
+      <%=raw @what_cooking_block.body %>
+    </p>
+  </section>
+  <section>
+    <h1>Add To Home Page</h1>
+    <p>
+      <%=raw @what_cooking_block.add_to_home_page %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="what_cooking_blocks">
+      <% @what_cooking_blocks.each do |what_cooking_block| %>
+        <li>
+          <%= link_to what_cooking_block.title, refinery.what_cooking_blocks_what_cooking_block_path(what_cooking_block) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

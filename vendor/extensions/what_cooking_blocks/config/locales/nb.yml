@@ -1,0 +1,31 @@
+nb:
+  refinery:
+    plugins:
+      what_cooking_blocks:
+        title: What Cooking Blocks
+    what_cooking_blocks:
+      admin:
+        what_cooking_blocks:
+          actions:
+            create_new: Lag en ny What Cooking Block
+            reorder: Endre rekkefølgen på What Cooking Blocks
+            reorder_done: Ferdig å endre rekkefølgen What Cooking Blocks
+          records:
+            title: What Cooking Blocks
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen What Cooking Blocks enda. Klikk på "Lag en ny What Cooking Block" for å legge til din første what cooking block.
+          what_cooking_block:
+            view_live_html: Vis hvordan denne what cooking block ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne what cooking block
+            delete: Fjern denne what cooking block permanent
+      what_cooking_blocks:
+        show:
+          other: Andre What Cooking Blocks
+  activerecord:
+    attributes:
+      'refinery/what_cooking_blocks/what_cooking_block':
+        title: Title
+        image: Image
+        file: File
+        body: Body
+        add_to_home_page: Add To Home Page

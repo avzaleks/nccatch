@@ -1,0 +1,31 @@
+fr:
+  refinery:
+    plugins:
+      what_cooking_blocks:
+        title: What Cooking Blocks
+    what_cooking_blocks:
+      admin:
+        what_cooking_blocks:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) What Cooking Block
+            reorder: Réordonner les What Cooking Blocks
+            reorder_done: Fin de réordonnancement des What Cooking Blocks
+          records:
+            title: What Cooking Blocks
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) What Cooking Block. Cliquer sur "Créer un(e) nouve(au/l/lle) What Cooking Block" pour créer votre premi(er/ère) what cooking block.'
+          what_cooking_block:
+            view_live_html: Voir ce(t/tte) what cooking block <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) what cooking block
+            delete: Supprimer définitivement ce(t/tte) what cooking block
+      what_cooking_blocks:
+        show:
+          other: Autres What Cooking Blocks
+  activerecord:
+    attributes:
+      'refinery/what_cooking_blocks/what_cooking_block':
+        title: Title
+        image: Image
+        file: File
+        body: Body
+        add_to_home_page: Add To Home Page
