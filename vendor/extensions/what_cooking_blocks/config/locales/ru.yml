@@ -1,0 +1,31 @@
+ru:
+  refinery:
+    plugins:
+      what_cooking_blocks:
+        title: What Cooking Blocks
+    what_cooking_blocks:
+      admin:
+        what_cooking_blocks:
+          actions:
+            create_new: Добавить What Cooking Block
+            reorder: Изменить порядок What Cooking Blocks
+            reorder_done: Закончить изменять порядок What Cooking Blocks
+          records:
+            title: What Cooking Blocks
+            sorry_no_results: "Извините, поиск не дал результатов."
+            no_items_yet: Записей "What Cooking Blocks" не найдено. Нажмите "Добавить What Cooking Block" чтобы создать what cooking block.
+          what_cooking_block:
+            view_live_html: Просмотреть what cooking block вживую <br/><em>(в новом окне)</em>
+            edit: Редактировать what cooking block
+            delete: Удалить what cooking block навсегда
+      what_cooking_blocks:
+        show:
+          other: Другие What Cooking Blocks
+  activerecord:
+    attributes:
+      'refinery/what_cooking_blocks/what_cooking_block':
+        title: Title
+        image: Image
+        file: File
+        body: Body
+        add_to_home_page: Add To Home Page

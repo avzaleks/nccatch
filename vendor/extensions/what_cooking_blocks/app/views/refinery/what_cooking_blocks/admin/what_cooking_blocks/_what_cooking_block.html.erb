@@ -1,0 +1,15 @@
+<li class='clearfix record <%= cycle("on", "on-hover") %>' id="<%= dom_id(what_cooking_block) -%>">
+  <span class='title'>
+    <%= what_cooking_block.title %>
+  </span>
+
+  <span class='preview'></span>
+
+  <span class='actions'>
+    <%= action_icon(:preview, refinery.what_cooking_blocks_what_cooking_block_path(what_cooking_block), t('.view_live_html')) %>
+    <%= action_icon(:edit,    refinery.edit_what_cooking_blocks_admin_what_cooking_block_path(what_cooking_block), t('.edit') ) %>
+    <%= action_icon(:delete,  refinery.what_cooking_blocks_admin_what_cooking_block_path(what_cooking_block), t('.delete'),
+      { class: "cancel confirm-delete",
+        data: {confirm: t('message',  scope: 'refinery.admin.delete', title: what_cooking_block.title)}}  ) %>
+  </span>
+</li>

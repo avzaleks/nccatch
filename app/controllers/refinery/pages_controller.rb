@@ -10,6 +10,7 @@ module Refinery
 
     # This action is usually accessed with the root path, normally '/'
     def home
+      @what_cooking_block = Refinery::WhatCookingBlocks::WhatCookingBlock.where(add_to_home_page: true).last
       @video = Refinery::Videos::Video.where(add_to_home_page: true).last
       @recipe = Refinery::Recipes::Recipe.where( recipe_of_the_week: true )
       @explore_regional = Refinery::ExploreRegionalNcFishings::ExploreRegionalNcFishing.where(add_to_home_page: true).last(4)

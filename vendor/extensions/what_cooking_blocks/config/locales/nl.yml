@@ -1,0 +1,31 @@
+nl:
+  refinery:
+    plugins:
+      what_cooking_blocks:
+        title: What Cooking Blocks
+    what_cooking_blocks:
+      admin:
+        what_cooking_blocks:
+          actions:
+            create_new: Nieuwe What Cooking Block toevoegen
+            reorder: De volgorde van de What Cooking Blocks wijzigen
+            reorder_done: Klaar met het wijzingen van de van de What Cooking Block-volgorde
+          records:
+            title: What Cooking Blocks
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen What Cooking Blocks. Druk op 'Nieuwe What Cooking Block toevoegen' om de eerste toe te voegen.
+          what_cooking_block:
+            view_live_html: Deze what cooking block op de website bekijken <br/><em>(opent in een nieuw venster)</em>
+            edit: Bewerk deze what cooking block
+            delete: Deze what cooking block definitief verwijderen
+      what_cooking_blocks:
+        show:
+          other: Andere What Cooking Blocks
+  activerecord:
+    attributes:
+      'refinery/what_cooking_blocks/what_cooking_block':
+        title: Title
+        image: Image
+        file: File
+        body: Body
+        add_to_home_page: Add To Home Page

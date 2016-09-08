@@ -1,0 +1,16 @@
+<%= render 'refinery/admin/search_header', :url => refinery.what_cooking_blocks_admin_what_cooking_blocks_path %>
+<div class='pagination_container'>
+  <% if @what_cooking_blocks.any? %>
+    <%= render 'what_cooking_blocks' %>
+  <% else %>
+    <p>
+      <% if searching? %>
+        <%= t('no_results', :scope => 'refinery.admin.search') %>
+      <% else %>
+        <strong>
+          <%= t('.no_items_yet') %>
+        </strong>
+      <% end %>
+    </p>
+  <% end %>
+</div>

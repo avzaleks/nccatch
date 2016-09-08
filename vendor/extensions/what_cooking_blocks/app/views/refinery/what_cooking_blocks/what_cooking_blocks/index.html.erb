@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <ul id="what_cooking_blocks">
+    <% @what_cooking_blocks.each do |what_cooking_block| %>
+      <li>
+        <%= link_to what_cooking_block.title, refinery.what_cooking_blocks_what_cooking_block_path(what_cooking_block) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

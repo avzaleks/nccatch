@@ -1,0 +1,52 @@
+<%= form_for [refinery, :what_cooking_blocks_admin, @what_cooking_block] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @what_cooking_block,
+              :include_object_name => true %>
+
+  <div class='field'>
+    <%= f.label :title -%>
+    <%= f.text_field :title, :class => 'larger widest' -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :image -%>
+    <%= render '/refinery/admin/image_picker',
+               :f => f,
+               :field => :image_id,
+               :image => @what_cooking_block.image,
+               :toggle_image_display => false -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :file -%>
+    <%= render '/refinery/admin/resource_picker',
+               :f => f,
+               :field => :file_id,
+               :resource => @what_cooking_block.file -%>
+  </div>
+
+  <div class='field'>
+    <%= render '/refinery/admin/wysiwyg',
+                :f => f,
+                :fields => [:body],
+                :object => "what_cooking_blocks/what_cooking_block" -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :add_to_home_page -%>
+    <%= f.check_box :add_to_home_page, :checked => @what_cooking_block[:add_to_home_page] -%>
+  </div>
+
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.what_cooking_blocks.admin.what_cooking_blocks.what_cooking_block'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @what_cooking_block.title) -%>
+<% end -%>
+
+<% content_for :javascripts do -%>
+  <script>
+    $(document).ready(function(){
+      page_options.init(false, '', '');
+    });
+  </script>
+<% end -%>

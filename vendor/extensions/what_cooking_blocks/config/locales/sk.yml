@@ -1,0 +1,31 @@
+sk:
+  refinery:
+    plugins:
+      what_cooking_blocks:
+        title: What Cooking Blocks
+    what_cooking_blocks:
+      admin:
+        what_cooking_blocks:
+          actions:
+            create_new: Pridať What Cooking Block
+            reorder: Preusporiadať What Cooking Blocks
+            reorder_done: Koniec radenia What Cooking Blocks
+          records:
+            title: What Cooking Blocks
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne What Cooking Blocks. Kliknite na "Pridať What Cooking Block" pre pridanie prvého what cooking block.
+          what_cooking_block:
+            view_live_html: Zobraziť náhľad what cooking block<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť what cooking block
+            delete: Zmazať what cooking block
+      what_cooking_blocks:
+        show:
+          other: Daľšie What Cooking Blocks
+  activerecord:
+    attributes:
+      'refinery/what_cooking_blocks/what_cooking_block':
+        title: Title
+        image: Image
+        file: File
+        body: Body
+        add_to_home_page: Add To Home Page
