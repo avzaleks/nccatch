@@ -50,9 +50,11 @@
       <div class="main-content-media">
         <div class="title media-title">
           <h4 class="title-text">Featured Media</h4>
-          <a class="title-link" href="#">View Media Gallery</a>
+          <%=  link_to "View Media Gallery", refinery.videos_videos_path, class: "title-link" %>
         </div>
-        <iframe class="main-content-media-video" src="https://www.youtube.com/embed/S-EXNounv-U" frameborder="0" allowfullscreen></iframe>
+        <% unless @video.link.blank? %>
+          <iframe class="main-content-media-video" src="https://www.youtube.com/embed/<%= video_link(@video) %>" frameborder="0" allowfullscreen></iframe>
+        <% end %>
       </div>
       <div class="main-content-news">
         <div class="title news-title">

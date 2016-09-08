@@ -8,4 +8,11 @@ module ApplicationHelper
 			link
 		end
 	end
+
+	def video_link(video)
+		link = video.link
+		if link || link.include?('v=')
+			link.split('v=')[-1]
+		end
+	end
 end
