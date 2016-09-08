@@ -35,5 +35,15 @@ ul#recipes{
 
 }
 .recipe_body p{
-		text-indent: 30px;
-	}
+	text-indent: 30px;
+}
+
+#videos{
+	list-style-type: none;
+}
+
+#videos > li{
+	float:left;
+	margin: 5%;
+	text-align:center;
+}

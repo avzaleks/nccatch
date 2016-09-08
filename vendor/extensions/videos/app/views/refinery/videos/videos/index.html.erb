@@ -1,0 +1,17 @@
+<div class='main-content cont'>
+	<div class="container videos">
+		<h1>Videos</h1>
+		  <ul id="videos">
+		    <% @videos.each do |video| %>
+		      <li>
+		        <% unless video.link.blank? %>
+	          		<iframe src="https://www.youtube.com/embed/<%= video_link(video) %>" frameborder="0" allowfullscreen></iframe><br>
+	          		<%= link_to video.title, "https://www.youtube.com/embed/#{video_link(video)}" %>
+        		<% end %>
+		      </li>
+		    <% end %>
+		  </ul>
+
+		<%#= render '/refinery/content_page' %>
+	</div>
+</div>
