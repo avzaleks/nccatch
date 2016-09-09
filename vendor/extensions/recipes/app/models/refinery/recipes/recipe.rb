@@ -8,13 +8,14 @@ module Refinery
 
       belongs_to :image, :class_name => '::Refinery::Image'
 
-      before_save :checkbox_checking
+      after_save :checkbox_checking
 
       private
         def checkbox_checking
           if self.recipe_of_the_week
-            Refinery::Recipes::Recipe.all.map{|r| r.update_column(:recipe_of_the_week, false)}
-            self.update_column(:recipe_of_the_week, true)
+            id = [] << self.id
+            ids = Refinery::Recipes::Recipe.where(recipe_of_the_week: true).map(&:id)
+            (ids - id).map{|r| Refinery::Recipes::Recipe.find(r).update_column(:recipe_of_the_week, false)} unless ids.blank?
           end
         end
 

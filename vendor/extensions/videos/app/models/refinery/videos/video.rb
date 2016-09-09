@@ -9,13 +9,14 @@ module Refinery
       # To enable admin searching, add acts_as_indexed on searchable fields, for example:
       #
       #   acts_as_indexed :fields => [:title]
-      before_save :checkbox_checking
+      after_save :checkbox_checking
 
       private
         def checkbox_checking
           if self.add_to_home_page
-            Refinery::Videos::Video.all.map{|r| r.update_column(:add_to_home_page, false)}
-            self.update_column(:add_to_home_page, true)
+            id = [] << self.id
+            ids = Refinery::Videos::Video.where(add_to_home_page: true).map(&:id)
+            (ids - id).map{|r| Refinery::Videos::Video.find(r).update_column(:add_to_home_page, false)} unless ids.blank?
           end
         end
     end
