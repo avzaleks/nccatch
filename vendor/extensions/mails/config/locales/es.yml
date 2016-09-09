@@ -1,0 +1,29 @@
+es:
+  refinery:
+    plugins:
+      mails:
+        title: Mails
+#        article: masculino/femenino
+    mails:
+      admin:
+        mails:
+          actions:
+            create_new: Crear nuevo mail
+            reorder: Reordenar mails
+            reorder_done: Reordenación de mails completada
+          records:
+            title: Mails
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay mails todavía. Pulsa en "Crear nuevo Mail" para crear tu primer mail.
+          mail:
+            view_live_html: Ver este mail como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este mail
+            delete: Borrar este mail para siempre
+      mails:
+        show:
+          other: Otros mails
+  activerecord:
+    attributes:
+      'refinery/mails/mail':
+        full_name: Full Name
+        email: Email
