@@ -1,0 +1,20 @@
+<ul>
+  <% if ::Refinery::Mails::Admin::MailsController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.mails_admin_mails_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= action_label :add, refinery.new_mails_admin_mail_path, t('.create_new') %>
+  </li>
+<% if !searching? && ::Refinery::Mails::Admin::MailsController.sortable? && ::Refinery::Mails::Mail.many? %>
+  <li>
+    <%= action_label :reorder,
+                     refinery.mails_admin_mails_path,
+                     t('.reorder', what:  "Mails"), id: 'reorder_action'%>
+    <%= action_label :reorder_done,
+                     refinery.mails_admin_mails_path,
+                      t('.reorder_done', what: "Mails"), id: 'reorder_action_done', class: 'hidden'%>
+  </li>
+<% end %>
+</ul>

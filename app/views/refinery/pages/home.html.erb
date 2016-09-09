@@ -96,14 +96,20 @@
         <div class="title mailing-title">
           <h4 class="title-text">Join our mailing list!</h4>
         </div>
-        <form class="main-content-mailing-text">
+        <div class="main-content-mailing-text">
           <p>
             Submit your email address to receive our monthly e-newseltter with events, recipes, special offers and more!
           </p>
-          <input class="default-input" placeholder="Full Name" type="text">
-          <input class="default-input" placeholder="Email" type="email">
-          <input class="default-button main-content-mailing-submit" type="submit" value="Submit">
-        </form>
+
+          <%= form_for [refinery, :mails_admin, @mail], class: "main-content-mailing-text" do |f| -%>
+              <%= f.text_field :full_name, class: 'default-input mailer-name', placeholder: "Full Name" %>
+              <%= f.email_field :email, class: 'default-input mailer-email', placeholder: "Email" %>
+              <%= submit_tag "Submit",
+                   :name => nil,
+                   :class => "default-button main-content-mailing-submit",
+                   :tooltip => "Submit" %>
+          <% end %>
+        </div>
       </div>
       <div class="main-content-additional-banner">
         <header class="title recipe-title">
@@ -131,3 +137,45 @@
       </div>
     </aside>
   </div>
+
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.0/additional-methods.min.js"></script>
+  <script>
+    jQuery.validator.setDefaults({
+      debug: true,
+      success: "valid"
+    });
+
+    $( "#new_mail" ).validate({
+      rules: {
+        field: {
+          required: true,
+          email: true
+        }
+      }
+    });
+  </script>
+
+  <script >
+    $('.default-button.main-content-mailing-submit').click(function(e){
+      e.preventDefault();
+      data = $('#new_mail').serialize();
+      if ($('#mail_email').val().match('@') == null){
+        console.log('error email with @');
+      } else{
+        $.ajax({
+          type: 'POST',
+          url: '/refinery/mails',
+          data: data,
+          success: function(data){
+            $('#flash_error').remove();
+            $('#mail_full_name').val('');
+            $('#mail_email').val('');
+            var flash = '<div id="flash"><b>Email was successfully saved!</b></div>'
+            $('.main-content-mailing-text').append(flash);
+            $('#flash').fadeOut(2000);
+          }
+        })
+      }
+    })
+  </script>

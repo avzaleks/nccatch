@@ -1,0 +1,28 @@
+ru:
+  refinery:
+    plugins:
+      mails:
+        title: Mails
+    mails:
+      admin:
+        mails:
+          actions:
+            create_new: Добавить Mail
+            reorder: Изменить порядок Mails
+            reorder_done: Закончить изменять порядок Mails
+          records:
+            title: Mails
+            sorry_no_results: "Извините, поиск не дал результатов."
+            no_items_yet: Записей "Mails" не найдено. Нажмите "Добавить Mail" чтобы создать mail.
+          mail:
+            view_live_html: Просмотреть mail вживую <br/><em>(в новом окне)</em>
+            edit: Редактировать mail
+            delete: Удалить mail навсегда
+      mails:
+        show:
+          other: Другие Mails
+  activerecord:
+    attributes:
+      'refinery/mails/mail':
+        full_name: Full Name
+        email: Email

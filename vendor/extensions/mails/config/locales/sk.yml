@@ -1,0 +1,28 @@
+sk:
+  refinery:
+    plugins:
+      mails:
+        title: Mails
+    mails:
+      admin:
+        mails:
+          actions:
+            create_new: Pridať Mail
+            reorder: Preusporiadať Mails
+            reorder_done: Koniec radenia Mails
+          records:
+            title: Mails
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Mails. Kliknite na "Pridať Mail" pre pridanie prvého mail.
+          mail:
+            view_live_html: Zobraziť náhľad mail<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť mail
+            delete: Zmazať mail
+      mails:
+        show:
+          other: Daľšie Mails
+  activerecord:
+    attributes:
+      'refinery/mails/mail':
+        full_name: Full Name
+        email: Email

@@ -1,0 +1,30 @@
+zh-CN:
+  refinery:
+    plugins:
+      mails:
+        title: Mails
+    mails:
+      admin:
+        mails:
+          actions:
+            create_new: 建立新的 Mail
+            reorder: 对 Mails 重新排序
+            reorder_done: 对 Mails 的重新排序结束
+          records:
+            title: Mails
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Mails yet. Click "Add New Mail" to add your first mail.
+            no_items_yet: 目前没有 Mails . 点击 "Add New Mail" 创建一个mail.
+          mail:
+            view_live_html: 查看 mail 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 mail
+            delete: 永久删除 mail
+      mails:
+        show:
+          other: 其他 Mails
+  activerecord:
+    attributes:
+      'refinery/mails/mail':
+        full_name: Full Name
+        email: Email

@@ -1,0 +1,28 @@
+nb:
+  refinery:
+    plugins:
+      mails:
+        title: Mails
+    mails:
+      admin:
+        mails:
+          actions:
+            create_new: Lag en ny Mail
+            reorder: Endre rekkefølgen på Mails
+            reorder_done: Ferdig å endre rekkefølgen Mails
+          records:
+            title: Mails
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Mails enda. Klikk på "Lag en ny Mail" for å legge til din første mail.
+          mail:
+            view_live_html: Vis hvordan denne mail ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne mail
+            delete: Fjern denne mail permanent
+      mails:
+        show:
+          other: Andre Mails
+  activerecord:
+    attributes:
+      'refinery/mails/mail':
+        full_name: Full Name
+        email: Email
