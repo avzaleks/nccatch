@@ -1,6 +1,14 @@
 <div class='main-content cont'>
 	<div class="container videos">
-		<h1>Videos</h1>
+
+
+		<%#= render '/refinery/content_page' %>
+	</div>
+</div>
+
+
+<%= render :layout => '/refinery/second_pages', :locals => { :title => "Video Gallery", :path => refinery.videos_videos_url.to_s  } do%>
+        <h1>Video Gallery</h1>
 		  <ul id="videos">
 		    <% @videos.each do |video| %>
 		      <li>
@@ -11,7 +19,4 @@
 		      </li>
 		    <% end %>
 		  </ul>
-
-		<%#= render '/refinery/content_page' %>
-	</div>
-</div>
+<% end %>

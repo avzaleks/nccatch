@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160908152415) do
+ActiveRecord::Schema.define(version: 20160909104454) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -66,14 +66,6 @@ ActiveRecord::Schema.define(version: 20160908152415) do
 
   add_index "refinery_authentication_devise_users", ["id"], name: "index_refinery_authentication_devise_users_on_id", using: :btree
   add_index "refinery_authentication_devise_users", ["slug"], name: "index_refinery_authentication_devise_users_on_slug", using: :btree
-
-  create_table "refinery_banners", force: :cascade do |t|
-    t.integer  "image_id"
-    t.boolean  "add_to_home_page"
-    t.integer  "position"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "refinery_explore_regional_nc_fishings", force: :cascade do |t|
     t.string   "link"
@@ -174,6 +166,7 @@ ActiveRecord::Schema.define(version: 20160908152415) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "show_in_footer"
+    t.integer  "background_image_id"
   end
 
   add_index "refinery_pages", ["depth"], name: "index_refinery_pages_on_depth", using: :btree

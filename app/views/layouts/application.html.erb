@@ -19,7 +19,7 @@
   </body>
 </html>
 <script>
-  <% unless @banner.nil? || @banner.image.blank? %>
-    $('.main-banner').parallax({imageSrc: "<%= @banner.image.url %>", zIndex:1, bleed:30, naturalWidth:1400, naruralHeight:900});
+  <% unless @page.background_image.nil? || @page.background_image.blank? %>
+    $('.main-banner').parallax({imageSrc: "<%= @page.background_image.url %>", zIndex:1, bleed:30, naturalWidth:1400, naruralHeight:900});
   <% end %>
 </script>

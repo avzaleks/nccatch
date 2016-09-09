@@ -43,7 +43,7 @@ ul#recipes{
 }
 
 #videos > li{
-	float:left;
+	/*float:left;*/
 	margin: 5%;
 	text-align:center;
 }

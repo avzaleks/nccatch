@@ -22,7 +22,7 @@ module Refinery
     protected
 
       def find_all_articles
-        @articles = Article.paginate(:page => params[:page], :per_page => 3).order('created_at DESC')
+        @articles = Article.paginate(:page => params[:page], :per_page => 10).order('created_at DESC')
       end
 
       def find_page

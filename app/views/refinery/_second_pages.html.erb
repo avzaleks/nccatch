@@ -1,0 +1,62 @@
+<%# byebug %>
+<div aria-expanded="false" id="navbar" class="navbar-collapse collapse main-header-collapse">
+	<div class="main-content cont">
+		<section class="main-content-main">
+			<div class="article-category">
+			<% if params[:controller] == "refinery/pages"%>
+		        <%= link_to "Home", "/" %>  /  <a href="#"><%= link_to truncate( @page.title.html_safe, length: 20, escape: false, :omission => ""), refinery.page_path(@page) %></a>
+		    <% elsif  (params[:controller] != "refinery/pages") && params[:action] == 'show'%>
+		    	<%= link_to "Home", "/" %> /  <%= link_to title, path %> /  <a href="#"><%= link_to truncate( obj.title.html_safe, length: 20, escape: false, :omission => ""), "#" %></a>
+		    <% else %>
+		    	<%= link_to "Home", "/" %> /  <%= link_to title, path %>
+		    <% end %>
+		    </div>
+		    <div class="article-box">
+
+		    	<%= yield %>
+
+			</div>
+		  	<div class="main-cooking-book">
+			    <% unless @what_cooking_block.blank? %>
+			      <% unless @what_cooking_block.image.blank?%>
+			        <%= image_tag @what_cooking_block.image.url, alt: "Seafood Guide", class: "main-cooking-book-img"%>
+			      <% end %>
+			      <div class="main-cooking-book-content">
+			        <header class="main-cooking-book-title">
+			          <% unless @what_cooking_block.title.blank?%><%= @what_cooking_block.title %><% end %>
+			        </header>
+			        <p class="main-cooking-book-text">
+			          <% unless @what_cooking_block.blank? %><%= @what_cooking_block.body.html_safe %><% end %>
+			        </p>
+			        <footer class="main-cooking-book-footer">
+			          <% unless @what_cooking_block.file.blank? %>
+			            <%= link_to "Click here to download the Guide", "/system/refinery/resources/#{@what_cooking_block.file.file_uid}",  target: '_blank', class: "link_to_pdf" %>
+			          <% end %>
+			        </footer>
+			      </div>
+			    <% end %>
+		    </div>
+		</section>
+
+		<aside class="main-content-additional">
+			<div class="main-content-additional-single-images">
+				<p>SPONSORED</p>
+				<img class="main-content-additional-single-image" src="img/fish-sponsor.png" alt="Fish sponsor">
+				
+			</div>
+		    <div class="main-content-additional-banner multiple-banners">
+			    <header class="title explore-title">
+			      <h4 class="title-text">Explore Regional NC Fishing</h4>
+			    </header>
+			    <% unless @explore_regional.blank? %>
+			      <% @explore_regional.each do |partner| %>
+			        <% unless partner.image.nil? || partner.link.nil? %>
+			          <%= link_to image_tag( partner.image.url ), partner.link, alt: 'Recipe photo' %>
+			          <%= link_to "Visit #{ remove_http(partner.link) }", partner.link, class: "main-banner-link" %>
+			        <% end %>
+			      <% end %>
+			    <% end %>
+		    </div>
+		</aside>
+	</div>
+</div>

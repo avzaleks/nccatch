@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
-  before_action :footer_links, :find_sponsors, :find_menu_items, :set_banner, :find_variables
+  before_action :footer_links, :find_sponsors, :find_menu_items, :find_variables
   
   private
     def find_variables
@@ -11,10 +11,6 @@ class ApplicationController < ActionController::Base
       @video = Refinery::Videos::Video.where(add_to_home_page: true).last
       @recipe = Refinery::Recipes::Recipe.where( recipe_of_the_week: true )
       @explore_regional = Refinery::ExploreRegionalNcFishings::ExploreRegionalNcFishing.where(add_to_home_page: true).last(4)
-    end
-    
-    def set_banner
-      @banner = Refinery::Banners::Banner.where(add_to_home_page: true).last
     end
 
     def footer_links

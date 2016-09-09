@@ -1,5 +1,4 @@
-<div class='main-content cont'>
-  <div class="container">
+<%= render :layout => '/refinery/second_pages', :locals => { :title => "Resipes", :path => refinery.recipes_recipes_path.to_s, :obj => @recipe  } do%>
     <% content_for :body_content_title do %>
       <h1><%= @recipe.title.upcase %></h1>
     <% end %>
@@ -15,19 +14,5 @@
       </section>
     <% end %>
 
-    <% content_for :side_body do %>
-      <aside>
-        <h2><%= t('.other') %></h2>
-        <ul id="recipes">
-          <% @recipes.each do |recipe| %>
-            <li>
-              <%= link_to recipe.title, refinery.recipes_recipe_path(recipe) %>
-            </li>
-          <% end %>
-        </ul>
-      </aside>
-    <% end %>
-
     <%= render '/refinery/content_page' %>
-  </div>
-</div>
+<% end %>

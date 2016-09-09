@@ -9,7 +9,16 @@
     <%= f.label :title %>
     <%= f.text_field :title, :class => "larger widest" %>
   </div>
-
+  <div class="field">
+    <%= f.label :background_image %>
+    <%= render :partial => "/refinery/admin/image_picker", :locals => {
+      :f => f,
+      :field => :background_image_id,
+      :image => f.object.background_image,
+      :toggle_image_display => false
+    }
+    %>
+</div>
   <%= render 'form_fields_after_title', :f => f %>
 
   <div class='field'>

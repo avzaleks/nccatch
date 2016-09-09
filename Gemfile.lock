@@ -4,9 +4,6 @@ PATH
     refinerycms-articles (1.0)
       acts_as_indexed (~> 0.8.0)
       refinerycms-core (~> 3.0.4)
-    refinerycms-banners (1.0)
-      acts_as_indexed (~> 0.8.0)
-      refinerycms-core (~> 3.0.4)
     refinerycms-explore_regional_nc_fishings (1.0)
       acts_as_indexed (~> 0.8.0)
       refinerycms-core (~> 3.0.4)
@@ -322,7 +319,6 @@ DEPENDENCIES
   refinerycms-acts-as-indexed (~> 2.0, >= 2.0.1)
   refinerycms-articles!
   refinerycms-authentication-devise (~> 1.0)
-  refinerycms-banners!
   refinerycms-explore_regional_nc_fishings!
   refinerycms-mails!
   refinerycms-recipes!
