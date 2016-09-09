@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160909104454) do
+ActiveRecord::Schema.define(version: 20160909144632) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -210,6 +210,15 @@ ActiveRecord::Schema.define(version: 20160909104454) do
     t.string   "name"
     t.string   "link"
     t.integer  "image_id"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "refinery_sponsors", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "image_id"
+    t.boolean  "add_to_home_page"
     t.integer  "position"
     t.datetime "created_at"
     t.datetime "updated_at"

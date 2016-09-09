@@ -41,8 +41,10 @@
 		<aside class="main-content-additional">
 			<div class="main-content-additional-single-images">
 				<p>SPONSORED</p>
-				<img class="main-content-additional-single-image" src="img/fish-sponsor.png" alt="Fish sponsor">
-				
+				<% @sponsors.each do |sponsor| %>
+				<%# byebug%>
+					<%= link_to image_tag(sponsor.image.url), sponsor_link(sponsor), class: "main-content-additional-single-image" %>
+				<% end %>
 			</div>
 		    <div class="main-content-additional-banner multiple-banners">
 			    <header class="title explore-title">

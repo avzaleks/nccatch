@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
   
   private
     def find_variables
+      @sponsors = Refinery::Sponsors::Sponsor.where(add_to_home_page: true).last(2)
       @mail = Refinery::Mails::Mail.new
       @articles = Refinery::Articles::Article.order("created_at DESC").first(4)
       @what_cooking_block = Refinery::WhatCookingBlocks::WhatCookingBlock.where(add_to_home_page: true).last

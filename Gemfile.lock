@@ -16,6 +16,9 @@ PATH
     refinerycms-sponsor_in_footers (1.0)
       acts_as_indexed (~> 0.8.0)
       refinerycms-core (~> 3.0.4)
+    refinerycms-sponsors (1.0)
+      acts_as_indexed (~> 0.8.0)
+      refinerycms-core (~> 3.0.4)
     refinerycms-videos (1.0)
       acts_as_indexed (~> 0.8.0)
       refinerycms-core (~> 3.0.4)
@@ -323,6 +326,7 @@ DEPENDENCIES
   refinerycms-mails!
   refinerycms-recipes!
   refinerycms-sponsor_in_footers!
+  refinerycms-sponsors!
   refinerycms-videos!
   refinerycms-what_cooking_blocks!
   refinerycms-wymeditor (~> 1.0, >= 1.0.6)
