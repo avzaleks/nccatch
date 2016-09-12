@@ -10,12 +10,13 @@
     <div class="main-header-logo-img">
       <%= image_tag "nc-catch-logo.png", alt: "Nc catch logo" %>
     </div>
-    <form class="main-header-logo-search">
+    <%= form_tag refinery.search_root_path, class: "main-header-logo-search", method: 'get' do %>
       <div class="default-text-input">
-        <input type="text" placeholder="Site Search">
+        <%= text_field_tag :query, {}, {type: "search", placeholder: "Search...", class: "bottom-search", value: (params[:query] if params[:query])} %>
       </div>
-      <input type="button" value="GO" class="default-submit">
-    </form>
+      <%= submit_tag "Go", :name => nil, class: "default-submit" %>
+    <% end %>
+
   </div>
   <div aria-expanded="false" id="navbar" class="navbar-collapse collapse main-header-collapse">
     <nav class="main-header-menu big-cont">

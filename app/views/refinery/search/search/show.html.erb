@@ -1,0 +1,29 @@
+<%= render :layout => '/refinery/second_pages', :locals => { :title => "Search", :path => refinery.search_root_path.to_s  } do%>
+  <% if params[:query].present? %>
+    <h3 class="article-header">Search results for: <%= params[:query] %></h3>
+  <% else %>
+    <h3 class="article-header">No results</h3>
+  <% end %>
+
+  <% if params[:query].present? %>
+    <% if @results.present? %>
+      <ul id="search_results">
+        <% @results.each do |result| %>
+          <li>
+            <span class='result_type'>
+              <%= result_type result %>
+            </span>
+            <%= link_to result_mark(result.title).html_safe, result_url(result) %>
+          </li>
+        <% end %>
+      </ul>
+      <div class="pagination">
+        <%= will_paginate @results %>
+      </div>
+    <% else %>
+      <h3 class="article-header">No results</h3>
+    <% end %>
+  <% else %>
+    <h3 class="article-header">No results</h3>
+  <% end %>
+<% end %>

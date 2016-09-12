@@ -3,7 +3,7 @@
 	<div class="main-content cont">
 		<section class="main-content-main">
 			<div class="article-category">
-			<% if params[:controller] == "refinery/pages"%>
+			<% if (params[:controller] == "refinery/pages") || (params[:controller] == "refinery/search/search") %>
 		        <%= link_to "Home", "/" %>  /  <a href="#"><%= link_to truncate( @page.title.html_safe, length: 20, escape: false, :omission => ""), refinery.page_path(@page) %></a>
 		    <% elsif  (params[:controller] != "refinery/pages") && params[:action] == 'show'%>
 		    	<%= link_to "Home", "/" %> /  <%= link_to title, path %> /  <a href="#"><%= link_to truncate( obj.title.html_safe, length: 20, escape: false, :omission => ""), "#" %></a>
