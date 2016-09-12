@@ -8,9 +8,13 @@ module Refinery
 
       # To enable admin searching, add acts_as_indexed on searchable fields, for example:
       #
-      #   acts_as_indexed :fields => [:title]
+      acts_as_indexed :fields => [:title]
+      
       after_save :checkbox_checking
 
+      def friendly_search_name
+        "Video Gallery"
+      end
       private
         def checkbox_checking
           if self.add_to_home_page

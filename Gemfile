@@ -73,7 +73,7 @@ gem 'quiet_assets', group: :development
 gem 'refinerycms', '~> 3.0'
 
 # Optionally, specify additional Refinery CMS Extensions here:
-gem 'refinerycms-acts-as-indexed', ['~> 2.0', '>= 2.0.1']
+gem 'refinerycms-acts-as-indexed'
 gem 'refinerycms-wymeditor', ['~> 1.0', '>= 1.0.6']
 gem 'refinerycms-authentication-devise', '~> 1.0'
 #  gem 'refinerycms-blog', ['~> 3.0', '>= 3.0.0']
@@ -89,3 +89,4 @@ gem 'refinerycms-what_cooking_blocks', path: 'vendor/extensions'
 gem 'refinerycms-articles', path: 'vendor/extensions'
 gem 'refinerycms-mails', path: 'vendor/extensions'
 gem 'refinerycms-sponsors', path: 'vendor/extensions'
+gem 'refinerycms-search', github: 'refinery/refinerycms-search', branch: 'master'

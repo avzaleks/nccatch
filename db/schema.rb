@@ -11,19 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160909144632) do
+ActiveRecord::Schema.define(version: 20160830193734) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "refinery_articles", force: :cascade do |t|
-    t.string   "title"
-    t.integer  "image_id"
-    t.text     "body"
-    t.integer  "position"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "refinery_authentication_devise_roles", force: :cascade do |t|
     t.string "title"
@@ -67,15 +58,6 @@ ActiveRecord::Schema.define(version: 20160909144632) do
   add_index "refinery_authentication_devise_users", ["id"], name: "index_refinery_authentication_devise_users_on_id", using: :btree
   add_index "refinery_authentication_devise_users", ["slug"], name: "index_refinery_authentication_devise_users_on_slug", using: :btree
 
-  create_table "refinery_explore_regional_nc_fishings", force: :cascade do |t|
-    t.string   "link"
-    t.integer  "image_id"
-    t.boolean  "add_to_home_page"
-    t.integer  "position"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "refinery_image_translations", force: :cascade do |t|
     t.integer  "refinery_image_id", null: false
     t.string   "locale",            null: false
@@ -99,14 +81,6 @@ ActiveRecord::Schema.define(version: 20160909144632) do
     t.datetime "updated_at"
     t.string   "image_title"
     t.string   "image_alt"
-  end
-
-  create_table "refinery_mails", force: :cascade do |t|
-    t.string   "full_name"
-    t.string   "email"
-    t.integer  "position"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
   create_table "refinery_page_part_translations", force: :cascade do |t|
@@ -165,8 +139,6 @@ ActiveRecord::Schema.define(version: 20160909144632) do
     t.string   "layout_template"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "show_in_footer"
-    t.integer  "background_image_id"
   end
 
   add_index "refinery_pages", ["depth"], name: "index_refinery_pages_on_depth", using: :btree
@@ -174,16 +146,6 @@ ActiveRecord::Schema.define(version: 20160909144632) do
   add_index "refinery_pages", ["lft"], name: "index_refinery_pages_on_lft", using: :btree
   add_index "refinery_pages", ["parent_id"], name: "index_refinery_pages_on_parent_id", using: :btree
   add_index "refinery_pages", ["rgt"], name: "index_refinery_pages_on_rgt", using: :btree
-
-  create_table "refinery_recipes", force: :cascade do |t|
-    t.string   "title"
-    t.integer  "image_id"
-    t.text     "body"
-    t.boolean  "recipe_of_the_week"
-    t.integer  "position"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "refinery_resource_translations", force: :cascade do |t|
     t.integer  "refinery_resource_id", null: false
@@ -202,44 +164,6 @@ ActiveRecord::Schema.define(version: 20160909144632) do
     t.integer  "file_size"
     t.string   "file_uid"
     t.string   "file_ext"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "refinery_sponsor_in_footers", force: :cascade do |t|
-    t.string   "name"
-    t.string   "link"
-    t.integer  "image_id"
-    t.integer  "position"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "refinery_sponsors", force: :cascade do |t|
-    t.string   "title"
-    t.integer  "image_id"
-    t.boolean  "add_to_home_page"
-    t.integer  "position"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "refinery_videos", force: :cascade do |t|
-    t.string   "title"
-    t.string   "link"
-    t.boolean  "add_to_home_page"
-    t.integer  "position"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "refinery_what_cooking_blocks", force: :cascade do |t|
-    t.string   "title"
-    t.integer  "image_id"
-    t.integer  "file_id"
-    t.text     "body"
-    t.boolean  "add_to_home_page"
-    t.integer  "position"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
