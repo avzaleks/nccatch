@@ -2,16 +2,16 @@ en:
   refinery:
     plugins:
       explore_regional_nc_fishings:
-        title: Explore Regional Nc Fishings
+        title: Explore Regional NC Fishing
     explore_regional_nc_fishings:
       admin:
         explore_regional_nc_fishings:
           actions:
             create_new: Add New Explore Regional Nc Fishing
-            reorder: Reorder Explore Regional Nc Fishings
+            reorder: Reorder Explore Regional NC Fishings
             reorder_done: Done Reordering Explore Regional Nc Fishings
           records:
-            title: Explore Regional Nc Fishings
+            title: Explore Regional NC Fishings
             sorry_no_results: Sorry! There are no results found.
             no_items_yet: There are no Explore Regional Nc Fishings yet. Click "Add New Explore Regional Nc Fishing" to add your first explore regional nc fishing.
           explore_regional_nc_fishing:

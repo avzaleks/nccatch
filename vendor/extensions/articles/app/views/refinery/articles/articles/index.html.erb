@@ -1,9 +1,10 @@
 <%= render :layout => '/refinery/second_pages', :locals => { :title => "News & Articles", :path => refinery.articles_articles_url.to_s  } do%>
-        <% content_for :body do %>
+        <%# content_for :body do %>
+        <h3 class="article-header">News & Articles</h3>
 		  <ul id="articles">
 		    <% @articles.each do |article| %>
 		      <li>
-		        <h3><%= link_to article.title, refinery.articles_article_path(article) %></h3>
+		        <h4><%= link_to article.title, refinery.articles_article_path(article) %></h4>
 		        <p>
 			    	<%= truncate( article.body.html_safe, length: 150, escape: false, :omission => ""){ link_to "...read more", refinery.articles_article_path(article) } %>
 			    </p>
@@ -13,7 +14,7 @@
 		  <div class="pagination">
 		  	<%= will_paginate @articles %>
 		  </div>
-		<% end %>
+		<%# end %>
 
-		<%= render '/refinery/content_page' %>
+		<%#= render '/refinery/content_page' %>
 <% end %>

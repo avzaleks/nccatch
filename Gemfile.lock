@@ -161,6 +161,8 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    quiet_assets (1.1.0)
+      railties (>= 3.1, < 5.0)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -317,6 +319,7 @@ DEPENDENCIES
   jquery-rails
   pg
   pry (= 0.10.3)
+  quiet_assets
   rails (= 4.2.6)
   refinerycms (~> 3.0)
   refinerycms-acts-as-indexed (~> 2.0, >= 2.0.1)

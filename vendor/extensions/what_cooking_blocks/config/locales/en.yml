@@ -2,13 +2,13 @@ en:
   refinery:
     plugins:
       what_cooking_blocks:
-        title: What Cooking Blocks
+        title: What`s Cooking Block
     what_cooking_blocks:
       admin:
         what_cooking_blocks:
           actions:
-            create_new: Add New What Cooking Block
-            reorder: Reorder What Cooking Blocks
+            create_new: Add New Cooking Block
+            reorder: Reorder Cooking Blocks
             reorder_done: Done Reordering What Cooking Blocks
           records:
             title: What Cooking Blocks

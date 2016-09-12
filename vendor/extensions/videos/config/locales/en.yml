@@ -2,7 +2,7 @@ en:
   refinery:
     plugins:
       videos:
-        title: Videos
+        title: Video Gallery
     videos:
       admin:
         videos:

@@ -67,6 +67,8 @@ group :development do
   gem 'capistrano3-unicorn', '0.2.1'
 end
 
+gem 'quiet_assets', group: :development
+
 # Refinery CMS
 gem 'refinerycms', '~> 3.0'
 

@@ -8,7 +8,7 @@
 
 
 <%= render :layout => '/refinery/second_pages', :locals => { :title => "Video Gallery", :path => refinery.videos_videos_url.to_s  } do%>
-        <h1>Video Gallery</h1>
+        <h3 class="article-header">Video Gallery</h3>
 		  <ul id="videos">
 		    <% @videos.each do |video| %>
 		      <li>
@@ -19,4 +19,7 @@
 		      </li>
 		    <% end %>
 		  </ul>
+		<div class="pagination">
+		  	<%= will_paginate @videos %>
+		</div>
 <% end %>

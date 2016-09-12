@@ -2,7 +2,7 @@ cs:
   refinery:
     plugins:
       sponsor_in_footers:
-        title: Sponsor In Footers
+        title: Footer sponsors
     sponsor_in_footers:
       admin:
         sponsor_in_footers:
@@ -11,7 +11,7 @@ cs:
             reorder: Řadit Sponsor In Footers
             reorder_done: Konec řazení Sponsor In Footers
           records:
-            title: Sponsor In Footers
+            title: Footer sponsors
             sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
             no_items_yet: Zatím nebyly vytvořeny žádné Sponsor In Footers. Zvolte "Přidat Sponsor In Footer" pro přidání prvního sponsor in footer.
           sponsor_in_footer:

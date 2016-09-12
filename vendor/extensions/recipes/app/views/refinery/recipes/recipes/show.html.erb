@@ -1,10 +1,11 @@
-<%= render :layout => '/refinery/second_pages', :locals => { :title => "Resipes", :path => refinery.recipes_recipes_path.to_s, :obj => @recipe  } do%>
-    <% content_for :body_content_title do %>
-      <h1><%= @recipe.title.upcase %></h1>
-    <% end %>
+<%= render :layout => '/refinery/second_pages', :locals => { :title => "Recipes", :path => refinery.recipes_recipes_path.to_s, :obj => @recipe  } do%>
+    <%# content_for :body_content_title do %>
+      
+    <%# end %>
 
-    <% content_for :body do %>
+    <%# content_for :body do %>
       <section>
+      <h3 class="article-header"><%= @recipe.title.upcase %></h3>
         <p>
             <%= image_fu @recipe.image, nil, class: "recipe_image" %>
           <div class="recipe_body">
@@ -12,7 +13,7 @@
           </div>
         </p>
       </section>
-    <% end %>
+    <%# end %>
 
-    <%= render '/refinery/content_page' %>
+    <%#= render '/refinery/content_page' %>
 <% end %>
