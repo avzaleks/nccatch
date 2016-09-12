@@ -18,7 +18,6 @@
       <a href="#" class="main-footer-content-copyright-place">North Carolina Catch</a>
       <p class="main-footer-content-copyright-text">Copyright © 2016 | Privacy Policy</p>
     </div>
-    
       <% @footer_links.each_slice(6) do |group| %>
         <div class="main-footer-list">
           <% group.each do |link| %>
@@ -26,38 +25,9 @@
           <% end %>
         </div>
       <% end %>
-    
-    <!-- <div class="main-footer-list">
-      <a href="#" class="main-footer-list-element">
-        Contact Us
-      </a>
-      <a href="#" class="main-footer-list-element">
-        Admin login
-      </a>
-      <a href="#" class="main-footer-list-element">
-        Email login
-      </a>
-      <a href="#" class="main-footer-list-element">
-        Return to Home Page
-      </a>
-      <a href="#" class="main-footer-list-element">
-        Contact Webmaster
-      </a> -->
       <div class="main-footer-menu-socials">
-        <a href="#">
-          <%= image_tag "facebook.png", alt: "facebook-icon"%>
-        </a>
-        <a href="#">
-          <%= image_tag "youtube.png", alt: "youtube-icon"%>
-        </a>
-        <a href="#">
-          <%= image_tag "twitter.png", alt: "twitter-icon"%>
-        </a>
-        <a href="#">
-          <%= image_tag "google.png", alt: "google-icon"%>
-        </a>
+        <%= render partial: "refinery/social" %>
       </div>
-    <!-- </div> -->
   </div>
 </footer>
 

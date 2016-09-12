@@ -15,7 +15,7 @@ module ApplicationHelper
 			link.split('v=')[-1]
 		end
 	end
-	
+
 # TODO sponsor has "title" attr becaurse refinery get error when we use attr with name"link"
 	def sponsor_link(sponsor)
 		sponsor.title

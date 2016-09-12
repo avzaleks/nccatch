@@ -5,13 +5,13 @@ class ApplicationController < ActionController::Base
   
   private
     def find_variables
-      @sponsors = Refinery::Sponsors::Sponsor.where(add_to_home_page: true).last(2)
-      @mail = Refinery::Mails::Mail.new
-      @articles = Refinery::Articles::Article.order("created_at DESC").first(4)
+      @sponsors           = Refinery::Sponsors::Sponsor.where(add_to_home_page: true).last(2)
+      @mail               = Refinery::Mails::Mail.new
+      @articles           = Refinery::Articles::Article.order("created_at DESC").first(4)
       @what_cooking_block = Refinery::WhatCookingBlocks::WhatCookingBlock.where(add_to_home_page: true).last
-      @video = Refinery::Videos::Video.where(add_to_home_page: true).last
-      @recipe = Refinery::Recipes::Recipe.where( recipe_of_the_week: true )
-      @explore_regional = Refinery::ExploreRegionalNcFishings::ExploreRegionalNcFishing.where(add_to_home_page: true).last(4)
+      @video              = Refinery::Videos::Video.where(add_to_home_page: true).last
+      @recipe             = Refinery::Recipes::Recipe.where( recipe_of_the_week: true )
+      @explore_regional   = Refinery::ExploreRegionalNcFishings::ExploreRegionalNcFishing.where(add_to_home_page: true).last(4)
     end
 
     def footer_links
