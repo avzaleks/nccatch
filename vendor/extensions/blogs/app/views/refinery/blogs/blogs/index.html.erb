@@ -1,0 +1,14 @@
+<main class="main-content cont" data-style="display: flex;">
+  <section class="whowe">
+    <h1>Other NC Catch`s posts</h1>
+	  <ul id="blogs">
+	    <% @blogs.each do |blog| %>
+	      <li>
+	        <%= link_to blog.title, refinery.blogs_blog_path(blog) %>
+	      </li>
+	    <% end %>
+	  </ul>
+
+	</section>
+	<%= render partial: "refinery/pages/events" %>
+</main>

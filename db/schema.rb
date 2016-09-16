@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160916124241) do
+ActiveRecord::Schema.define(version: 20160916130912) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -60,6 +60,15 @@ ActiveRecord::Schema.define(version: 20160916124241) do
 
   create_table "refinery_banners", force: :cascade do |t|
     t.integer  "image_id"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "refinery_blogs", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "image_id"
+    t.text     "body"
     t.integer  "position"
     t.datetime "created_at"
     t.datetime "updated_at"

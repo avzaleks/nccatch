@@ -83,3 +83,5 @@ gem 'refinerycms-authentication-devise', '~> 1.0'
 gem 'refinerycms-banners', path: 'vendor/extensions'
 gem 'refinerycms-mails', path: 'vendor/extensions'
 gem 'refinerycms-search', github: 'refinery/refinerycms-search', branch: 'master'
+
+gem 'refinerycms-blogs', path: 'vendor/extensions'

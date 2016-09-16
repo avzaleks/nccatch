@@ -1,0 +1,29 @@
+ru:
+  refinery:
+    plugins:
+      blogs:
+        title: Blogs
+    blogs:
+      admin:
+        blogs:
+          actions:
+            create_new: Добавить Blog
+            reorder: Изменить порядок Blogs
+            reorder_done: Закончить изменять порядок Blogs
+          records:
+            title: Blogs
+            sorry_no_results: "Извините, поиск не дал результатов."
+            no_items_yet: Записей "Blogs" не найдено. Нажмите "Добавить Blog" чтобы создать blog.
+          blog:
+            view_live_html: Просмотреть blog вживую <br/><em>(в новом окне)</em>
+            edit: Редактировать blog
+            delete: Удалить blog навсегда
+      blogs:
+        show:
+          other: Другие Blogs
+  activerecord:
+    attributes:
+      'refinery/blogs/blog':
+        title: Title
+        image: Image
+        body: Body

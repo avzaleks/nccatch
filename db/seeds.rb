@@ -17,3 +17,6 @@ Refinery::Mails::Engine.load_seed
 
 # Added by Refinery CMS Search engine
 Refinery::Search::Engine.load_seed
+
+# Added by Refinery CMS Blogs extension
+Refinery::Blogs::Engine.load_seed

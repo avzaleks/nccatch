@@ -10,6 +10,7 @@ module Refinery
 
     # This action is usually accessed with the root path, normally '/'
     def home
+      @blogs_masseges = Refinery::Blogs::Blog.all
       render_with_templates?
     end
 

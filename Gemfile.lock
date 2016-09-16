@@ -13,6 +13,9 @@ PATH
     refinerycms-banners (1.0)
       acts_as_indexed (~> 0.8.0)
       refinerycms-core (~> 3.0.4)
+    refinerycms-blogs (1.0)
+      acts_as_indexed (~> 0.8.0)
+      refinerycms-core (~> 3.0.4)
     refinerycms-mails (1.0)
       acts_as_indexed (~> 0.8.0)
       refinerycms-core (~> 3.0.4)
@@ -312,6 +315,7 @@ DEPENDENCIES
   refinerycms-acts-as-indexed
   refinerycms-authentication-devise (~> 1.0)
   refinerycms-banners!
+  refinerycms-blogs!
   refinerycms-mails!
   refinerycms-search!
   refinerycms-wymeditor (~> 1.0, >= 1.0.6)

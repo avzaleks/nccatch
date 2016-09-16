@@ -1,31 +1,26 @@
 <main class="main-content cont" data-style="display: flex;">
   <section class="blog">
     <h3 class="default-title blue">Blog</h3>
-    <figure class="blog-figure">
-      <%= image_tag "blog1.png", class: "blog-figure-img", alt: "Blog" %>
-      <figcaption class="blog-figure-content">
-        <h4 class="blog-figure-content-title">NC Catch Receives $10,000 from PCS Challenge</h4>
-        <p class="blog-figure-content-text">PotashCorp/PCS Phosphate and NC Catch today announced the donation of $10,000 from PCS in support of the nonprofit’s work to strengthen markets and public awareness for local North Carolina wild-caught seafood. <a class="blog-figure-content-link" href="#"> [ READ MORE ]</a></p>
-      </figcaption>
-    </figure>
-    <figure class="blog-figure">
-      <%= image_tag "blog2.png", class: "blog-figure-img", alt: "Blog" %>
-      <figcaption class="blog-figure-content">
-        <h4 class="blog-figure-content-title">State Farmers Market to host Seafood Day Aug. 26</h4>
-        <p class="blog-figure-content-text">Shoppers can reel in some fresh N.C. seafood at the State Farmers Market during Seafood Day on Friday, Aug. 26, from 11 a.m. to 1 p.m. <a class="blog-figure-content-link" href="#">[ READ MORE ]</a></p>
-      </figcaption>
-    </figure>
-    <figure class="blog-figure">
-      <%= image_tag "blog3.png", class: "blog-figure-img", alt: "Blog" %>
-      <figcaption class="blog-figure-content">
-        <h4 class="blog-figure-content-title">Seafood Throwdown Set For 2 PM Saturday, September 17, 2016</h4>
-        <p class="blog-figure-content-text">The freshness and flavor of our seafood inspires chefs and home cooks alike. During Day at the Docks there are several small group cooking demos where you can get close and talk to the cooks. Two brilliant chefs appear on the stage for the Seafood Throwdown at 2 PM on Saturday, Sept. 17, 2016. <a class="blog-figure-content-link" href="#"> [ READ MORE ] </a></p>
-      </figcaption>
-    </figure>
+    <% if @blogs_masseges.any? %>
+      <% @blogs_masseges.each do |msg| %>
+        <figure class="blog-figure">
+          <% unless msg.image.blank? %>
+            <%= image_tag msg.image.url, class: "blog-figure-img", alt: (msg.image.url || "Blog") %>
+          <% end %>
+          <figcaption class="blog-figure-content">
+            <h4 class="blog-figure-content-title"><%= msg.title %></h4>
+            <p class="blog-figure-content-text">
+              <%= truncate( msg.body, length: 150, escape: false){ link_to "[ READ MORE ]", blogs_blog_path(msg),class: "recipes-figure-link" }%>
+            </p>
+          </figcaption>
+        </figure>
+      <% end %>
+    <% end %>
     <footer class="main-content-footer">
-      <a href="#">[View more posts]</a>
+      <%= link_to "[View more posts]", blogs_blogs_path %>
     </footer>
   </section>
+
   <section class="recipes">
     <h3 class="default-title">Recipes</h3>
     <figure class="recipes-figure">
