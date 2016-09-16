@@ -1,1 +1,12 @@
-<%= render '/refinery/content_page' %>
+<main class="main-content different-blocks cont" data-style="display: flex;">
+	<section class="whowe">
+		<h3 class="default-title blue"><%= @page.title %></h3>
+		<p class="whowe-paragraph">
+			<%= raw(@page.content_for(:body)) %>
+		</p>
+		<p class="whowe-paragraph">
+			<%= raw(@page.content_for(:side_body)) %>
+		</p>
+	</section>
+	<%= render :partial => "events" %>
+</main>
