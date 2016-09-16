@@ -6,7 +6,7 @@
     <span class="icon-bar"></span>
 </button>
 <header class="main-header cont" data-style="display: flex;">
-<%= link_to image_tag("nc_catch_logo.png"), root_path, class: "main-header-logo", alt: "NC catch logo" %>
+<%= link_to image_tag("nc_catch_logo.png"), '/', class: "main-header-logo", alt: "NC catch logo" %>
 <div class="main-header-search" data-style="display: flex;">
   <div class="main-header-search-inputs">
     <div class="main-header-search-input email">
@@ -20,7 +20,11 @@
       <% end %>
     </div>
     <div class="main-header-search-input search">
-      <input type="text" class="default-input">
+      <%= form_tag refinery.search_root_path, class: "main-header-logo-search", method: 'get' do %>
+          <%= text_field_tag :query, {}, {type: "search", placeholder: "Search...", class: "default-input", value: (params[:query] if params[:query])} %>
+        <%= submit_tag "Go", :name => nil, class: "default-submit search_button", style: "display: none" %>
+      <% end %>
+      <!-- <input type="text" class="default-input"> -->
     </div>
     <div class="main-header-socials">
       <a href="#"><%= image_tag "facebook-icon.png", class: "main-header-socials-facebook", alt: "Facebook" %></a>
@@ -30,7 +34,7 @@
   </div>
   <div class="main-header-search-buttons">
     <a href="#" class="default-button" id="sign_up">sign up</a>
-    <a href="#" class="default-button">search</a>
+    <a href="#" class="default-button" id= "search_button" >search</a>
     <a href="#" class="default-button">join</a>
   </div>
 </div>
@@ -101,7 +105,11 @@
 
   <script >
     $('#sign_up').on('click', function(){
-      $('.default-button.main-content-mailing-submit').click()
+      $('.default-button.main-content-mailing-submit').click();
+    })
+
+    $('#search_button').on('click', function(){
+      $('.default-submit.search_button').click();
     })
 
     $('.default-button.main-content-mailing-submit').click(function(e){
