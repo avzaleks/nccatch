@@ -10,7 +10,14 @@
 <div class="main-header-search" data-style="display: flex;">
   <div class="main-header-search-inputs">
     <div class="main-header-search-input email">
-      <input type="text" class="default-input" placeholder="Reveive out eNewsletter!">
+      <%= form_for [refinery, :mails_admin, @mail], class: "main-content-mailing-text" do |f| -%>
+        <%= f.email_field :email, class: 'default-input email_input', placeholder: "Reveive out eNewsletter!" %>
+        <%= submit_tag "sign up",
+             :name => nil,
+             :class => "default-button main-content-mailing-submit",
+             :tooltip => "sign up",
+             style: "display: none" %>
+      <% end %>
     </div>
     <div class="main-header-search-input search">
       <input type="text" class="default-input">
@@ -22,7 +29,7 @@
     </div>
   </div>
   <div class="main-header-search-buttons">
-    <a href="#" class="default-button">sign up</a>
+    <a href="#" class="default-button" id="sign_up">sign up</a>
     <a href="#" class="default-button">search</a>
     <a href="#" class="default-button">join</a>
   </div>
@@ -51,7 +58,7 @@
   </div>
 </nav>
 <div class="main-menu">
-  <%# unless @banner_images.blank? %>
+  <% unless @banner_images.blank? %>
     <div id="banner-carousel" class="carousel slide cont" data-ride="carousel">
       <div class="carousel-inner" role="listbox">
         <% @banner_images.each_with_index do |banner, i| %>
@@ -71,5 +78,50 @@
           <%= image_tag "arrow.png", alt: "Prev arrow" %>
       </a>
     </div>
-  <%# end  %>
+  <% end  %>
 </div>
+
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.0/additional-methods.min.js"></script>
+  <script>
+    jQuery.validator.setDefaults({
+      debug: true,
+      success: "valid"
+    });
+
+    $( "#new_mail" ).validate({
+      rules: {
+        field: {
+          required: true,
+          email: true
+        }
+      }
+    });
+  </script>
+
+  <script >
+    $('#sign_up').on('click', function(){
+      $('.default-button.main-content-mailing-submit').click()
+    })
+
+    $('.default-button.main-content-mailing-submit').click(function(e){
+      e.preventDefault();
+      data = $('#new_mail').serialize();
+      if ($('#mail_email').val().match('@') == null){
+        console.log('error email with @');
+      } else{
+        $.ajax({
+          type: 'POST',
+          url: '/refinery/mails',
+          data: data,
+          success: function(data){
+            $('#flash_error').remove();
+            $('#mail_email').val('');
+            // var flash = '<div id="flash"><b>Email was successfully saved!</b></div>'
+            // $('.main-content-mailing-text').append(flash);
+            // $('#flash').fadeOut(2000);
+          }
+        })
+      }
+    })
+  </script>

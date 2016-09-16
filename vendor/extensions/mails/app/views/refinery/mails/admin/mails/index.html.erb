@@ -5,3 +5,8 @@
   <%= render 'actions' %>
 </aside>
 <%= render '/refinery/admin/make_sortable', options: {tree: false} if !searching? and ::Refinery::Mails::Admin::MailsController.sortable? and ::Refinery::Mails::Mail.many? %>
+<section id='records'>
+  Download:
+  <%= link_to "CSV", refinery.get_csv_mails_admin_mails_path(format: "csv")%> |
+  <%= link_to "Excel", refinery.get_csv_mails_admin_mails_path(format: "xls") %>
+</section>

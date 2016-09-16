@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
   private
 
 	  def find_links
+	  	@mail = Refinery::Mails::Mail.new
 	  	@menu_items = Refinery::Page.where( show_in_menu: true )
 	  	@banner_images = Refinery::Banners::Banner.all
 	  end
