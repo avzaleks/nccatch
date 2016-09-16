@@ -1,0 +1,27 @@
+it:
+  refinery:
+    plugins:
+      mails:
+        title: Mails
+    mails:
+      admin:
+        mails:
+          actions:
+            create_new: Aggiungi Nuovo Mail
+            reorder: Riordina Mails
+            reorder_done: Termina il Riordino di Mails
+          records:
+            title: Mails
+            sorry_no_results: "Spiacenti! Nessun risultato trovato"
+            no_items_yet: Non ci sono ancora Mails. Clicca "Aggiungi Nuovo Mail" per aggiungere il tuo primo mail.
+          mail:
+            view_live_html: Guarda live questo mail <br/><em>(apre una nuova finestra)</em>
+            edit: Modifica questo mail
+            delete: Rimuovi per sempre questo mail
+      mails:
+        show:
+          other: Altri Mails
+  activerecord:
+    attributes:
+      'refinery/mails/mail':
+        email: Email

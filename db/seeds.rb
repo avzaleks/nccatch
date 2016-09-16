@@ -11,3 +11,6 @@ Refinery::Pages::Engine.load_seed
 
 # Added by Refinery CMS Banners extension
 Refinery::Banners::Engine.load_seed
+
+# Added by Refinery CMS Mails extension
+Refinery::Mails::Engine.load_seed

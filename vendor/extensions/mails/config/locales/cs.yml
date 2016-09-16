@@ -1,0 +1,27 @@
+cs:
+  refinery:
+    plugins:
+      mails:
+        title: Mails
+    mails:
+      admin:
+        mails:
+          actions:
+            create_new: Přidat Mail
+            reorder: Řadit Mails
+            reorder_done: Konec řazení Mails
+          records:
+            title: Mails
+            sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
+            no_items_yet: Zatím nebyly vytvořeny žádné Mails. Zvolte "Přidat Mail" pro přidání prvního mail.
+          mail:
+            view_live_html: Zobrazit náhled mail<br/><em>(otevře se v novém okně)</em>
+            edit: Upravit mail
+            delete: Smazat mail
+      mails:
+        show:
+          other: Další Mails
+  activerecord:
+    attributes:
+      'refinery/mails/mail':
+        email: Email
