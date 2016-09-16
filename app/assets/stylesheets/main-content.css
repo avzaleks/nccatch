@@ -4,500 +4,212 @@
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-	padding: 5px 25px;
-	background-color: #fff;
+	-js-display: flex;
+	margin-top: 3rem;
 }
 
-.main-content-main{
-	width: 64%;
+.main-content.different-blocks{
+	align-items: flex-start;
+}
+
+.blog{
+	width: 40%;
 	margin-right: 1%;
-	margin-bottom: 15px;
-}
-
-.main-content-additional{
-	width: 35%;
-	margin-bottom: 10px;
-}
-
-.main-content-additional-single-images{
-	width: 100%;
-	padding-top: 15px;
-	margin-bottom: 10%;
-}
-
-.main-content-additional-single-images img{
-	width: 100%;
-	padding-bottom: 4%;	
-}
-
-.main-content-additional-single-images p{
-	color: #b2b2b2;
-	text-align: center;
-	font-family: Arial;
-}
-
-.main-content-event{
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	background-color: #f4f4e7;
-	padding: 2% 6% 2% 3%;
-}
-
-.main-content-events .main-content-event:nth-child(2){
-	padding-top: 3%;
-}
-
-.main-content-events .main-content-event:last-child{
-	padding-bottom: 5%;
-}
-
-.main-content-event-image{
-	width: 87px;
-	height: 67px;
-}
-
-.main-content-event-block{
-	padding-left: 10px;
-}
-
-.main-content-event-title{
-	color: #2c5987;
-	font-weight: bold;
-	font-size: 21px;
-	line-height: 24px;
-}
-
-.main-content-event-text{
-	font-family: Arial;
-	color: #2c5987;
-	margin-top: 2px;
 	position: relative;
-	line-height: 21px;
+	padding-bottom: 3rem;
 }
 
-.main-content-event-readmore{
-	position: absolute;
-	bottom: 0px;
-	right: 0px;
-	color: #2c5987;
-	background-color: #f4f4e7;
-	padding-left: 5px;
-	font-weight: bold;
-	text-decoration: underline;
-	z-index: 3;
-}
-
-.main-content-event-readmore:hover{
-	color:inherit;
-}
-
-.main-content-mailing-text{
-	background-color: #e8e8f4;
-	padding:10px;
+.blog-figure{
+	margin-top:2rem;
 	overflow: hidden;
+	font-family: 'Helvetica';
 }
 
-.main-content-mailing-text p{
-	color: #2c5987;
-	line-height: 18px;
-	font-family: Arial;
-	font-size: 14px;
+.blog-figure-img{
+	float: left;
+	width: 35%;
+	margin-right: 2%;
+}
+
+.blog-figure-content{
+	float:left;
+	width: 63%;
+}
+
+.blog-figure-content-title{
+	color:#1b64b5;
+	font-size: 1.2rem;
+	margin:0 0 0.5rem 0;
+}
+
+.blog-figure-content-text{
+	font-size: 0.9rem;
+}
+
+.blog-figure-content-link{
+	font-size: 0.9rem;
+	white-space: nowrap;
+	color:#244FB5;
 	font-weight: bold;
 }
 
-.main-content-additional-banner{
-	margin-top: 10px;
-}
-
-.main-content-additional-banner img{
-	width:100%;
-}
-
-.main-banner-link{
-	display: block;
-	padding: 5px 25px;
-	background-color: #8aa700;
-	color: #fff;
-	font-weight: bold;
-	font-size: 18px;
-}
-
-.main-banner-link:hover{
-	color:#fff;
-}
-
-.main-content-additional-banner.multiple-banners{
-	background: #eeecf1;
-	padding-bottom: 2%;
-}
-
-.main-content-additional-banner.multiple-banners img{
-	padding: 4% 2% 0;
-}
-
-.main-content-additional-banner.multiple-banners .main-banner-link{
-	width: 96%;
-	margin:auto;
-}
-
-.main-content-additional-banner.multiple-banners .main-banner-link:last-child{
-	margin-bottom: 4%;
-}
-
-.main-content-media{
-	margin-top: 1.5%;
-}
-
-.main-content-media-video{
-	width: 100%;
-	height: 360px;
-	vertical-align: bottom;
-}
-
-.main-content-news{
-	margin-top: 1.5%;
-	padding-bottom: 2%;
-}
-
-.main-content-news-single{
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	align-items: center;
-	padding: 2% 2.5%;
-}
-
-.main-content-news-data{
-	color: #371758;
-	font-size: 18px;
-	font-weight: 700;
-	padding:1% 2% 1% 0;
-	width: 18%;
-	text-align: center;
-}
-
-.main-content-news-title{
-	font-size: 24px;
-	font-weight: 700;
-	line-height: 24px;
-}
-
-.main-content-news .main-content-news-single:nth-child(2){
-	padding-top: 5%;
-}
-
-.main-content-news .main-content-news-single:nth-child(even){
-	background: #f0ecf0;
-	color: #4d4d4d;
-}
-
-.main-content-news .main-content-news-single:nth-child(odd){
-	color: #8e8e8e;
-}
-
-.main-content-news .main-content-news-single:last-child{
-	padding-bottom: 5%;
-}
-
-.main-cooking-book{
-	background: #ebebeb;
-	border: 1px solid #f7c97b;
-	padding: 4% 2%;
-	overflow: hidden;
-}
-
-.main-cooking-book-img{
-	width: 32%;
-	margin-right: 4%;
-	float:left;
-}
-
-.main-cooking-book-content{
-	width: 64%;
-	float:left;
-}
-
-.main-cooking-book-title{
-	color: #b0853c;
-	font-size: 36px;
-	font-weight: 700;
-}
-
-.main-cooking-book-text{
-	color: #545454;
-	font-size: 18px;
-	font-style: italic;
-	line-height: 25px;
-}
-
-.main-cooking-book-text-link{
-	color: #bd7429;
-}
-
-.main-cooking-book-text-link:hover{
-	color:#bd7429;
-}
-
-.main-cooking-book-footer a{
-	color: #19366a;
-	font-size: 21px;
-	font-weight: 500;
-	font-style: italic;
-	text-decoration: underline;
-}
-
-.main-sponsors{
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	background:#e5e6e7;
-	padding:1% 1% 1.5% 1%;
-	justify-content: space-around;
-}
-
-.main-sponsors-single{
-	width: 19%;
+.recipes{
+	width: 30%;
 	margin-right: 1%;
-	border:5px solid #fff;
-	text-align: center;
+	position: relative;
+	padding-bottom: 3rem;
 }
 
-.main-sponsors-centrer{
-	display: table-cell;
-	vertical-align: middle;
-	width: 188px;
-	height: 160px;
+.recipes-figure{
+	margin-top: 2rem;
 }
 
-.main-sponsors-centrer img{
+.recipes-figure-img{
 	width: 100%;
-	max-height: 160px;
 }
 
-.main-sponsors-single:last-child{
-	margin-right: 0;
+.recipes-figure-title{
+	color: #1b64b5;
+	font-size: 1.2rem;
+	margin: 0.5rem 0 0.5rem 0;
 }
 
-@media (max-width: 1020px){
-	.main-content-event-image{
-		width: 70px;
-		height: 57px;
-	}
-	.main-content-event-title{
-		font-size: 17px;
-		line-height:19px;
-	}
-
-	.main-content-event-text{
-		font-size: 13px;
-		line-height: 19px;
-	}
-
-	.main-content-mailing-text p{
-		font-size: 13px;
-		line-height: 15px;
-	}
-
-	.main-banner-link{
-		font-size: 14px;
-		padding: 4px 18px;
-	}
-
-	.main-content-media-video{
-		height: 290px;
-	}
-
-	.main-content-news-data{
-		font-size: 16px;
-	}
-
-	.main-content-news-title{
-		font-size: 18px;
-		line-height: 21px;
-	}
-
-	.main-cooking-book-title{
-		font-size: 26px;
-	}
-
-	.main-cooking-book-text{
-		font-size: 15px;
-		line-height: 20px;
-	}
-
-	.main-cooking-book-footer a{
-		font-size: 17px;
-	}
-
-	.main-sponsors-centrer{
-		width: 170px;
-		height: 130px;
-	}
+.recipes-figure-link{
+	font-size: 0.9rem;
+	white-space: nowrap;
+	color: #244FB5;
+	font-weight: bold;
 }
 
-@media(max-width: 820px){
-	.main-content-event-image{
-		width: 60px;
-		height: 50px;
-	}
-	.main-content-event-title{
-		font-size: 15px;
-		line-height:17px;
-	}
-
-	.main-content-event-text{
-		font-size: 12px;
-		line-height: 16px;
-	}
-
-	.main-content-mailing-text p{
-		font-size: 12px;
-		line-height: 13px;
-	}
-
-	.main-banner-link{
-		font-size: 13px;
-		padding: 3px 14px;
-	}
-
-	.main-content-media-video{
-		height: 260px;
-	}
-
-	.main-content-news-data{
-		font-size: 14px;
-	}
-
-	.main-content-news-title{
-		font-size: 16px;
-		line-height: 19px;
-	}
-
-	.main-cooking-book-title{
-		font-size: 21px;
-	}
-
-	.main-cooking-book-text{
-		font-size: 13px;
-		line-height: 17px;
-	}
-
-	.main-cooking-book-footer a{
-		font-size: 15px;
-	}
-
-	.main-sponsors-centrer{
-		width: 130px;
-		height: 116px;
-	}
-
-	.main-banner-link{
-		font-size: 12px;
-		padding: 3px 14px;
-	}
+.recipes-figure-text{
+	font-size: 0.9rem;
 }
 
-@media(max-width: 768px){
+.events{
+	width: 28%;
+	position: relative;
+	padding-bottom: 3rem;
+}
+
+.event{
+	margin-top: 2rem;
+	padding: 1rem 2rem;
+	overflow: hidden;
+    background: #ffffff;
+    background: -moz-linear-gradient(top, #ffffff 0%, #f4f3f0 100%);
+    background: -webkit-linear-gradient(top, #ffffff 0%,#f4f3f0 100%);
+    background: linear-gradient(to bottom, #ffffff 0%,#f4f3f0 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f4f3f0',GradientType=0 );
+    border-bottom: 2px solid #ccc;
+}
+
+.event-content-text{
+	float: left;
+	width: 80%;
+}
+
+.event-content-text .glyphicon{
+	color:#666;
+	margin-right: 4px;
+}
+
+.event-time{
+	float:left;
+	width: 12%;
+	margin-right: 6%;
+	color:#666;
+	text-align: center;
+	font-weight: bold;
+}
+
+.event-content-text-title{
+	color:#666;
+	font-size: 1.3rem;
+	font-weight: bold;
+	margin:0px;
+	margin-bottom: 0.3rem;
+}
+
+.event-time-big{
+	font-size: 1.8rem;
+	line-height: 1;
+}
+
+.event-time-small{
+	font-size: 0.9rem;
+	line-height: 0.9;
+	text-transform: uppercase;
+}
+
+.event-content-text-time{
+	color: #ff855b;
+	font-size: 0.9rem;
+	margin:0;
+}
+
+.event-content-text-address{
+	color: #ff855b;
+	font-size: 0.9rem;
+	margin:0;
+}
+
+.event-content-text-city{
+	color: #ff855b;
+	font-size: 0.9rem;
+	margin:0;
+	padding-left: 1.25rem;
+}
+
+.main-content-footer{
+	position: absolute;
+	right: 0px;
+	bottom:0px;
+}
+
+.main-content-footer a{
+	color:#fc1b1e;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 0.9rem;
+}
+
+.whowe{
+	width: 68%;
+	margin-right: 4%;
+	margin-bottom: 3rem;
+}
+
+.whowe-paragraph{
+	font-size: 1rem;
+	margin:2rem 0 0;
+}
+
+@media (max-width: 768px){
 	.main-content{
-		flex-wrap: wrap;
-		padding:0px;
+		padding:0 15px;
+		display: block;
 	}
-
-	.main-content-media{
-		margin-top: 0;
+	.blog{
+		width: 100%;
+		padding-bottom: 2rem;
+		margin-bottom: 1rem;
 	}
-
-	.main-content-news{
-		margin-top: 0;
+	.recipes{
+		width: 100%;
+		padding-bottom: 2rem;
+		margin-bottom: 1rem;
 	}
-
-	.main-content-event{
-		padding:2%;
+	.events{
+		width: 100%;
+		padding-bottom: 2rem;
+		margin-bottom: 1rem;
 	}
-
-	.main-content-main{
+	.event{
+		max-width: 260px;
+		margin:1rem auto 1rem;
+	}
+	.whowe{
 		width: 100%;
 		margin-right: 0;
 	}
-
-	.main-content-additional{
-		width: 100%;
-		margin-top: 1%;
-	}
-
-	.main-content-news-data{
-		width: 64px;
-		min-width: 64px;
-	}
-
-	.main-content-media-video{
-		height: 240px;
-	}
-
-	.main-cooking-book{
-		padding: 10px;
-	}
-
-	.main-cooking-book-img{
-		width: 100%;
-		max-width: 360px;
-		margin: 0px auto 10px;
-		float: none;
-		display: block;
-	}
-
-	.main-content-news .main-content-news-single:nth-child(2){
-		padding-top: 2%;
-	}
-
-	.main-content-news .main-content-news-single:last-child{
-		padding-bottom: 0%;
-	}
-
-	.main-cooking-book-content{
-		width: 100%;
-		padding: 0;
-	}
-
-	.main-sponsors{
-		flex-wrap: wrap;
-	}
-
-	.main-sponsors-single{
-		width: 100%;
-	}
-
-	.main-sponsors-centrer{
-		width: 100%;
-		height: auto;
-		display: block;
-	}
-
-	.main-sponsors-centrer img{
-		max-height: inherit;
-	}
-
-	.main-content-additional-single-images{
-		margin-bottom: 0;
-	}
-
-	.main-content-additional-single-images p{
-		font-size: 20px;
-	}
-
-	.main-content-additional-single-images img{
-		padding-bottom: 1%;
-	}
-
-	.main-content-additional-banner{
-		margin-top: 5px;
-	}
-
 }

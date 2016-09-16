@@ -1,154 +1,143 @@
-<%#= render '/refinery/content_page' %>
-
-<main class="nc-catch-main">
-    <section class="main-banner cont">
-    <%= image_tag 'banner-images.png', alt: "Banner image"%>
-  </section>
-  <div class="main-content cont">
-    <section class="main-content-main">
-      <div class="main-content-events">
-        <div class="title events-title">
-          <h4 class="title-text">Upcoming Events</h4>
-          <a class="title-link" href="#">View Event Calendar</a>
-        </div>
-        <div class="main-content-event">
-          <%= image_tag "event-thumbnail.png", class: "main-content-event-image", alt: "Thumbnail" %>
-            <div class="main-content-event-block">
-            <div class="main-content-event-title">
-              Seafood Throwdown Set For 2 PM Saturday, September 17, 2016
+    <main class="main-content cont" data-style="display: flex;">
+      <section class="blog">
+        <h3 class="default-title blue">Blog</h3>
+        <figure class="blog-figure">
+          <%= image_tag "blog1.png", class: "blog-figure-img", alt: "Blog" %>
+          <figcaption class="blog-figure-content">
+            <h4 class="blog-figure-content-title">NC Catch Receives $10,000 from PCS Challenge</h4>
+            <p class="blog-figure-content-text">PotashCorp/PCS Phosphate and NC Catch today announced the donation of $10,000 from PCS in support of the nonprofit’s work to strengthen markets and public awareness for local North Carolina wild-caught seafood. <a class="blog-figure-content-link" href="#"> [ READ MORE ]</a></p>
+          </figcaption>
+        </figure>
+        <figure class="blog-figure">
+          <%= image_tag "blog2.png", class: "blog-figure-img", alt: "Blog" %>
+          <figcaption class="blog-figure-content">
+            <h4 class="blog-figure-content-title">State Farmers Market to host Seafood Day Aug. 26</h4>
+            <p class="blog-figure-content-text">Shoppers can reel in some fresh N.C. seafood at the State Farmers Market during Seafood Day on Friday, Aug. 26, from 11 a.m. to 1 p.m. <a class="blog-figure-content-link" href="#">[ READ MORE ]</a></p>
+          </figcaption>
+        </figure>
+        <figure class="blog-figure">
+          <%= image_tag "blog3.png", class: "blog-figure-img", alt: "Blog" %>
+          <figcaption class="blog-figure-content">
+            <h4 class="blog-figure-content-title">Seafood Throwdown Set For 2 PM Saturday, September 17, 2016</h4>
+            <p class="blog-figure-content-text">The freshness and flavor of our seafood inspires chefs and home cooks alike. During Day at the Docks there are several small group cooking demos where you can get close and talk to the cooks. Two brilliant chefs appear on the stage for the Seafood Throwdown at 2 PM on Saturday, Sept. 17, 2016. <a class="blog-figure-content-link" href="#"> [ READ MORE ] </a></p>
+          </figcaption>
+        </figure>
+        <footer class="main-content-footer">
+          <a href="#">[View more posts]</a>
+        </footer>
+      </section>
+      <section class="recipes">
+        <h3 class="default-title">Recipes</h3>
+        <figure class="recipes-figure">
+          <%= image_tag "recipe2.png", class: "recipes-figure-img",  alt: "recipe" %>
+          <figcaption>
+            <h4 class="recipes-figure-title">Seared Rockfish with Herb Butter</h4>
+            <p class="recipes-figure-text">Pat fish dry. Water is the enemy here! Slice fillet into four pieces diagonally. Score the skin side. Season with salt, pepper and a very light dusting of Wondra flour on both sides. fish for 20-30 seconds to prevent curling. <a href="#" class="recipes-figure-link">[ READ MORE ]</a></p>
+          </figcaption>
+        </figure>
+        <figure class="recipes-figure">
+          <%= image_tag "recipe1.png", class: "recipes-figure-img", alt: "recipe" %>
+          <figcaption>
+            <h4 class="recipes-figure-title">Ina Garten’s Make-Ahead Coquilles St.-Jacques</h4>
+            <p class="recipes-figure-text">Here is an easy version of coquilles St.-Jacques, the classic French preparation of scallops in a creamy sauce, under a crust of bread crumbs and cheese. It comes from Ina Garten, the celebrated... <a href="#" class="recipes-figure-link">[ READ MORE ]</a></p>
+          </figcaption>
+        </figure>
+        <footer class="main-content-footer">
+          <a href="#">[View more recipes]</a>
+        </footer>
+      </section>
+      <section class="events">
+        <h3 class="default-title">Events</h3>
+        <div class="event">
+          <div class="event-time">
+            <div class="event-time-big">24</div>
+            <div class="event-time-small">sep</div>
+          </div>
+          <div class="event-content">
+            <div class="event-content-text">
+              <h4 class="event-content-text-title">
+                2016 Annual Catch Summit: Beaufort
+              </h4>
+              <p class="event-content-text-time">
+                <span class="glyphicon glyphicon-time" aria-hidden="true"></span>04:30pm - 10:00pm
+              </p>
+              <p class="event-content-text-address">
+                <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>102 South Main St.
+              </p>
+              <p class="event-content-text-city">
+                Beaufort. NC
+              </p>
             </div>
-            <div class="main-content-event-text">
-              The freshness and flavor of our seafood inspires chefs and home cooks alike. During Day at the Docks there are several small...
-              <a href="" class="main-content-event-readmore">READ MORE</a>
+          </div>
+        </div>
+        <div class="event">
+          <div class="event-time">
+            <div class="event-time-big">24</div>
+            <div class="event-time-small">sep</div>
+          </div>
+          <div class="event-content">
+            <div class="event-content-text">
+              <h4 class="event-content-text-title">
+                2016 Annual Catch Summit: Beaufort
+              </h4>
+              <p class="event-content-text-time">
+                <span class="glyphicon glyphicon-time" aria-hidden="true"></span>04:30pm - 10:00pm
+              </p>
+              <p class="event-content-text-address">
+                <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>102 South Main St.
+              </p>
+              <p class="event-content-text-city">
+                Beaufort. NC
+              </p>
             </div>
           </div>
         </div>
-        <div class="main-content-event">
-          <%= image_tag "thumbnail-2.png", class: "main-content-event-image", alt: "Thumbnail" %>
-          <div class="main-content-event-block">
-            <div class="main-content-event-title">
-              Piedmont brings the Lowcountry & Bayou together for a celebration of NC Shrimp
-            </div>
-            <div class="main-content-event-text">
-              On August 24th, Piedmont’s new Executive Chef John May – formerly of Chef & The Farmer – welcomes Chef...
-              <a href="" class="main-content-event-readmore">READ MORE</a>
-            </div>
+        <div class="event">
+          <div class="event-time">
+            <div class="event-time-big">24</div>
+            <div class="event-time-small">sep</div>
           </div>
-        </div>
-        <div class="main-content-event">
-          <%= image_tag "thumbnail-3.png", class: "main-content-event-image", alt: "Thumbnail" %>
-          <div class="main-content-event-block">
-            <div class="main-content-event-title">
-              Seafood Throwdown Set For 2 PM Saturday, September 17, 2016
-            </div>
-            <div class="main-content-event-text">
-              The freshness and flavor of our seafood inspires chefs and home cooks alike. During Day at the Docks there are several small...
-              <a href="" class="main-content-event-readmore">READ MORE</a>
+          <div class="event-content">
+            <div class="event-content-text">
+              <h4 class="event-content-text-title">
+                2016 Annual Catch Summit: Beaufort
+              </h4>
+              <p class="event-content-text-time">
+                <span class="glyphicon glyphicon-time" aria-hidden="true"></span>04:30pm - 10:00pm
+              </p>
+              <p class="event-content-text-address">
+                <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>102 South Main St.
+              </p>
+              <p class="event-content-text-city">
+                Beaufort. NC
+              </p>
             </div>
           </div>
         </div>
-      </div>
-      <div class="main-content-media">
-        <div class="title media-title">
-          <h4 class="title-text">Featured Media</h4>
-          <a class="title-link" href="#">View Media Gallery</a>
-        </div>
-        <iframe class="main-content-media-video" src="https://www.youtube.com/embed/S-EXNounv-U" frameborder="0" allowfullscreen></iframe>
-      </div>
-      <div class="main-content-news">
-        <div class="title news-title">
-          <h4 class="title-text">Featured Media</h4>
-          <a class="title-link" href="#">View All News Articles</a>
-        </div>
-        <div class="main-content-news-single">
-          <div class="main-content-news-data">
-            APR 20
+        <div class="event">
+          <div class="event-time">
+            <div class="event-time-big">24</div>
+            <div class="event-time-small">sep</div>
           </div>
-          <div class="main-content-news-title">
-            Pied host a Late Spring Bacbecue with Sustainable NC Seafood
-          </div>
-        </div>
-        <div class="main-content-news-single">
-          <div class="main-content-news-data">
-            MAY 8
-          </div>
-          <div class="main-content-news-title">
-            Aquaculture and Seafood Industry Education Day
+          <div class="event-content">
+            <div class="event-content-text">
+              <h4 class="event-content-text-title">
+                2016 Annual Catch Summit: Beaufort
+              </h4>
+              <p class="event-content-text-time">
+                <span class="glyphicon glyphicon-time" aria-hidden="true"></span>04:30pm - 10:00pm
+              </p>
+              <p class="event-content-text-address">
+                <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>102 South Main St.
+              </p>
+              <p class="event-content-text-city">
+                Beaufort. NC
+              </p>
+            </div>
           </div>
         </div>
-        <div class="main-content-news-single">
-          <div class="main-content-news-data">
-            SEP 20
-          </div>
-          <div class="main-content-news-title">
-            Z. Smith Reynolds Foundation awards $40,000 to NC Catch
-          </div>
-        </div>
-        <div class="main-content-news-single">
-          <div class="main-content-news-data">
-            DEC 15
-          </div>
-          <div class="main-content-news-title">
-            NCDEQ Secretary van der Vaart to Participate in NC Catch Summit
-          </div>
-        </div>
-      </div>
-      <div class="main-cooking-book">
-        <%= image_tag "seafood-guide.png", alt: "Seafood Guide", class: "main-cooking-book-img"%>
-        <div class="main-cooking-book-content">
-          <header class="main-cooking-book-title">
-            What's Cooking?
-          </header>
-          <p class="main-cooking-book-text">
-            Freshness comes from local waters and our friends at North Carolina Sea Grant have created a seafood availability guide featuring seasonal choices. Summer brings to North Carolina docks the world’s finest shrimp. And there’s plenty of finfish to round out seasonal menus.
-          </p>
-          <p class="main-cooking-book-text">
-            Dining out? Be sure to ask your server for <a href="#" class="main-cooking-book-text-link">"Local Catch"</a> selections.
-          </p>
-          <footer class="main-cooking-book-footer">
-            <a href="#">Click here to download the Guide</a>
-          </footer>
-        </div>
-      </div>
-    </section>
-    <aside class="main-content-additional">
-      <div class="main-content-mailing">
-        <div class="title mailing-title">
-          <h4 class="title-text">Join our mailing list!</h4>
-        </div>
-        <form class="main-content-mailing-text">
-          <p>
-            Submit your email address to receive our monthly e-newseltter with events, recipes, special offers and more!
-          </p>
-          <input class="default-input" placeholder="Full Name" type="text">
-          <input class="default-input" placeholder="Email" type="email">
-          <input class="default-button main-content-mailing-submit" type="submit" value="Submit">
-        </form>
-      </div>
-      <div class="main-content-additional-banner">
-        <header class="title recipe-title">
-          <h4 class="title-text">Recipe of the Week</h4>
-          <a class="title-link" href="#">View All</a>
-        </header>
-        <%= image_tag "recipe-photo.png", alt: "Recipe photo"%>
-     </div>
-      <div class="main-content-additional-banner multiple-banners">
-        <header class="title explore-title">
-          <h4 class="title-text">Explore Regional NC Fishing</h4>
-        </header>
-        <%= image_tag "brunswick-catch.png", alt: "Recipe photo"%>
-        <a href="#" class="main-banner-link">Visit BrunswickCatch.com</a>
-        <%= image_tag "cartaret-catch.png", alt: "Recipe photo"%>
-
-        <a href="#" class="main-banner-link">Visit CarteretCatch.org</a>
-        <%= image_tag "outer-banks-catch.png", alt: "Recipe photo"%>
-
-        <a href="#" class="main-banner-link">Visit OuterBanksCatch.com</a>
-        <%= image_tag "ocracoke-fresh.png", alt: "Recipe photo"%>
-
-        <a href="#" class="main-banner-link">Visit OcracokeSeafood.com</a>
-      </div>
-    </aside>
-  </div>
-
-</main>
+        <footer class="main-content-footer">
+          <a href="#">[View more events]</a>
+        </footer>
+      </section>
+    </main>

@@ -1,0 +1,37 @@
+@font-face{
+	font-family:'function';
+	src: url(../fonts/function_regular.ttf);
+}
+
+*{
+	font-size: 1rem;
+}
+
+html{
+	font-size: 14px;
+	font-family: "function";
+}
+
+.cont{
+	width: 1000px;
+	margin:auto;
+}
+
+@media(max-width: 1100px){
+	html{
+		font-size: 10px;
+	}
+
+	.cont{
+		width: 720px;
+	}
+}
+
+@media(max-width: 768px){
+	html{
+		font-size: 14px;
+	}
+	.cont{
+		width: 100%;
+	}
+}

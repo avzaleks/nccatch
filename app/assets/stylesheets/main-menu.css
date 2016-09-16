@@ -1,0 +1,148 @@
+.main-menu{
+	background-color: #DDDCDC;
+}
+
+.main-menu-nav{
+	position: relative;
+	z-index: 2;
+}
+
+.main-menu-nav .navbar-collapse.collapse{
+	padding:0;
+}
+
+.main-menu-nav .navbar-collapse.collapsing{
+	padding: 0;
+}
+
+.main-menu-nav .navbar-toggle{
+	border:1px solid #ccc;
+}
+
+.main-menu-nav .icon-bar{
+	background: #ccc;	
+}
+
+#banner-carousel{
+	position: relative;
+	z-index: 1;
+}
+
+.main-menu-list{
+	padding: 0;
+	background: #344CAF;
+	margin:0;
+	-webkit-overflow-scrolling: touch;
+}
+
+.main-menu-list > li{
+	display: inline-block;
+}
+
+.main-menu-list-element{
+	position: relative;
+}
+
+.main-menu-list-element > a{
+	display: inline-block;
+	padding: 0.7rem 1.7rem;
+	color: #fff;
+	font-weight: bold;
+	font-size: 1.6rem;
+}
+
+.main-menu-list-element > a:hover{
+	text-decoration: none;
+}
+
+.main-menu-subcategory{
+	display: none;
+	position: absolute;
+	top: 3.7rem;
+	padding: 1rem 0;
+	background-color: rgba(0,0,0,0.65);
+}
+
+.main-menu-list-element:hover .main-menu-subcategory{
+	display: block;	
+}
+
+.main-menu-subcategory li{
+	white-space: nowrap;
+	list-style-type: none;
+}
+
+.main-menu-subcategory li a{
+	display: block;
+    color: #fff;
+    padding: 0.25rem 1.7rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.main-menu-subcategory li a:hover{
+	text-decoration: none;
+	background: #344CAF;
+}
+
+.main-menu-carousel-control{
+	display: inline-block;
+	width: 3.5rem;
+	height: 3.5rem;
+	position: absolute;
+	top: 50%;
+	margin-top: -1.75rem;
+	background: #8B8B8B;
+	text-align: center;
+}
+
+.main-menu-carousel-control:hover{
+	background: #344CAF;
+}
+
+.main-menu-carousel-control img{
+	padding-top: 1rem;
+}
+
+.main-menu-carousel-control.left{
+	left: -3.5rem;
+}
+
+.main-menu-carousel-control.right{
+	right: -3.5rem;
+	transform: rotate(180deg)
+}
+
+@media(max-width: 1100px){
+	.main-menu-carousel-control.right{
+		right: 0;
+	}
+	.main-menu-carousel-control.left{
+		left: 0;
+	}
+	.main-menu-carousel-control img{
+		width: 10px;
+	}
+}
+
+@media(max-width: 768px){
+	.main-menu{
+		display: none;
+	}
+
+	.main-menu-list{
+		overflow: hidden;
+	}
+
+	.main-menu-list > li{
+		display: block;
+	}
+
+	.main-menu-subcategory{
+		display: none;
+		position: relative;
+		top: 0rem;
+		padding: 1rem 0 1rem 1rem;
+		background-color: rgba(0,0,0,0.65);
+	}
+}

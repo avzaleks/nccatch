@@ -1,0 +1,40 @@
+.default-button{
+	display: inline-block;
+	padding: 0.5rem 2rem;
+	color: #fff;
+	text-align: center;
+	font-size: 1rem;
+	background-color: #244FB5;
+	min-width: 8.5rem;
+	width: 100%;
+}
+
+.default-button:hover{
+	color:#fff;
+}
+
+.default-button:focus, .default-button:visited{
+	color:#fff;
+}
+
+.default-input{
+	width: 100%;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	background-color: rgba(230, 230, 230, 0.2);
+	padding: 0.44rem;
+	font-size: 1rem;
+}
+
+.default-title{
+	color: #fff;
+	padding: 0.5rem 0.8rem;
+	margin: 0px;
+	background: #999999;
+	text-transform: uppercase;
+	font-size: 1.5rem;
+}
+
+.default-title.blue{
+	background: #244FB5;
+}

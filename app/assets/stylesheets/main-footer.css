@@ -1,0 +1,32 @@
+.main-footer{
+	margin-top: 2rem;
+	border-top: 3px solid #2B8CEC;
+	font-family: "Helvetica";
+}
+
+.main-footer-contacts{
+	font-size: 0.9rem;
+	font-weight: bold;
+	padding:1rem 0;
+}
+
+.main-footer-copyrights{
+	padding-bottom: 2rem;
+	font-size: 0.8rem;
+}
+
+.main-footer-copyrights-company{
+	font-weight: bold;
+	color:#000;
+}
+
+.main-footer-copyrights-powered{
+	color: #ff8a00;
+}
+
+@media(max-width: 768px){
+	.main-footer{
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+}

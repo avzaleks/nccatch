@@ -1,57 +1,132 @@
-<header class="main-header cont">
+<nav class="main-menu-nav cont">
   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-    <span class="sr-only">Toggle navigation</span>
+      <span class="sr-only">Toggle navigation</span>
     <span class="icon-bar"></span>
     <span class="icon-bar"></span>
     <span class="icon-bar"></span>
-  </button>
-  <div class="main-header-logo">
-    <div></div>
-    <div class="main-header-logo-img">
-      <%= image_tag "nc-catch-logo.png", alt: "Nc catch logo" %>
+</button>
+<header class="main-header cont" data-style="display: flex;">
+<%= image_tag "nc_catch_logo.png", class: "main-header-logo", alt: "NC catch logo" %>
+<div class="main-header-search" data-style="display: flex;">
+  <div class="main-header-search-inputs">
+    <div class="main-header-search-input email">
+      <input type="text" class="default-input" placeholder="Reveive out eNewsletter!">
     </div>
-    <form class="main-header-logo-search">
-      <div class="default-text-input">
-        <input type="text" placeholder="Site Search">
-      </div>
-      <input type="button" value="GO" class="default-submit">
-    </form>
+    <div class="main-header-search-input search">
+      <input type="text" class="default-input">
+    </div>
+    <div class="main-header-socials">
+      <a href="#"><%= image_tag "facebook-icon.png", class: "main-header-socials-facebook", alt: "Facebook" %></a>
+      <a href="#"><%= image_tag "twitter-icon.png", class: "main-header-socials-twitter", alt: "Twitter" %></a>
+      <a href="#"><%= image_tag "instagram-icon.png", class: "main-header-socials-instagram", alt: "Instagram" %></a>
+    </div>
   </div>
-  <div aria-expanded="false" id="navbar" class="navbar-collapse collapse main-header-collapse">
-    <nav class="main-header-menu big-cont">
-      <ul class="main-header-menu-nav">
-        <% if @menu_items %>
-            <% @menu_items.each do |root_item| %>
-                <li class="main-header-menu-nav-element">
-                  <%= link_to root_item.title, refinery.page_path(root_item) %>
-                  <% child_items = root_item.children.where(show_in_menu: true) %>
-                  <% if child_items.present? %>
-                      <ul class="main-header-submenu">
-                        <% child_items.each do |child_item| %>
-                            <li>
-                              <%= link_to child_item.title, refinery.page_path(child_item) %>
-                            </li>
-                        <% end %>
-                      </ul>
-                  <% end %>
-                </li>
-            <% end %>
-        <% end %>
-      </ul>
-      <div class="main-header-menu-socials">
-        <a href="#">
-          <%= image_tag "facebook.png", alt: "facebook-icon" %>
-        </a>
-        <a href="#">
-          <%= image_tag "youtube.png", alt: "youtube-icon" %>
-        </a>
-        <a href="#">
-          <%= image_tag "twitter.png", alt: "twitter-icon" %>
-        </a>
-        <a href="#">
-          <%= image_tag "google.png", alt: "google-icon" %>
-        </a>
-      </div>
-    </nav>
+  <div class="main-header-search-buttons">
+    <a href="#" class="default-button">sign up</a>
+    <a href="#" class="default-button">search</a>
+    <a href="#" class="default-button">join</a>
   </div>
+</div>
 </header>
+  <div id="navbar" class="navbar-collapse collapse">
+      <ul class="main-menu-list">
+        <li class="main-menu-list-element"><a href="#">home</a>
+    <ul class="main-menu-subcategory">
+      <li><a href="#">who we are</a></li>
+      <li><a href="#">our board</a></li>
+      <li><a href="#">fundraisers & partners</a></li>
+      <li><a href="#">become a sponsor</a></li>
+      <li><a href="#">media kit</a></li>
+    </ul>
+  </li>
+  <li class="main-menu-list-element"><a href="#">about</a>
+    <ul class="main-menu-subcategory">
+      <li><a href="#">who we are</a></li>
+      <li><a href="#">our board</a></li>
+      <li><a href="#">fundraisers & partners</a></li>
+      <li><a href="#">become a sponsor</a></li>
+      <li><a href="#">media kit</a></li>
+    </ul>
+  </li>
+  <li class="main-menu-list-element">
+    <a href="#">news</a>
+    <ul class="main-menu-subcategory">
+      <li><a href="#">who we are</a></li>
+      <li><a href="#">our board</a></li>
+      <li><a href="#">fundraisers & partners</a></li>
+      <li><a href="#">become a sponsor</a></li>
+      <li><a href="#">media kit</a></li>
+    </ul>
+  </li>
+  <li class="main-menu-list-element"><a href="#">events</a>
+    <ul class="main-menu-subcategory">
+      <li><a href="#">who we are</a></li>
+      <li><a href="#">our board</a></li>
+      <li><a href="#">fundraisers & partners</a></li>
+      <li><a href="#">become a sponsor</a></li>
+      <li><a href="#">media kit</a></li>
+    </ul>
+  </li>
+  <li class="main-menu-list-element"><a href="#">recipes</a>
+    <ul class="main-menu-subcategory">
+      <li><a href="#">who we are</a></li>
+      <li><a href="#">our board</a></li>
+      <li><a href="#">fundraisers & partners</a></li>
+      <li><a href="#">become a sponsor</a></li>
+      <li><a href="#">media kit</a></li>
+    </ul>
+  </li>
+  <li class="main-menu-list-element"><a href="#">seafood</a>
+    <ul class="main-menu-subcategory">
+      <li><a href="#">who we are</a></li>
+      <li><a href="#">our board</a></li>
+      <li><a href="#">fundraisers & partners</a></li>
+      <li><a href="#">become a sponsor</a></li>
+      <li><a href="#">media kit</a></li>
+    </ul>
+  </li>
+  <li class="main-menu-list-element"><a href="#">fisheries</a>
+    <ul class="main-menu-subcategory">
+      <li><a href="#">who we are</a></li>
+      <li><a href="#">our board</a></li>
+      <li><a href="#">fundraisers & partners</a></li>
+      <li><a href="#">become a sponsor</a></li>
+      <li><a href="#">media kit</a></li>
+    </ul>
+  </li>
+  <li class="main-menu-list-element"><a href="#">contact</a>
+    <ul class="main-menu-subcategory">
+      <li><a href="#">who we are</a></li>
+      <li><a href="#">our board</a></li>
+      <li><a href="#">fundraisers & partners</a></li>
+      <li><a href="#">become a sponsor</a></li>
+      <li><a href="#">media kit</a></li>
+    </ul>
+  </li>
+    </ul>
+  </div>
+</nav>
+<div class="main-menu">
+  <div id="banner-carousel" class="carousel slide cont" data-ride="carousel">
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <%= image_tag "banner.png", alt: "Banner" %>
+        </div>
+        <div class="item">
+          <%= image_tag "banner.png", alt: "Banner" %>
+        </div>
+        <div class="item">
+          <%= image_tag "banner.png", alt: "Banner" %>
+        </div>
+        <div class="item">
+          <%= image_tag "banner.png", alt: "Banner" %>
+        </div>
+    </div>
+    <a class="main-menu-carousel-control left" href="#banner-carousel" role="button" data-slide="prev">
+        <%= image_tag "arrow.png", alt: "Prev arrow" %>
+    </a>
+    <a class="main-menu-carousel-control right" href="#banner-carousel" role="button" data-slide="next">
+        <%= image_tag "arrow.png", alt: "Prev arrow" %>
+    </a>
+  </div>
+</div>
