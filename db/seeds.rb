@@ -9,5 +9,5 @@
 # Added by Refinery CMS Pages extension
 Refinery::Pages::Engine.load_seed
 
-# Added by Refinery CMS SponsorInFooters extension
-Refinery::SponsorInFooters::Engine.load_seed
+# Added by Refinery CMS Banners extension
+Refinery::Banners::Engine.load_seed

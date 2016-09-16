@@ -6,7 +6,7 @@
     <span class="icon-bar"></span>
 </button>
 <header class="main-header cont" data-style="display: flex;">
-<%= image_tag "nc_catch_logo.png", class: "main-header-logo", alt: "NC catch logo" %>
+<%= link_to image_tag("nc_catch_logo.png"), root_path, class: "main-header-logo", alt: "NC catch logo" %>
 <div class="main-header-search" data-style="display: flex;">
   <div class="main-header-search-inputs">
     <div class="main-header-search-input email">
@@ -51,26 +51,25 @@
   </div>
 </nav>
 <div class="main-menu">
-  <div id="banner-carousel" class="carousel slide cont" data-ride="carousel">
-    <div class="carousel-inner" role="listbox">
-        <div class="item active">
-          <%= image_tag "banner.png", alt: "Banner" %>
-        </div>
-        <div class="item">
-          <%= image_tag "banner.png", alt: "Banner" %>
-        </div>
-        <div class="item">
-          <%= image_tag "banner.png", alt: "Banner" %>
-        </div>
-        <div class="item">
-          <%= image_tag "banner.png", alt: "Banner" %>
-        </div>
+  <%# unless @banner_images.blank? %>
+    <div id="banner-carousel" class="carousel slide cont" data-ride="carousel">
+      <div class="carousel-inner" role="listbox">
+        <% @banner_images.each_with_index do |banner, i| %>
+          <% if  i == 0 %>
+            <div class="item active">
+          <% else %>
+            <div class="item">
+          <% end %>
+            <%= image_tag banner.image.url, alt: "banner_alt(banner)" %>
+          </div>
+        <% end %>
+      </div>
+      <a class="main-menu-carousel-control left" href="#banner-carousel" role="button" data-slide="prev">
+          <%= image_tag "arrow.png", alt: "Prev arrow" %>
+      </a>
+      <a class="main-menu-carousel-control right" href="#banner-carousel" role="button" data-slide="next">
+          <%= image_tag "arrow.png", alt: "Prev arrow" %>
+      </a>
     </div>
-    <a class="main-menu-carousel-control left" href="#banner-carousel" role="button" data-slide="prev">
-        <%= image_tag "arrow.png", alt: "Prev arrow" %>
-    </a>
-    <a class="main-menu-carousel-control right" href="#banner-carousel" role="button" data-slide="next">
-        <%= image_tag "arrow.png", alt: "Prev arrow" %>
-    </a>
-  </div>
+  <%# end  %>
 </div>

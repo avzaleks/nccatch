@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160903182017) do
+ActiveRecord::Schema.define(version: 20160916100649) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -57,6 +57,13 @@ ActiveRecord::Schema.define(version: 20160903182017) do
 
   add_index "refinery_authentication_devise_users", ["id"], name: "index_refinery_authentication_devise_users_on_id", using: :btree
   add_index "refinery_authentication_devise_users", ["slug"], name: "index_refinery_authentication_devise_users_on_slug", using: :btree
+
+  create_table "refinery_banners", force: :cascade do |t|
+    t.integer  "image_id"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "refinery_image_translations", force: :cascade do |t|
     t.integer  "refinery_image_id", null: false
@@ -139,7 +146,6 @@ ActiveRecord::Schema.define(version: 20160903182017) do
     t.string   "layout_template"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "show_in_footer"
   end
 
   add_index "refinery_pages", ["depth"], name: "index_refinery_pages_on_depth", using: :btree
@@ -165,15 +171,6 @@ ActiveRecord::Schema.define(version: 20160903182017) do
     t.integer  "file_size"
     t.string   "file_uid"
     t.string   "file_ext"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "refinery_sponsor_in_footers", force: :cascade do |t|
-    t.string   "name"
-    t.string   "link"
-    t.integer  "image_id"
-    t.integer  "position"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
