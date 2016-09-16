@@ -85,3 +85,4 @@ gem 'refinerycms-mails', path: 'vendor/extensions'
 gem 'refinerycms-search', github: 'refinery/refinerycms-search', branch: 'master'
 
 gem 'refinerycms-blogs', path: 'vendor/extensions'
+gem 'refinerycms-recipes', path: 'vendor/extensions'

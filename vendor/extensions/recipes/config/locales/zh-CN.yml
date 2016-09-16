@@ -1,0 +1,32 @@
+zh-CN:
+  refinery:
+    plugins:
+      recipes:
+        title: Recipes
+    recipes:
+      admin:
+        recipes:
+          actions:
+            create_new: 建立新的 Recipe
+            reorder: 对 Recipes 重新排序
+            reorder_done: 对 Recipes 的重新排序结束
+          records:
+            title: Recipes
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Recipes yet. Click "Add New Recipe" to add your first recipe.
+            no_items_yet: 目前没有 Recipes . 点击 "Add New Recipe" 创建一个recipe.
+          recipe:
+            view_live_html: 查看 recipe 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 recipe
+            delete: 永久删除 recipe
+      recipes:
+        show:
+          other: 其他 Recipes
+  activerecord:
+    attributes:
+      'refinery/recipes/recipe':
+        title: Title
+        image: Image
+        add_to_the_home_page: Add To The Home Page
+        body: Body

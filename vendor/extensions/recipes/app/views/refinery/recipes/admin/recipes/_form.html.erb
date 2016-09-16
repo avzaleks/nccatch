@@ -1,0 +1,44 @@
+<%= form_for [refinery, :recipes_admin, @recipe] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @recipe,
+              :include_object_name => true %>
+
+  <div class='field'>
+    <%= f.label :title -%>
+    <%= f.text_field :title, :class => 'larger widest' -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :image -%>
+    <%= render '/refinery/admin/image_picker',
+               :f => f,
+               :field => :image_id,
+               :image => @recipe.image,
+               :toggle_image_display => false -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :add_to_the_home_page -%>
+    <%= f.check_box :add_to_the_home_page, :checked => @recipe[:add_to_the_home_page] -%>
+  </div>
+
+  <div class='field'>
+    <%= render '/refinery/admin/wysiwyg',
+                :f => f,
+                :fields => [:body],
+                :object => "recipes/recipe" -%>
+  </div>
+
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.recipes.admin.recipes.recipe'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @recipe.title) -%>
+<% end -%>
+
+<% content_for :javascripts do -%>
+  <script>
+    $(document).ready(function(){
+      page_options.init(false, '', '');
+    });
+  </script>
+<% end -%>

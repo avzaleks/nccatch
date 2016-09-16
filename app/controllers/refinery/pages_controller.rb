@@ -10,7 +10,11 @@ module Refinery
 
     # This action is usually accessed with the root path, normally '/'
     def home
-      @blogs_masseges = Refinery::Blogs::Blog.all
+      @recipes = Refinery::Recipes::Recipe.where(add_to_the_home_page: true).order('created_at DESC').last(2)
+      if @recipes.blank?
+        @recipes = Refinery::Recipes::Recipe.order('created_at DESC').last(2)
+      end
+      @blogs_masseges = Refinery::Blogs::Blog.order('created_at DESC').last(3)
       render_with_templates?
     end
 

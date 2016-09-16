@@ -1,0 +1,30 @@
+nb:
+  refinery:
+    plugins:
+      recipes:
+        title: Recipes
+    recipes:
+      admin:
+        recipes:
+          actions:
+            create_new: Lag en ny Recipe
+            reorder: Endre rekkefølgen på Recipes
+            reorder_done: Ferdig å endre rekkefølgen Recipes
+          records:
+            title: Recipes
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Recipes enda. Klikk på "Lag en ny Recipe" for å legge til din første recipe.
+          recipe:
+            view_live_html: Vis hvordan denne recipe ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne recipe
+            delete: Fjern denne recipe permanent
+      recipes:
+        show:
+          other: Andre Recipes
+  activerecord:
+    attributes:
+      'refinery/recipes/recipe':
+        title: Title
+        image: Image
+        add_to_the_home_page: Add To The Home Page
+        body: Body

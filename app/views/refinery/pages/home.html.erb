@@ -23,22 +23,23 @@
 
   <section class="recipes">
     <h3 class="default-title">Recipes</h3>
-    <figure class="recipes-figure">
-      <%= image_tag "recipe2.png", class: "recipes-figure-img",  alt: "recipe" %>
-      <figcaption>
-        <h4 class="recipes-figure-title">Seared Rockfish with Herb Butter</h4>
-        <p class="recipes-figure-text">Pat fish dry. Water is the enemy here! Slice fillet into four pieces diagonally. Score the skin side. Season with salt, pepper and a very light dusting of Wondra flour on both sides. fish for 20-30 seconds to prevent curling. <a href="#" class="recipes-figure-link">[ READ MORE ]</a></p>
-      </figcaption>
-    </figure>
-    <figure class="recipes-figure">
-      <%= image_tag "recipe1.png", class: "recipes-figure-img", alt: "recipe" %>
-      <figcaption>
-        <h4 class="recipes-figure-title">Ina Garten’s Make-Ahead Coquilles St.-Jacques</h4>
-        <p class="recipes-figure-text">Here is an easy version of coquilles St.-Jacques, the classic French preparation of scallops in a creamy sauce, under a crust of bread crumbs and cheese. It comes from Ina Garten, the celebrated... <a href="#" class="recipes-figure-link">[ READ MORE ]</a></p>
-      </figcaption>
-    </figure>
+    <% if @recipes.any? %>
+      <% @recipes.each do |recipe| %>
+        <figure class="recipes-figure">
+          <% unless recipe.image.blank? %>
+            <%= image_tag recipe.image.url, class: "recipes-figure-img",  alt: "recipe" %>
+          <% end %>
+          <figcaption>
+            <h4 class="recipes-figure-title">resipe.title</h4>
+            <p class="recipes-figure-text">
+            <%= truncate( recipe.body, length: 150, escape: false){ link_to "[ READ MORE ]", recipes_recipe_path(recipe),class: "recipes-figure-link" }%>
+            </p>
+          </figcaption>
+        </figure>
+      <% end %>
+    <% end %>
     <footer class="main-content-footer">
-      <a href="#">[View more recipes]</a>
+      <%= link_to '[View more recipes]', recipes_recipes_path %>
     </footer>
   </section>
 

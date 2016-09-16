@@ -22,7 +22,7 @@ module Refinery
     protected
 
       def find_all_blogs
-        @blogs = Blog.order('position ASC')
+        @blogs = Blog.order('created_at DESC')
       end
 
       def find_page

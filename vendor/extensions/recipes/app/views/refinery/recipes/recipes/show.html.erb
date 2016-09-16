@@ -1,0 +1,28 @@
+<main class="main-content cont" data-style="display: flex;">
+  <section class="whowe">
+    <h1><%= @recipe.title %></h1>
+    <%= image_tag @recipe.image.url %>
+    <%= raw @recipe.body %>
+    <% content_for :side_body do %>
+      <aside>
+        <h2><%= t('.other') %></h2>
+        <ul id="recipes">
+          <% @recipes.each do |recipe| %>
+            <li>
+              <%= link_to recipe.title, refinery.recipes_recipe_path(recipe) %>
+            </li>
+          <% end %>
+        </ul>
+      </aside>
+    <% end %>
+    <h1>Other NC Catch`s Recipes</h1>
+      <ul id="blogs">
+        <% @recipes.each do |recipe| %>
+          <li>
+            <%= link_to recipe.title, refinery.recipes_recipe_path(recipe) %>
+          </li>
+        <% end %>
+      </ul>
+  </section>
+  <%= render partial: "refinery/pages/events" %>
+</main>

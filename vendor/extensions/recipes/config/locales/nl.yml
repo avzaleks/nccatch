@@ -1,0 +1,30 @@
+nl:
+  refinery:
+    plugins:
+      recipes:
+        title: Recipes
+    recipes:
+      admin:
+        recipes:
+          actions:
+            create_new: Nieuwe Recipe toevoegen
+            reorder: De volgorde van de Recipes wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Recipe-volgorde
+          records:
+            title: Recipes
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Recipes. Druk op 'Nieuwe Recipe toevoegen' om de eerste toe te voegen.
+          recipe:
+            view_live_html: Deze recipe op de website bekijken <br/><em>(opent in een nieuw venster)</em>
+            edit: Bewerk deze recipe
+            delete: Deze recipe definitief verwijderen
+      recipes:
+        show:
+          other: Andere Recipes
+  activerecord:
+    attributes:
+      'refinery/recipes/recipe':
+        title: Title
+        image: Image
+        add_to_the_home_page: Add To The Home Page
+        body: Body

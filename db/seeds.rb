@@ -20,3 +20,6 @@ Refinery::Search::Engine.load_seed
 
 # Added by Refinery CMS Blogs extension
 Refinery::Blogs::Engine.load_seed
+
+# Added by Refinery CMS Recipes extension
+Refinery::Recipes::Engine.load_seed

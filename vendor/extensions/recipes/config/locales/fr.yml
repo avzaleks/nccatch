@@ -1,0 +1,30 @@
+fr:
+  refinery:
+    plugins:
+      recipes:
+        title: Recipes
+    recipes:
+      admin:
+        recipes:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Recipe
+            reorder: Réordonner les Recipes
+            reorder_done: Fin de réordonnancement des Recipes
+          records:
+            title: Recipes
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Recipe. Cliquer sur "Créer un(e) nouve(au/l/lle) Recipe" pour créer votre premi(er/ère) recipe.'
+          recipe:
+            view_live_html: Voir ce(t/tte) recipe <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) recipe
+            delete: Supprimer définitivement ce(t/tte) recipe
+      recipes:
+        show:
+          other: Autres Recipes
+  activerecord:
+    attributes:
+      'refinery/recipes/recipe':
+        title: Title
+        image: Image
+        add_to_the_home_page: Add To The Home Page
+        body: Body

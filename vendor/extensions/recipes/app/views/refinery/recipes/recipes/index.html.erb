@@ -1,0 +1,14 @@
+<main class="main-content cont" data-style="display: flex;">
+  <section class="whowe">
+    <h1>Other NC Catch`s Recipes</h1>
+	  <ul id="recipeы">
+	    <% @recipes.each do |recipe| %>
+	      <li>
+	        <%= link_to recipe.title, refinery.recipes_recipe_path(recipe) %>
+	      </li>
+	    <% end %>
+	  </ul>
+
+	</section>
+	<%= render partial: "refinery/pages/events" %>
+</main>
