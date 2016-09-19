@@ -10,7 +10,8 @@
           <figcaption class="blog-figure-content">
             <h4 class="blog-figure-content-title"><%= msg.title %></h4>
             <p class="blog-figure-content-text">
-              <%= truncate( msg.body, length: 150, escape: false){ link_to "[ READ MORE ]", blogs_blog_path(msg),class: "recipes-figure-link" }%>
+              <%= truncator(msg) %>
+              <%= link_to "[ READ MORE ]", blogs_blog_path(msg),class: "recipes-figure-link" %>
             </p>
           </figcaption>
         </figure>
@@ -30,9 +31,11 @@
             <%= image_tag recipe.image.url, class: "recipes-figure-img",  alt: "recipe" %>
           <% end %>
           <figcaption>
-            <h4 class="recipes-figure-title">resipe.title</h4>
+            <h4 class="recipes-figure-title"><%= recipe.title %></h4>
             <p class="recipes-figure-text">
-            <%= truncate( recipe.body, length: 150, escape: false){ link_to "[ READ MORE ]", recipes_recipe_path(recipe),class: "recipes-figure-link" }%>
+              <%#= truncate( recipe.body, length: 150, escape: false, :separator => ' '){ link_to "[ READ MORE ]", recipes_recipe_path(recipe),class: "recipes-figure-link" }%>
+              <%= truncator(recipe) %>
+              <%= link_to "[ READ MORE ]", recipes_recipe_path(recipe),class: "recipes-figure-link" %>
             </p>
           </figcaption>
         </figure>

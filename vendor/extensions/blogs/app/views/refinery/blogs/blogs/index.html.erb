@@ -2,9 +2,9 @@
   <section class="whowe">
     <h1>Other NC Catch`s posts</h1>
 	  <ul id="blogs">
-	    <% @blogs.each do |blog| %>
+	    <% @blogs.each do |msg| %>
 	      <li>
-	        <%= link_to blog.title, refinery.blogs_blog_path(blog) %>
+	        <%= link_to truncate( msg.title, length: 100, escape: false), refinery.blogs_blog_path(msg), class: "recipes-figure-link" %>
 	      </li>
 	    <% end %>
 	  </ul>

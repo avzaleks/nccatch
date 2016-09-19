@@ -4,7 +4,8 @@
 	  <ul id="recipeы">
 	    <% @recipes.each do |recipe| %>
 	      <li>
-	        <%= link_to recipe.title, refinery.recipes_recipe_path(recipe) %>
+	      	<%= image_tag recipe.image.url, width: "100px" unless recipe.image.blank? %>
+	        <%= link_to truncate( recipe.title, length: 100, escape: false), refinery.recipes_recipe_path(recipe),class: "recipes-figure-link" %>
 	      </li>
 	    <% end %>
 	  </ul>
