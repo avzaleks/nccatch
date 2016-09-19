@@ -17,6 +17,7 @@ set :keep_releases, 5
 
 namespace :deploy do
   after :finishing, 'deploy:cleanup'
+  after :finishing, 'deploy:migrate'
   after :finishing, 'deploy:assets:precompile'
   after :finishing, 'unicorn:restart'
 end
