@@ -112,10 +112,10 @@
       $('.default-submit.search_button').click();
     })
 
-    $('.default-button.main-content-mailing-submit').click(function(e){
+    $('#sign_up').click(function(e){
       e.preventDefault();
       data = $('#new_mail').serialize();
-      if ($('#mail_email').val().match('@') == null){
+      if (/\S+@\S+/.test($('#mail_email').val()) == false){
         console.log('error email with @');
       } else{
         $.ajax({
@@ -123,7 +123,7 @@
           url: '/refinery/mails',
           data: data,
           success: function(data){
-            $('#flash_error').remove();
+            // $('#flash_error').remove();
             $('#mail_email').val('');
             // var flash = '<div id="flash"><b>Email was successfully saved!</b></div>'
             // $('.main-content-mailing-text').append(flash);

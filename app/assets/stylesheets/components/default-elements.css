@@ -4,7 +4,8 @@
 	color: #fff;
 	text-align: center;
 	font-size: 1rem;
-	background-color: #244FB5;
+	font-family: "function";
+	background-color: #3749B4;
 	min-width: 8.5rem;
 	width: 100%;
 }
@@ -27,6 +28,7 @@
 }
 
 .default-title{
+	font-family: "function";
 	color: #fff;
 	padding: 0.5rem 0.8rem;
 	margin: 0px;
@@ -36,5 +38,5 @@
 }
 
 .default-title.blue{
-	background: #244FB5;
+	background: #2789F2;
 }

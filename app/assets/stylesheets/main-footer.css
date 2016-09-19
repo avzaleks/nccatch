@@ -5,13 +5,21 @@
 }
 
 .main-footer-contacts{
-	font-size: 0.9rem;
 	font-weight: bold;
-	padding:1rem 0;
+	padding: 1.5rem 0 1rem;
+	font-size: 0.9rem;
+}
+
+.main-footer-contacts span{
+	font-size: 0.9rem;
 }
 
 .main-footer-copyrights{
 	padding-bottom: 2rem;
+	font-size: 0.8rem;
+}
+
+.main-footer-copyrights span{
 	font-size: 0.8rem;
 }
 
@@ -29,4 +37,8 @@
 		padding-right: 15px;
 		padding-left: 15px;
 	}
+}
+
+.main-footer.cont{
+	margin-top: 28px;
 }
