@@ -5,7 +5,7 @@
 	display: -o-flex;
 	display: flex;
 	-js-display: flex;
-	margin-top: 3rem;
+	margin-top: 3rem !important;
 }
 
 .main-content.different-blocks{

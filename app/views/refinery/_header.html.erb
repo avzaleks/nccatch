@@ -39,28 +39,30 @@
   </div>
 </div>
 </header>
-  <div id="navbar" class="navbar-collapse collapse">
-    <ul class="main-menu-list">
-      <% if @menu_items %>
-        <% @menu_items.each do |root_item| %>
-            <li class="main-menu-list-element">
-              <%= link_to root_item.title, refinery.page_path(root_item) %>
-              <% child_items = root_item.children.where(show_in_menu: true) %>
-              <% if child_items.present? %>
-                  <ul class="main-menu-subcategory">
-                    <% child_items.each do |child_item| %>
-                        <li>
-                          <%= link_to child_item.title, refinery.page_path(child_item) %>
-                        </li>
-                    <% end %>
-                  </ul>
-              <% end %>
-            </li>
-        <% end %>
-      <% end %>
-    </ul>
-  </div>
 </nav>
+<div id="navbar" class="navbar-collapse collapse">
+    <div class="main-menu-list-cont">
+      <ul class="main-menu-list cont">
+        <% if @menu_items %>
+          <% @menu_items.each do |root_item| %>
+              <li class="main-menu-list-element">
+                <%= link_to root_item.title, refinery.page_path(root_item) %>
+                <% child_items = root_item.children.where(show_in_menu: true) %>
+                <% if child_items.present? %>
+                    <ul class="main-menu-subcategory">
+                      <% child_items.each do |child_item| %>
+                          <li>
+                            <%= link_to child_item.title, refinery.page_path(child_item) %>
+                          </li>
+                      <% end %>
+                    </ul>
+                <% end %>
+              </li>
+          <% end %>
+        <% end %>
+      </ul>
+    </div>
+  </div>
 <div class="main-menu">
   <% unless @banner_images.blank? %>
     <div id="banner-carousel" class="carousel slide cont" data-ride="carousel">
