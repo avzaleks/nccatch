@@ -69,6 +69,11 @@ group :development do
   gem 'capistrano3-unicorn', '0.2.1'
 end
 
+#fullcalendar
+gem 'fullcalendar-rails'
+gem 'momentjs-rails'
+gem 'jquery-qtip2-rails'
+
 # Refinery CMS
 gem 'refinerycms', '~> 3.0'
 
@@ -86,3 +91,4 @@ gem 'refinerycms-search', github: 'refinery/refinerycms-search', branch: 'master
 
 gem 'refinerycms-blogs', path: 'vendor/extensions'
 gem 'refinerycms-recipes', path: 'vendor/extensions'
+gem 'refinerycms-events', path: 'vendor/extensions'

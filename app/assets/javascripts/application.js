@@ -12,5 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-
+//= require jquery.qtip.js
+//= require moment
+//= require fullcalendar
 //= require_tree .

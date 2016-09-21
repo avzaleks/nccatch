@@ -16,6 +16,9 @@ PATH
     refinerycms-blogs (1.0)
       acts_as_indexed (~> 0.8.0)
       refinerycms-core (~> 3.0.4)
+    refinerycms-events (1.0)
+      acts_as_indexed (~> 0.8.0)
+      refinerycms-core (~> 3.0.4)
     refinerycms-mails (1.0)
       acts_as_indexed (~> 0.8.0)
       refinerycms-core (~> 3.0.4)
@@ -117,6 +120,10 @@ GEM
       sass (>= 3.2)
     friendly_id (5.1.0)
       activerecord (>= 4.0.0)
+    fullcalendar-rails (2.8.0.0)
+      jquery-rails (>= 4.0.5, < 5.0.0)
+      jquery-ui-rails (>= 5.0.2)
+      momentjs-rails (>= 2.9.0)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     globalize (5.0.1)
@@ -126,6 +133,8 @@ GEM
     jbuilder (2.6.0)
       activesupport (>= 3.0.0, < 5.1)
       multi_json (~> 1.2)
+    jquery-qtip2-rails (0.5.0)
+      railties (>= 3.1.0)
     jquery-rails (4.2.1)
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
@@ -144,6 +153,8 @@ GEM
     mime-types-data (3.2016.0521)
     mini_portile2 (2.1.0)
     minitest (5.9.0)
+    momentjs-rails (2.11.1)
+      railties (>= 3.1)
     multi_json (1.12.1)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
@@ -309,8 +320,11 @@ DEPENDENCIES
   capistrano-rvm (= 0.1.2)
   capistrano3-unicorn (= 0.2.1)
   coffee-rails (~> 4.1.0)
+  fullcalendar-rails
   jbuilder (~> 2.0)
+  jquery-qtip2-rails
   jquery-rails
+  momentjs-rails
   pg
   pry (= 0.10.3)
   rails (= 4.2.6)
@@ -319,6 +333,7 @@ DEPENDENCIES
   refinerycms-authentication-devise (~> 1.0)
   refinerycms-banners!
   refinerycms-blogs!
+  refinerycms-events!
   refinerycms-mails!
   refinerycms-recipes!
   refinerycms-search!

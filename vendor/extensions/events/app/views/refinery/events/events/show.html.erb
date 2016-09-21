@@ -1,0 +1,23 @@
+<main class="main-content cont" data-style="display: flex;">
+  <section class="whowe">
+    <h3 class="default-title blue"><%= @event.title %></h3>
+    <h4>
+      Date:
+      <% events_date(@event).each do |event| %>
+        <%= event[:day] + " " + event[:month]%><%= " - " if (events_date(@event).count == 2) && (events_date(@event).index(event) == 0) %>
+      <% end %>
+    <h4>
+      Time:
+      <%= events_time(@event)%>
+    </h4>
+    <h4>
+      Location:
+      <%= @event.location %>
+    </h4>
+    <h4>
+      Description:<br><br>
+      <%= @event.description.html_safe %>
+    </h4>
+  </section>
+  <%= render partial: "refinery/pages/events" %>
+</main>

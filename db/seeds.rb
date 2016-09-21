@@ -23,3 +23,6 @@ Refinery::Blogs::Engine.load_seed
 
 # Added by Refinery CMS Recipes extension
 Refinery::Recipes::Engine.load_seed
+
+# Added by Refinery CMS Events extension
+Refinery::Events::Engine.load_seed
