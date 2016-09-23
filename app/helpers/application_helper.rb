@@ -28,10 +28,10 @@ module ApplicationHelper
 		end_m   = event.end_date.strftime('%b')
 		end_d   = event.end_date.strftime('%e')
 		hours_diff = ((Time.parse(event.end_date.to_s) - Time.parse(event.start_date.to_s)).to_i / 60 ) / 60
-		if hours_diff > 24
-			[ {day: start_d, month: start_m}, { day: end_d, month: end_m} ]
-		else
+		# if hours_diff > 24
+		# 	[ {day: start_d, month: start_m}, { day: end_d, month: end_m} ]
+		# else
 			[ {day: start_d, month: start_m} ]
-		end
+		# end
 	end
 end
