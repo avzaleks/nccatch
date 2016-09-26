@@ -1,6 +1,8 @@
 <li class='clearfix record <%= cycle("on", "on-hover") %>' id="<%= dom_id(banner) -%>">
   <span class='title'>
-    <%= image_tag banner.image.url, width: '300px' %>
+    <% unless banner.image.blank? %>
+      <%= image_tag banner.image.url, width: '300px' %>
+    <% end %>
   </span>
 
   <span class='preview'></span>

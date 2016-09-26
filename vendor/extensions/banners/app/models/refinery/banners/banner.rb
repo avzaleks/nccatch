@@ -2,7 +2,7 @@ module Refinery
   module Banners
     class Banner < Refinery::Core::BaseModel
       self.table_name = 'refinery_banners'
-
+      validates :image_id, presence: true
 
       # def title was created automatically because you didn't specify a string field
       # when you ran the refinery:engine generator. <3 <3 Refinery CMS.

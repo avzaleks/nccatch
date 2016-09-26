@@ -73,7 +73,9 @@
           <% else %>
             <div class="item">
           <% end %>
-            <%= image_tag banner.image.url, alt: "banner_alt(banner)" %>
+            <% unless banner.image.blank? %>
+              <%= image_tag banner.image.url, alt: "banner_alt(banner)" %>
+            <% end %>
           </div>
         <% end %>
       </div>
