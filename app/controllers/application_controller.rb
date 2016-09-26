@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
 	  def find_links
   		@soon_events = Refinery::Events::Event.where( "start_date > ?", Date.today ).order('start_date DESC').last(4)
 	  	@mail = Refinery::Mails::Mail.new
-	  	@menu_items = Refinery::Page.where( show_in_menu: true )
+	  	@menu_items = Refinery::Page.where( show_in_menu: true ).roots.includes(:children)
 	  	@banner_images = Refinery::Banners::Banner.all
 	  end
 end

@@ -64,7 +64,7 @@
 .main-menu-list-element > a:hover{
 	text-decoration: none;
 	background-color: #999999;
-	/*height: 100%;*/
+	top: -1px;
 }
 
 .main-menu-subcategory{
