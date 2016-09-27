@@ -67,6 +67,9 @@ group :development do
 
   # Capistrano 3.x plugin that integrates Unicorn server tasks
   gem 'capistrano3-unicorn', '0.2.1'
+
+  # Capistrano 3.x plugin for console
+  gem 'capistrano-rails-console', require: false
 end
 
 #fullcalendar
