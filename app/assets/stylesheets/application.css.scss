@@ -19,10 +19,16 @@
  */
 
 .blog_recipe_title{
-	top: -25px;
+  top: -25px;
   position: relative;
 }
 
-.blog_recipe_image, .calendar_title{
+.calendar_title{
 	margin-bottom: 25px;
+}
+
+
+.blog_recipe_image{
+  position: relative;
+  top: -21px
 }
