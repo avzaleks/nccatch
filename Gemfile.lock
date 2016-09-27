@@ -85,6 +85,8 @@ GEM
     capistrano-rails (1.1.6)
       capistrano (~> 3.1)
       capistrano-bundler (~> 1.1)
+    capistrano-rails-console (1.0.2)
+      capistrano (>= 3.1.0, < 4.0.0)
     capistrano-rvm (0.1.2)
       capistrano (~> 3.0)
       sshkit (~> 1.2)
@@ -317,6 +319,7 @@ DEPENDENCIES
   capistrano (= 3.4.0)
   capistrano-bundler (= 1.1.4)
   capistrano-rails (= 1.1.6)
+  capistrano-rails-console
   capistrano-rvm (= 0.1.2)
   capistrano3-unicorn (= 0.2.1)
   coffee-rails (~> 4.1.0)

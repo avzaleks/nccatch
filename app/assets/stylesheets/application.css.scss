@@ -17,3 +17,12 @@
  *= require jquery.qtip.css
  *= require_self
  */
+
+.blog_recipe_title{
+	top: -25px;
+  position: relative;
+}
+
+.blog_recipe_image, .calendar_title{
+	margin-bottom: 25px;
+}

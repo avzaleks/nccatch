@@ -1,7 +1,7 @@
 <main class="main-content cont" data-style="display: flex;">
   <section class="whowe">
-    <h1><%= @recipe.title %></h1>
-    <%= image_tag @recipe.image.url %>
+    <h1 class="blog_recipe_title"><%= @recipe.title %></h1>
+    <%= image_tag @recipe.image.url, class: "blog_recipe_image" %>
     <%= raw @recipe.body %>
     <% content_for :side_body do %>
       <aside>
