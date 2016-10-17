@@ -72,6 +72,9 @@ group :development do
   gem 'capistrano-rails-console', require: false
 end
 
+#paginate
+gem 'will_paginate'
+
 #fullcalendar
 gem 'fullcalendar-rails'
 gem 'momentjs-rails'

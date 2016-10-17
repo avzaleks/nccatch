@@ -1,15 +1,37 @@
-<main class="main-content cont" data-style="display: flex;">
-  <section class="whowe">
-    <h1>Other NC Catch`s Recipes</h1>
-	  <ul id="recipeы">
-	    <% @recipes.each do |recipe| %>
-	      <li>
-	      	<%= image_tag recipe.image.url, width: "100px" unless recipe.image.blank? %>
-	        <%= link_to truncate( recipe.title, length: 100, escape: false), refinery.recipes_recipe_path(recipe),class: "recipes-figure-link" %>
-	      </li>
-	    <% end %>
-	  </ul>
-
+<main class="main-content different__order cont" data-style="display: flex;">
+	<section class="main-block">
+		<h3 class="default-title blue">Recipes</h3>
+		<% if @recipes.any? %>
+			<% @recipes.each do |recipe| %>
+				<div class="single-recipe">
+					<%= image_tag recipe.image.url, class: "single-recipe__image" %>
+					<span class="single-recipe__time"><%= recipe.created_at.strftime('%b %d, %Y') %></span>
+					<h3 class="single-recipe__title"><%= recipe.title %></h3>
+					<p class="single-recipe__text">
+						<%= truncator(recipe) %>
+					</p>
+					<%= link_to "[ READ MORE ]", refinery.recipes_recipe_path(recipe),class: "single-recipe__link" %>
+				</div>
+			<% end %>
+		<% end %>
+		<div class="pagination-box">
+			<span class="pagination__label"><%= will_paginate @recipes %></span>
+			<%#= will_paginate @recipes %>
+		</div>
 	</section>
-	<%= render partial: "refinery/pages/events" %>
+	<section class="events events__recipes">
+		<h3 class="default-title">Recipe search</h3>
+		<%= form_tag refinery.recipes_search_path, method: 'post', class: "recipe-search" do %>
+			<div class="default-input-box default-input__search">
+				<%= text_field_tag :search_by_title, params[:search_by_title], placeholder: "Search by Name" %>
+			</div>
+			<div class="default-input-box default-input__search">
+				<%= text_field_tag :search_by_body, params[:search_by_body], placeholder: "Search by Ingredient" %>
+			</div>
+			<footer class="recipe-search-footer">
+				<%= link_to "[View Categories]", "#", class: "extended-link extended-link__category" %>
+				<%= submit_tag "Search", class: "default-button default-button__recipe-search" %>
+			</footer>
+		<% end %>
+	</section>
 </main>

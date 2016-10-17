@@ -6,8 +6,13 @@
 	font-size: 1rem;
 	font-family: "function";
 	background-color: #3749B4;
-	min-width: 8.5rem;
+	min-width: 9rem;
 	width: 100%;
+}
+
+.default-button.default-button__recipe-search{
+	font-weight: bold;
+	min-width: 6rem;
 }
 
 .default-button:hover{
@@ -16,6 +21,29 @@
 
 .default-button:focus, .default-button:visited{
 	color:#fff;
+}
+
+.default-input-box{
+	position: relative;
+}
+
+.default-input-box input{
+	width: 100%;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	background-color: rgba(230, 230, 230, 0.2);
+	padding: 0.54rem 0.44rem 0.44rem 3rem;
+	font-size: 1rem;
+	font-weight: bold;
+}
+
+.default-input-box.default-input__search:before{
+	content: "\e003";
+	font-family: 'Glyphicons Halflings';
+	color: #777;
+	position: absolute;
+	top: 0.5rem;
+	left: 1rem;
 }
 
 .default-input{
@@ -39,4 +67,37 @@
 
 .default-title.blue{
 	background: #2789F2;
+}
+
+.extended-link{
+	font-size: 0.95rem;
+}
+
+.extended-link.extended-link__category {
+	white-space: nowrap;
+	padding-right: 2rem;
+	font-weight: bold;
+}
+
+.pagination-box{
+	display: flex;
+	margin: auto;
+}
+
+.pagination__label{
+	margin-right: 1.2rem;
+	color: #379cec;
+}
+
+.pagination__value{
+	margin-right: 1.2rem;
+	color: #379cec;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+@media (max-width:768px) {
+	.default-button.default-button__recipe-search{
+		max-width: 8rem;
+	}
 }

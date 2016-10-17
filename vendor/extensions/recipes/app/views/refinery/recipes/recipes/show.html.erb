@@ -1,28 +1,67 @@
-<main class="main-content cont" data-style="display: flex;">
-  <section class="whowe">
-    <h1 class="blog_recipe_title"><%= @recipe.title %></h1>
-    <%= image_tag @recipe.image.url, class: "blog_recipe_image" %>
-    <%= raw @recipe.body %>
-    <% content_for :side_body do %>
-      <aside>
-        <h2><%= t('.other') %></h2>
-        <ul id="recipes">
-          <% @recipes.each do |recipe| %>
-            <li>
-              <%= link_to recipe.title, refinery.recipes_recipe_path(recipe) %>
-            </li>
-          <% end %>
-        </ul>
-      </aside>
-    <% end %>
-    <h1>Other NC Catch`s Recipes</h1>
-      <ul id="blogs">
-        <% @recipes.each do |recipe| %>
-          <li>
-            <%= link_to recipe.title, refinery.recipes_recipe_path(recipe) %>
+<main class="main-content different__order cont" data-style="display: flex;">
+      <section class="detail-recipe">
+        <h3 class="default-title blue"><%= @recipe.title %></h3>
+        <div class="detail-recipe__category">Category: <a href="#">Dinners</a> </div>
+        <header class="detail-recipe__header">
+          <%= image_tag @recipe.image.url,  class: "detail-recipe__main-image", alt: "Recipe" %>
+          <div class="detail-recipe__main-ingredients">
+          <%= @recipe.body.html_safe %>
+          </div>
+        </header>
+        <h5 class="detail-recipe__title detail-recipe__title_different-margin">Servings: 4</h5>
+        <h5 class="detail-recipe__title">Directions</h5>
+        <ol class="detail-recipe__directions-list">
+          <li>Peel any discolored leaves away from the cabbage and discard. Cut the cabbage in half (reserve one half for another time) then
+              into quarters. Cut out the core from each quarter. Now, as thinly as you can, slice the cabbage into lacy shreds. Place in a bowl.
           </li>
+          <li>Peel the garlic and thinly slice.</li>
+          <li>Lay the shrimp flat on your cutting board and, with your knife parallel to the cutting board, slice them in half.</li>
+          <li>Place a medium skillet on the stove and turn the heat on to medium. Add the oil and heat until is shimmers (about 1 minute).
+              Add the garlic and cook, stirring, until golden brown 1 to 2 minutes. Stir in the shrimp. Sprinkle with the chipotle and salt.
+              Continue to cook and stir until the shrimp is opaque throughout, 3 to 5 minutes.</li>
+          <li>Warm up your tortillas. Fill them with the shredded cabbage and shrimp. Top with the salsa. You can stop right here or keep
+              adding more of your favorite toppings. Serve with lime.</li>
+        </ol>
+        <div class="detail-recipe__author">RECIPE BY: <a href="#">Jane Smith</a></div>
+        <div class="detail-recipe__social">
+          <h5>
+            SHARE THIS RECIPE:
+          </h5>
+          <a href="#"><%= image_tag "facebook-icon.png", class: "main-header-socials-facebook", alt: "Facebook" %></a>
+          <a href="#"><%= image_tag "twitter-icon.png", class: "main-header-socials-twitter", alt: "Twitter" %></a>
+          <a href="#"><%= image_tag "google-plus.png", class: "main-header-socials-twitter", alt: "Twitter" %></a>
+          <a href="#"><%= image_tag "convert.png", class: "main-header-socials-instagram", alt: "Instagram" %></a>        </div>
+      </section>
+      <section class="events">
+        <div class="events__recent">
+          <h3 class="default-title">Most recent recipes</h3>
+          <% unless @recipes.blank? %>
+            <% @recipes.each do |recipe| %>
+              <div class="recent-recipe">
+                <%= image_tag recipe.image.url, alt: "Recent-recipe", class: "recent-recipe__image" %>
+                <div class="recent-recipe__info">
+                  <p class="recent-recipe__label">Posted:</p>
+                  <p class="recent-recipe__text"><%= recipe.created_at.strftime('%d/%m/%y') %></p>
+                  <p class="recent-recipe__label">Category:</p>
+                  <p class="recent-recipe__text">Dinners</p>
+                </div>
+                <%= link_to recipe.title, refinery.recipes_recipe_path(recipe), class: "recent-recipe__title" %>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
+        <h3 class="default-title">Recipe search</h3>
+        <%= form_tag refinery.recipes_search_path, method: 'post', class: "recipe-search" do %>
+          <div class="default-input-box default-input__search">
+            <%= text_field_tag :search_by_title, params[:search_by_title], placeholder: "Search by Name" %>
+          </div>
+          <div class="default-input-box default-input__search">
+            <%= text_field_tag :search_by_body, params[:search_by_body], placeholder: "Search by Ingredient" %>
+          </div>
+          <footer class="recipe-search-footer">
+            <%= link_to "[View Categories]", "#", class: "extended-link extended-link__category" %>
+            <%= submit_tag "Search", class: "default-button default-button__recipe-search" %>
+          </footer>
         <% end %>
-      </ul>
-  </section>
-  <%= render partial: "refinery/pages/events" %>
-</main>
+      </section>
+    </main>
