@@ -21,7 +21,12 @@
     <%= f.label :add_to_the_home_page -%>
     <%= f.check_box :add_to_the_home_page, :checked => @recipe[:add_to_the_home_page] -%>
   </div>
-
+  <div class='field'>
+  <%= render '/refinery/admin/wysiwyg',
+              :f => f,
+              :fields => [:ingredients],
+              :object => "recipes/recipe" -%>
+  </div>
   <div class='field'>
     <%= render '/refinery/admin/wysiwyg',
                 :f => f,

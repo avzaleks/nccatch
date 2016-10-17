@@ -5,24 +5,10 @@
         <header class="detail-recipe__header">
           <%= image_tag @recipe.image.url,  class: "detail-recipe__main-image", alt: "Recipe" %>
           <div class="detail-recipe__main-ingredients">
-          <%= @recipe.body.html_safe %>
+          <%= @recipe.ingredients.html_safe unless @recipe.ingredients.blank? %>
           </div>
         </header>
-        <h5 class="detail-recipe__title detail-recipe__title_different-margin">Servings: 4</h5>
-        <h5 class="detail-recipe__title">Directions</h5>
-        <ol class="detail-recipe__directions-list">
-          <li>Peel any discolored leaves away from the cabbage and discard. Cut the cabbage in half (reserve one half for another time) then
-              into quarters. Cut out the core from each quarter. Now, as thinly as you can, slice the cabbage into lacy shreds. Place in a bowl.
-          </li>
-          <li>Peel the garlic and thinly slice.</li>
-          <li>Lay the shrimp flat on your cutting board and, with your knife parallel to the cutting board, slice them in half.</li>
-          <li>Place a medium skillet on the stove and turn the heat on to medium. Add the oil and heat until is shimmers (about 1 minute).
-              Add the garlic and cook, stirring, until golden brown 1 to 2 minutes. Stir in the shrimp. Sprinkle with the chipotle and salt.
-              Continue to cook and stir until the shrimp is opaque throughout, 3 to 5 minutes.</li>
-          <li>Warm up your tortillas. Fill them with the shredded cabbage and shrimp. Top with the salsa. You can stop right here or keep
-              adding more of your favorite toppings. Serve with lime.</li>
-        </ol>
-        <div class="detail-recipe__author">RECIPE BY: <a href="#">Jane Smith</a></div>
+        <%= @recipe.body.html_safe %>
         <div class="detail-recipe__social">
           <h5>
             SHARE THIS RECIPE:

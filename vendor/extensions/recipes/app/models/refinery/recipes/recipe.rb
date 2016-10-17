@@ -8,8 +8,8 @@ module Refinery
           where("title ILIKE ?", "%#{title}%")
         end
 
-        def search_by_body(body)
-          where("body ILIKE ?", "%#{body}%")
+        def search_by_ingredient(body)
+          where("ingredients ILIKE ?", "%#{body}%")
         end
       end
 

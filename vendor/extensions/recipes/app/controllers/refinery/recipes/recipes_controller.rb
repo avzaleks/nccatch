@@ -16,7 +16,7 @@ module Refinery
         if !params[:search_by_title].blank?
           @recipes = Refinery::Recipes::Recipe.search_by_title(params[:search_by_title]).paginate(page: params[:page], per_page: 6)
         elsif !params[:search_by_body].blank?
-          @recipes = Refinery::Recipes::Recipe.search_by_body(params[:search_by_body]).paginate(page: params[:page], per_page: 6)
+          @recipes = Refinery::Recipes::Recipe.search_by_ingredient(params[:search_by_body]).paginate(page: params[:page], per_page: 6)
         else
           redirect_to refinery.recipes_recipes_path and return
         end
