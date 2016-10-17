@@ -29,25 +29,13 @@
                   <p class="recent-recipe__label">Posted:</p>
                   <p class="recent-recipe__text"><%= recipe.created_at.strftime('%d/%m/%y') %></p>
                   <p class="recent-recipe__label">Category:</p>
-                  <p class="recent-recipe__text">Dinners</p>
+                  <p class="recent-recipe__text"><%= recipe.try(:refinery_category).try(:title) %></p>
                 </div>
                 <%= link_to recipe.title, refinery.recipes_recipe_path(recipe), class: "recent-recipe__title" %>
               </div>
             <% end %>
           <% end %>
         </div>
-        <h3 class="default-title">Recipe search</h3>
-        <%= form_tag refinery.recipes_search_path, method: 'post', class: "recipe-search" do %>
-          <div class="default-input-box default-input__search">
-            <%= text_field_tag :search_by_title, params[:search_by_title], placeholder: "Search by Name" %>
-          </div>
-          <div class="default-input-box default-input__search">
-            <%= text_field_tag :search_by_body, params[:search_by_body], placeholder: "Search by Ingredient" %>
-          </div>
-          <footer class="recipe-search-footer">
-            <%= link_to "[View Categories]", "#", class: "extended-link extended-link__category" %>
-            <%= submit_tag "Search", class: "default-button default-button__recipe-search" %>
-          </footer>
-        <% end %>
+        <%= render partial: "search" %>
       </section>
     </main>

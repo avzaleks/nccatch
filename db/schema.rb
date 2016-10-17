@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161017161310) do
+ActiveRecord::Schema.define(version: 20161017162630) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -69,6 +69,13 @@ ActiveRecord::Schema.define(version: 20161017161310) do
     t.string   "title"
     t.integer  "image_id"
     t.text     "body"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "refinery_categories", force: :cascade do |t|
+    t.string   "title"
     t.integer  "position"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -190,7 +197,10 @@ ActiveRecord::Schema.define(version: 20161017161310) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "ingredients"
+    t.integer  "refinery_category_id"
   end
+
+  add_index "refinery_recipes", ["refinery_category_id"], name: "index_refinery_recipes_on_refinery_category_id", using: :btree
 
   create_table "refinery_resource_translations", force: :cascade do |t|
     t.integer  "refinery_resource_id", null: false
@@ -225,4 +235,5 @@ ActiveRecord::Schema.define(version: 20161017161310) do
   add_index "seo_meta", ["id"], name: "index_seo_meta_on_id", using: :btree
   add_index "seo_meta", ["seo_meta_id", "seo_meta_type"], name: "id_type_index_on_seo_meta", using: :btree
 
+  add_foreign_key "refinery_recipes", "refinery_categories"
 end

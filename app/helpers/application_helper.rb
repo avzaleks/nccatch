@@ -12,6 +12,16 @@ module ApplicationHelper
     end
 	end
 
+	def truncator_ingredients(msg)
+		if msg.ingredients
+	    if msg.ingredients.length > 150
+	      msg.ingredients.truncate_words(30, omission: " ").html_safe
+	    else
+	      msg.ingredients.html_safe
+	    end
+	  end
+	end
+
 	def events_time(event)
 		start_f, end_date_f = event.start_date.strftime('%l%P'), event.end_date.strftime('%l%P')
 		hours_diff = ((Time.parse(event.end_date.to_s) - Time.parse(event.start_date.to_s)).to_i / 60 ) / 60

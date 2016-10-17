@@ -16,6 +16,9 @@ PATH
     refinerycms-blogs (1.0)
       acts_as_indexed (~> 0.8.0)
       refinerycms-core (~> 3.0.4)
+    refinerycms-categories (1.0)
+      acts_as_indexed (~> 0.8.0)
+      refinerycms-core (~> 3.0.4)
     refinerycms-events (1.0)
       acts_as_indexed (~> 0.8.0)
       refinerycms-core (~> 3.0.4)
@@ -336,6 +339,7 @@ DEPENDENCIES
   refinerycms-authentication-devise (~> 1.0)
   refinerycms-banners!
   refinerycms-blogs!
+  refinerycms-categories!
   refinerycms-events!
   refinerycms-mails!
   refinerycms-recipes!

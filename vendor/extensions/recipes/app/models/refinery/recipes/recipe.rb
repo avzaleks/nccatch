@@ -3,6 +3,8 @@ module Refinery
     class Recipe < Refinery::Core::BaseModel
       self.table_name = 'refinery_recipes'
 
+      belongs_to :refinery_category, :class_name => '::Refinery::Categories::Category'
+
       class << self
         def search_by_title(title)
           where("title ILIKE ?", "%#{title}%")

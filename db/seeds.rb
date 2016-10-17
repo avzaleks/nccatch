@@ -26,3 +26,6 @@ Refinery::Recipes::Engine.load_seed
 
 # Added by Refinery CMS Events extension
 Refinery::Events::Engine.load_seed
+
+# Added by Refinery CMS Categories extension
+Refinery::Categories::Engine.load_seed

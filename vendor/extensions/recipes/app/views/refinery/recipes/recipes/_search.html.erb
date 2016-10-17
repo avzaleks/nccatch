@@ -1,0 +1,13 @@
+<h3 class="default-title">Recipe search</h3>
+<%= form_tag refinery.recipes_search_path, method: 'post', class: "recipe-search" do %>
+	<div class="default-input-box default-input__search">
+		<%= text_field_tag :search_by_title, params[:search_by_title], placeholder: "Search by Name" %>
+	</div>
+	<div class="default-input-box default-input__search">
+		<%= text_field_tag :search_by_body, params[:search_by_body], placeholder: "Search by Ingredient" %>
+	</div>
+	<footer class="recipe-search-footer">
+		<%= link_to "[View Categories]", refinery.categories_categories_path, class: "extended-link extended-link__category" %>
+		<%= submit_tag "Search", class: "default-button default-button__recipe-search" %>
+	</footer>
+<% end %>

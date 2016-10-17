@@ -9,7 +9,7 @@ module Refinery
 
         # Only allow a trusted parameter "white list" through.
         def recipe_params
-          params.require(:recipe).permit(:title, :image_id, :add_to_the_home_page, :body, :ingredients)
+          params.require(:recipe).permit(:title, :image_id, :add_to_the_home_page, :body, :ingredients, :refinery_category_id)
         end
       end
     end

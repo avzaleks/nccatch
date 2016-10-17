@@ -21,6 +21,12 @@
     <%= f.label :add_to_the_home_page -%>
     <%= f.check_box :add_to_the_home_page, :checked => @recipe[:add_to_the_home_page] -%>
   </div>
+
+  <div class='field'>
+    <%= f.label :category -%>
+    <% @categories = Refinery::Categories::Category.all -%>
+    <%= f.select 'refinery_category_id', options_for_select(@categories.map { |cat| [cat.title, cat.id] }, :selected => @recipe.refinery_category_id ) %>
+  </div>
   <div class='field'>
   <%= render '/refinery/admin/wysiwyg',
               :f => f,
