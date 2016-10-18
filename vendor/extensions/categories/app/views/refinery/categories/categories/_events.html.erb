@@ -1,0 +1,31 @@
+<!-- <section class="events"> -->
+	<h3 class="default-title">Events</h3>
+		<% unless @soon_events.blank? %>
+			<% @soon_events.each do |event| %>
+				<div class="event">
+					<div class="event-time">
+						<% events_date(event).each do |event| %>
+							<div class="event-time-big"><%= event[:day] %></div>
+							<div class="event-time-small"><%= event[:month] %></div>
+						<% end %>
+					</div>
+					<div class="event-content">
+						<div class="event-content-text">
+							<h4 class="event-content-text-title">
+								<%= link_to event.title, refinery.events_event_path(event), class: "event-content-text-title" %>
+							</h4>
+							<p class="event-content-text-time">
+								<span class="glyphicon glyphicon-time" aria-hidden="true"></span><%= events_time(event) %>
+							</p>
+							<p class="event-content-text-address">
+								<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span><%= event.location %>
+							</p>
+						</div>
+					</div>
+				</div>
+			<% end %>
+		<% end %>
+	<footer class="main-content-footer">
+		<%= link_to '[View more events]', refinery.events_events_path %>
+	</footer>
+<!-- </section> -->

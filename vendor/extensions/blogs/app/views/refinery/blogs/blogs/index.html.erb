@@ -1,14 +1,24 @@
-<main class="main-content cont" data-style="display: flex;">
-  <section class="whowe">
-    <h1>Other NC Catch`s posts</h1>
-	  <ul id="blogs">
-	    <% @blogs.each do |msg| %>
-	      <li>
-	        <%= link_to truncate( msg.title, length: 100, escape: false), refinery.blogs_blog_path(msg), class: "recipes-figure-link" %>
-	      </li>
-	    <% end %>
-	  </ul>
-
+<main class="main-content different__order cont" data-style="display: flex;">
+	<section class="main-block">
+		<h3 class="default-title blue">Posts</h3>
+		<% if @posts.any? %>
+			<% @posts.each do |post| %>
+				<div class="single-recipe">
+					<%= image_tag post.image.url, class: "single-recipe__image" %>
+					<span class="single-recipe__time"><%= post.created_at.strftime('%b %d, %Y') %></span>
+					<h3 class="single-recipe__title"><%= post.title %></h3>
+					<p class="single-recipe__text">
+						<%= truncator(post) %>
+					</p>
+					<%= link_to "[ READ MORE ]", refinery.blogs_blog_path(post),class: "single-recipe__link" %>
+				</div>
+			<% end %>
+		<% end %>
+		<div class="pagination-box">
+			<span class="pagination__label"><%= will_paginate @posts %></span>
+		</div>
 	</section>
-	<%= render partial: "refinery/pages/events" %>
+	<section class="events events__recipes">
+		<%= render partial: "search" %>
+	</section>
 </main>

@@ -6,7 +6,11 @@ module Refinery
       before_action :find_page
 
       def index
-        @recipes = Refinery::Recipes::Recipe.paginate(page: params[:page], per_page: 6)
+        unless params[:category]
+          @recipes = Refinery::Recipes::Recipe.order('created_at DESC').paginate(page: params[:page], per_page: 6)
+        else
+          @recipes = Refinery::Categories::Category.find(params[:category]).recipes.order('created_at DESC').paginate(page: params[:page], per_page: 6)
+        end
         present(@page)
       end
 

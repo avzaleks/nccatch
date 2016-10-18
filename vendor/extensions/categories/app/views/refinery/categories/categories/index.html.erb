@@ -1,11 +1,24 @@
-<% content_for :body do %>
-  <ul id="categories">
-    <% @categories.each do |category| %>
-      <li>
-        <%= link_to category, refinery.categories_category_path(category) %>
-      </li>
-    <% end %>
-  </ul>
-<% end %>
-
-<%= render '/refinery/content_page' %>
+<main class="main-content different__order cont" data-style="display: flex;">
+	<section class="main-block">
+		<h3 class="default-title blue">Categories</h3>
+		<% if @categories.any? %>
+			<ul>
+				<% @categories.each do |category| %>
+						<li>
+							<div class="single-recipe__title">
+								<%= link_to category.title, refinery.recipes_recipes_path(category: category.id) %> (<%= category.recipes.count %>)
+							</div>
+						</li>
+				<% end %>
+			</ul>
+		<% end %>
+		<div class="pagination-box">
+			<span class="pagination__label">
+				<%= will_paginate @categories %>
+			</span>
+		</div>
+	</section>
+	<section class="events events__recipes">
+		<%= render :partial => "events" %>
+	</section>
+</main>

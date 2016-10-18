@@ -1,28 +1,43 @@
-<main class="main-content cont" data-style="display: flex;">
-  <section class="whowe">
-    <h1 class="blog_recipe_title"><%= @blog.title %></h1>
-    <%= image_tag @blog.image.url, class: "blog_recipe_image" %>
-    <%= raw @blog.body %>
-    <% content_for :side_body do %>
-      <aside>
-        <h2><%= t('.other') %></h2>
-        <ul id="blogs">
-          <% @blogs.each do |blog| %>
-            <li>
-              <%= link_to blog.title, refinery.blogs_blog_path(blog) %>
-            </li>
-          <% end %>
-        </ul>
-      </aside>
-    <% end %>
-    <h1>Other NC Catch`s posts</h1>
-      <ul id="blogs">
-        <% @blogs.each do |blog| %>
-          <li>
-            <%= link_to blog.title, refinery.blogs_blog_path(blog) %>
-          </li>
-        <% end %>
-      </ul>
+<main class="main-content different__order cont" data-style="display: flex;">
+  <section class="detail-recipe">
+    <h3 class="default-title blue"><%= @post.title %></h3>
+    <div class="detail-recipe__category">
+      <!-- Category: --> <%#= link_to @category.title, refinery.categories_category_path(@category) if @category %>
+    </div>
+    <header class="detail-recipe__header">
+      <%= image_tag @post.image.url,  class: "detail-recipe__main-image", alt: "Recipe", style: "padding-top: 25px;" %>
+      <div class="detail-recipe__main-ingredients">
+      <%#= @recipe.ingredients.html_safe unless @recipe.ingredients.blank? %>
+      </div>
+    </header>
+    <%= @post.body.html_safe %>
+    <div class="detail-recipe__social">
+      <h5>
+        SHARE THIS RECIPE:
+      </h5>
+      <a href="#"><%= image_tag "facebook-icon.png", class: "main-header-socials-facebook", alt: "Facebook" %></a>
+      <a href="#"><%= image_tag "twitter-icon.png", class: "main-header-socials-twitter", alt: "Twitter" %></a>
+      <a href="#"><%= image_tag "google-plus.png", class: "main-header-socials-twitter", alt: "Twitter" %></a>
+      <a href="#"><%= image_tag "convert.png", class: "main-header-socials-instagram", alt: "Instagram" %></a>        </div>
   </section>
-  <%= render partial: "refinery/pages/events" %>
+  <section class="events">
+    <div class="events__recent">
+      <h3 class="default-title">Most recent posts</h3>
+      <% unless @posts.blank? %>
+        <% @posts.each do |post| %>
+          <div class="recent-recipe">
+            <%= image_tag post.image.url, alt: "Recent-recipe", class: "recent-recipe__image" %>
+            <div class="recent-recipe__info">
+              <p class="recent-recipe__label">Posted:</p>
+              <p class="recent-recipe__text"><%= post.created_at.strftime('%d/%m/%y') %></p>
+              <p class="recent-recipe__label"><!-- Category: --></p>
+              <p class="recent-recipe__text"><%#= link_to post.try(:refinery_category).try(:title), refinery.categories_category_path(recipe.try(:refinery_category).try(:id)) if  recipe.try(:refinery_category) %></p>
+            </div>
+            <%= link_to post.title, refinery.blogs_blog_path(post), class: "recent-recipe__title" %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+    <%= render partial: "search" %>
+  </section>
 </main>
