@@ -16,6 +16,7 @@ module Refinery
       end
 
       validates :title, :presence => true, :uniqueness => true
+      validates :image, :ingredients, :body, :presence => true
 
       belongs_to :image, :class_name => '::Refinery::Image'
 

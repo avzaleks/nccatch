@@ -5,7 +5,7 @@
 	display: -o-flex;
 	display: flex;
 	-js-display: flex;
-	margin-top: 3rem;
+	margin-top: 3rem !important;
 }
 
 .main-content.different-blocks{
@@ -402,7 +402,7 @@
 	font-weight: bold;
 }
 
-.recent-recipe__text{
+.recent-recipe__text, .recent-recipe__text a{
 	color: #ff855b;
 	font-size: 0.95rem;
 	text-transform: uppercase;

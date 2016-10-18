@@ -1,41 +1,43 @@
 <main class="main-content different__order cont" data-style="display: flex;">
-      <section class="detail-recipe">
-        <h3 class="default-title blue"><%= @recipe.title %></h3>
-        <div class="detail-recipe__category">Category: <a href="#">Dinners</a> </div>
-        <header class="detail-recipe__header">
-          <%= image_tag @recipe.image.url,  class: "detail-recipe__main-image", alt: "Recipe" %>
-          <div class="detail-recipe__main-ingredients">
-          <%= @recipe.ingredients.html_safe unless @recipe.ingredients.blank? %>
+  <section class="detail-recipe">
+    <h3 class="default-title blue"><%= @recipe.title %></h3>
+    <div class="detail-recipe__category">
+      Category: <%= link_to @category.title, refinery.categories_category_path(@category) if @category %>
+    </div>
+    <header class="detail-recipe__header">
+      <%= image_tag @recipe.image.url,  class: "detail-recipe__main-image", alt: "Recipe" %>
+      <div class="detail-recipe__main-ingredients">
+      <%= @recipe.ingredients.html_safe unless @recipe.ingredients.blank? %>
+      </div>
+    </header>
+    <%= @recipe.body.html_safe %>
+    <div class="detail-recipe__social">
+      <h5>
+        SHARE THIS RECIPE:
+      </h5>
+      <a href="#"><%= image_tag "facebook-icon.png", class: "main-header-socials-facebook", alt: "Facebook" %></a>
+      <a href="#"><%= image_tag "twitter-icon.png", class: "main-header-socials-twitter", alt: "Twitter" %></a>
+      <a href="#"><%= image_tag "google-plus.png", class: "main-header-socials-twitter", alt: "Twitter" %></a>
+      <a href="#"><%= image_tag "convert.png", class: "main-header-socials-instagram", alt: "Instagram" %></a>        </div>
+  </section>
+  <section class="events">
+    <div class="events__recent">
+      <h3 class="default-title">Most recent recipes</h3>
+      <% unless @recipes.blank? %>
+        <% @recipes.each do |recipe| %>
+          <div class="recent-recipe">
+            <%= image_tag recipe.image.url, alt: "Recent-recipe", class: "recent-recipe__image" %>
+            <div class="recent-recipe__info">
+              <p class="recent-recipe__label">Posted:</p>
+              <p class="recent-recipe__text"><%= recipe.created_at.strftime('%d/%m/%y') %></p>
+              <p class="recent-recipe__label">Category:</p>
+              <p class="recent-recipe__text"><%= link_to recipe.try(:refinery_category).try(:title), refinery.categories_category_path(recipe.try(:refinery_category).try(:id)) if  recipe.try(:refinery_category) %></p>
+            </div>
+            <%= link_to recipe.title, refinery.recipes_recipe_path(recipe), class: "recent-recipe__title" %>
           </div>
-        </header>
-        <%= @recipe.body.html_safe %>
-        <div class="detail-recipe__social">
-          <h5>
-            SHARE THIS RECIPE:
-          </h5>
-          <a href="#"><%= image_tag "facebook-icon.png", class: "main-header-socials-facebook", alt: "Facebook" %></a>
-          <a href="#"><%= image_tag "twitter-icon.png", class: "main-header-socials-twitter", alt: "Twitter" %></a>
-          <a href="#"><%= image_tag "google-plus.png", class: "main-header-socials-twitter", alt: "Twitter" %></a>
-          <a href="#"><%= image_tag "convert.png", class: "main-header-socials-instagram", alt: "Instagram" %></a>        </div>
-      </section>
-      <section class="events">
-        <div class="events__recent">
-          <h3 class="default-title">Most recent recipes</h3>
-          <% unless @recipes.blank? %>
-            <% @recipes.each do |recipe| %>
-              <div class="recent-recipe">
-                <%= image_tag recipe.image.url, alt: "Recent-recipe", class: "recent-recipe__image" %>
-                <div class="recent-recipe__info">
-                  <p class="recent-recipe__label">Posted:</p>
-                  <p class="recent-recipe__text"><%= recipe.created_at.strftime('%d/%m/%y') %></p>
-                  <p class="recent-recipe__label">Category:</p>
-                  <p class="recent-recipe__text"><%= recipe.try(:refinery_category).try(:title) %></p>
-                </div>
-                <%= link_to recipe.title, refinery.recipes_recipe_path(recipe), class: "recent-recipe__title" %>
-              </div>
-            <% end %>
-          <% end %>
-        </div>
-        <%= render partial: "search" %>
-      </section>
-    </main>
+        <% end %>
+      <% end %>
+    </div>
+    <%= render partial: "search" %>
+  </section>
+</main>

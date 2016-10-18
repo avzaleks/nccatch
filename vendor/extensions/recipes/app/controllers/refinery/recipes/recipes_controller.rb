@@ -7,8 +7,6 @@ module Refinery
 
       def index
         @recipes = Refinery::Recipes::Recipe.paginate(page: params[:page], per_page: 6)
-        # you can use meta fields from your model instead (e.g. browser_title)
-        # by swapping @page for @recipe in the line below:
         present(@page)
       end
 
@@ -24,11 +22,9 @@ module Refinery
       end
 
       def show
-        @recipes = Refinery::Recipes::Recipe.order('created_at DESC').last(3)
+        @recipes = Refinery::Recipes::Recipe.order('created_at DESC').first(3)
         @recipe = Recipe.find(params[:id])
-
-        # you can use meta fields from your model instead (e.g. browser_title)
-        # by swapping @page for @recipe in the line below:
+        @category = @recipe.try(:refinery_category)
         present(@page)
       end
 
