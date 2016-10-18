@@ -2,7 +2,7 @@
   <section class="detail-recipe">
     <h3 class="default-title blue"><%= @recipe.title %></h3>
     <div class="detail-recipe__category">
-      Category: <%= link_to @category.title, refinery.categories_category_path(@category) if @category %>
+      Category: <%= link_to @category.title, refinery.recipes_recipes_path(category: @category.id) if @category %>
     </div>
     <header class="detail-recipe__header">
       <%= image_tag @recipe.image.url,  class: "detail-recipe__main-image", alt: "Recipe" %>
@@ -31,7 +31,7 @@
               <p class="recent-recipe__label">Posted:</p>
               <p class="recent-recipe__text"><%= recipe.created_at.strftime('%d/%m/%y') %></p>
               <p class="recent-recipe__label">Category:</p>
-              <p class="recent-recipe__text"><%= link_to recipe.try(:refinery_category).try(:title), refinery.categories_category_path(recipe.try(:refinery_category).try(:id)) if  recipe.try(:refinery_category) %></p>
+              <p class="recent-recipe__text"><%= link_to recipe.try(:refinery_category).try(:title), refinery.recipes_recipes_path(category: recipe.try(:refinery_category).try(:id)) if  recipe.try(:refinery_category) %></p>
             </div>
             <%= link_to recipe.title, refinery.recipes_recipe_path(recipe), class: "recent-recipe__title" %>
           </div>
