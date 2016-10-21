@@ -7,7 +7,7 @@ set :default_shell, '/bin/bash --login'
 set :rails_env, 'production'
 set :branch, 'production'
 set :unicorn_env, 'production'
-set :unicorn_pid, "#{deploy_to}/shared/pids/unicorn.pid"
+set :unicorn_pid, "#{deploy_to}/shared/tmp/pids/unicorn.pid"
 set :unicorn_config, "/apps/nccatch/current/config/unicorn-production.rb"
 
 server '23.92.28.86',
