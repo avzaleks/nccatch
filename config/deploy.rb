@@ -15,9 +15,19 @@ set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets public/system}
 
 set :keep_releases, 5
 
+namespace :unicorn do
+	desc "Rake unicorn_stop"
+	task :stop_server do
+	  on 'adam@23.92.28.86' do
+	    execute "cd #{deploy_to}/current && kill -9 `cat tmp/pids/unicorn.pid`"
+	  end
+	end
+end
+
 namespace :deploy do
   after :finishing, 'deploy:cleanup'
   after :finishing, 'deploy:migrate'
   after :finishing, 'deploy:assets:precompile'
-  after :finishing, 'unicorn:restart'
+  after :finishing, 'unicorn:stop_server'
+  after :finishing, 'unicorn:start'
 end
