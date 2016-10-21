@@ -5,7 +5,7 @@
       <!-- Category: --> <%#= link_to @category.title, refinery.categories_category_path(@category) if @category %>
     </div>
     <header class="detail-recipe__header">
-      <%= image_tag @post.image.url,  class: "detail-recipe__main-image", alt: "Recipe", style: "padding-top: 25px;" %>
+      <%= image_tag @post.image.url,  class: "detail-recipe__main-image left_image", alt: "Recipe", style: "padding-top: 25px;" %>
       <div class="detail-recipe__main-ingredients">
       <%#= @recipe.ingredients.html_safe unless @recipe.ingredients.blank? %>
       </div>

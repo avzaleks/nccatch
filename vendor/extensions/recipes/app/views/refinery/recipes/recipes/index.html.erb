@@ -6,9 +6,9 @@
 				<div class="single-recipe">
 					<%= image_tag recipe.image.url, class: "single-recipe__image" %>
 					<span class="single-recipe__time"><%= recipe.created_at.strftime('%b %d, %Y') %></span>
-					<h3 class="single-recipe__title"><%= recipe.title %></h3>
+					<h3 class="single-recipe__title"><%= link_to recipe.title, refinery.recipes_recipe_path(recipe), class: 'single-recipe__title black' %></h3>
 					<p class="single-recipe__text">
-						<%= truncator_ingredients(recipe) %>
+						<%= truncator(recipe) %>
 					</p>
 					<%= link_to "[ READ MORE ]", refinery.recipes_recipe_path(recipe),class: "single-recipe__link" %>
 				</div>

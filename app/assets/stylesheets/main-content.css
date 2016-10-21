@@ -221,6 +221,7 @@
 .single-recipe{
 	width: 48%;
 	padding-bottom: 3rem;
+	margin-right: 1%;
 }
 
 .single-recipe__time{
@@ -484,4 +485,17 @@
 		position: static;
 		width: 100%;
 	}
+}
+
+.left_image{
+	left: 0px !important;
+	width: 100% !important;
+}
+
+.black{
+	color: #333;
+}
+
+a.black:hover{
+	color: #333;
 }

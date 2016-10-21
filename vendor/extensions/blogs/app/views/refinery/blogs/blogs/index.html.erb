@@ -6,7 +6,7 @@
 				<div class="single-recipe">
 					<%= image_tag post.image.url, class: "single-recipe__image" %>
 					<span class="single-recipe__time"><%= post.created_at.strftime('%b %d, %Y') %></span>
-					<h3 class="single-recipe__title"><%= post.title %></h3>
+					<h3 class="single-recipe__title"><%= link_to post.title, refinery.blogs_blog_path(post), class: 'single-recipe__title black' %></h3>
 					<p class="single-recipe__text">
 						<%= truncator(post) %>
 					</p>
