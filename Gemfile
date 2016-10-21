@@ -55,7 +55,7 @@ group :development do
   gem 'pry', '0.10.3'
 
   # for executing commands in parallel on multiple remote machines
-  gem 'capistrano', '3.4.0'
+  gem 'capistrano', '3.5.0'
 
   gem 'capistrano-rvm', '0.1.2'
 
