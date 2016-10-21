@@ -15,11 +15,16 @@
 			<% end %>
 		<% end %>
 		<div class="pagination-box">
-			<span class="pagination__label"><%= will_paginate @recipes %></span>
-			<%#= will_paginate @recipes %>
+			<span class="pagination__label">
+				<%= will_paginate @recipes %>
+			</span>
 		</div>
 	</section>
 	<section class="events events__recipes">
 		<%= render partial: "search" %>
 	</section>
 </main>
+
+<% content_for :js do %>
+  <%= javascript_include_tag "pagination_style" %>
+<% end %>

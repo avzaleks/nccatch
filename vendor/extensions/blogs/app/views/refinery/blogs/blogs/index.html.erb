@@ -22,3 +22,7 @@
 		<%= render partial: "search" %>
 	</section>
 </main>
+
+<% content_for :js do %>
+  <%= javascript_include_tag "pagination_style" %>
+<% end %>

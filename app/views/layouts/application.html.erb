@@ -2,6 +2,7 @@
 <%= render "/refinery/html_tag" %>
   <% site_bar = render('/refinery/site_bar', :head => true) -%>
   <head>
+    <%= yield :js %>
     <%= render "/refinery/head" %>
     <%= render "/refinery/javascripts" %>
   </head>
