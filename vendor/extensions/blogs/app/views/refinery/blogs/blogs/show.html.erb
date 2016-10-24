@@ -2,23 +2,14 @@
   <section class="detail-recipe">
     <h3 class="default-title blue"><%= @post.title %></h3>
     <div class="detail-recipe__category">
-      <!-- Category: --> <%#= link_to @category.title, refinery.categories_category_path(@category) if @category %>
     </div>
     <header class="detail-recipe__header">
       <%= image_tag @post.image.url,  class: "detail-recipe__main-image left_image", alt: "Recipe", style: "padding-top: 25px;" %>
       <div class="detail-recipe__main-ingredients">
-      <%#= @recipe.ingredients.html_safe unless @recipe.ingredients.blank? %>
       </div>
     </header>
     <%= @post.body.html_safe %>
-    <div class="detail-recipe__social">
-      <h5>
-        SHARE THIS RECIPE:
-      </h5>
-      <a href="#"><%= image_tag "facebook-icon.png", class: "main-header-socials-facebook", alt: "Facebook" %></a>
-      <a href="#"><%= image_tag "twitter-icon.png", class: "main-header-socials-twitter", alt: "Twitter" %></a>
-      <a href="#"><%= image_tag "google-plus.png", class: "main-header-socials-twitter", alt: "Twitter" %></a>
-      <a href="#"><%= image_tag "convert.png", class: "main-header-socials-instagram", alt: "Instagram" %></a>        </div>
+    <%= render partial: "refinery/shared", locals: { flag: "blog" } %>
   </section>
   <section class="events">
     <div class="events__recent">
@@ -30,8 +21,8 @@
             <div class="recent-recipe__info">
               <p class="recent-recipe__label">Posted:</p>
               <p class="recent-recipe__text"><%= post.created_at.strftime('%d/%m/%y') %></p>
-              <p class="recent-recipe__label"><!-- Category: --></p>
-              <p class="recent-recipe__text"><%#= link_to post.try(:refinery_category).try(:title), refinery.categories_category_path(recipe.try(:refinery_category).try(:id)) if  recipe.try(:refinery_category) %></p>
+              <p class="recent-recipe__label"></p>
+              <p class="recent-recipe__text"></p>
             </div>
             <%= link_to post.title, refinery.blogs_blog_path(post), class: "recent-recipe__title" %>
           </div>
