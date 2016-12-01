@@ -9,7 +9,7 @@ module Refinery
 
         # Only allow a trusted parameter "white list" through.
         def banner_params
-          params.require(:banner).permit(:image_id)
+          params.require(:banner).permit(:image_id, :link)
         end
       end
     end
