@@ -20,7 +20,7 @@
             <%= image_tag post.image.url, alt: "Recent-recipe", class: "recent-recipe__image" %>
             <div class="recent-recipe__info">
               <p class="recent-recipe__label">Posted:</p>
-              <p class="recent-recipe__text"><%= post.created_at.strftime('%d/%m/%y') %></p>
+              <p class="recent-recipe__text"><%= post.created_at.strftime('%m/%d/%y') %></p>
               <p class="recent-recipe__label"></p>
               <p class="recent-recipe__text"></p>
             </div>
