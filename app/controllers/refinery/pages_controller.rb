@@ -14,7 +14,7 @@ module Refinery
       if @recipes.blank?
         @recipes = Refinery::Recipes::Recipe.order('created_at DESC').last(2)
       end
-      @blogs_masseges = Refinery::Blogs::Blog.order('updated_at DESC').first(3)
+      @blogs_masseges = Refinery::Blogs::Blog.order('created_at DESC').first(3)
       render_with_templates?
     end
 
