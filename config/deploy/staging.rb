@@ -5,7 +5,7 @@ set :deploy_to, '/apps/nccatch_staging'
 set :default_shell, '/bin/bash --login'
 
 set :rails_env, 'staging'
-set :branch, 'staging'
+set :branch, 'master'
 
 set :unicorn_env, 'staging'
 set :unicorn_pid, "#{deploy_to}/shared/tmp/pids/unicorn.pid"
