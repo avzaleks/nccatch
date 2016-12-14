@@ -13,13 +13,15 @@ set :linked_files, %w{config/database.yml config/secrets.yml}
 
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets public/system}
 
+set (:unicorn_pid)  { "#{deploy_to}/shared/pids/unicorn.pid" }
+
 set :keep_releases, 5
 
 namespace :unicorn do
 	desc "Rake unicorn_stop"
 	task :stop_server do
 	  on 'adam@23.92.28.86' do
-	    execute "cd #{deploy_to}/current && kill -9 `cat tmp/pids/unicorn.pid`"
+      run "if [ -f #{unicorn_pid} ] && [ -e /proc/$(cat #{unicorn_pid}) ]; then kill -QUIT `cat #{unicorn_pid}`; fi"
 	  end
 	end
 end
