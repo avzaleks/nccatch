@@ -5,7 +5,7 @@ set :rvm_ruby_version, '2.2.2@nccatch'
 
 set :application, 'nccatch'
 
-set :repo_url, 'git@github.com:avzaleks/nccatch.git'
+set :repo_url, 'git@bitbucket.org:SlobodaStudioB/nc_catch.git'
 
 set :scm, :git
 
