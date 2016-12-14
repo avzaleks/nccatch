@@ -7,6 +7,7 @@
           <% unless msg.image.blank? %>
             <%= image_tag msg.image.url, class: "blog-figure-img", alt: (msg.image.url || "Blog") %>
           <% end %>
+          <span class="single-recipe__time"><%= msg.created_at.strftime('%b %d, %Y') %></span>
           <figcaption class="blog-figure-content">
             <h4 class="blog-figure-content-title"><%= link_to msg.title, refinery.blogs_blog_path(msg), class: 'blog-figure-content-title' %></h4>
             <p class="blog-figure-content-text">
