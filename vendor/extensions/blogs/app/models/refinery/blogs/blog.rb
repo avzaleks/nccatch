@@ -15,6 +15,7 @@ module Refinery
 
       validates :title, :presence => true, :uniqueness => true
       validates :image, :body, :presence => true
+      validates :created_at, :presence => true
 
       belongs_to :image, :class_name => '::Refinery::Image'
 

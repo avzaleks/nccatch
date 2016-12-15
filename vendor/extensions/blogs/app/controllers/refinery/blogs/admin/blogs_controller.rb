@@ -9,7 +9,7 @@ module Refinery
 
         # Only allow a trusted parameter "white list" through.
         def blog_params
-          params.require(:blog).permit(:title, :image_id, :body)
+          params.require(:blog).permit(:title, :image_id, :body, :created_at)
         end
       end
     end
