@@ -10,7 +10,7 @@
 
   <div class='field'>
     <%= f.label :created_at, 'Date of Post' -%>
-    <%= f.text_field :created_at, value: @blog.created_at || Date.today -%>
+    <%= f.text_field :created_at, value: @blog.created_at?? @blog.created_at.to_date.to_s : Date.today.to_date.to_s -%>
   </div>
 
   <div class='field'>
