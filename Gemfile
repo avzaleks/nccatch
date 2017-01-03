@@ -64,6 +64,8 @@ group :development do
 
   # Capistrano 3.x plugin for console
   gem 'capistrano-rails-console', require: false
+
+  gem 'meta_request'
 end
 
 #paginate
