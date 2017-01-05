@@ -1,6 +1,6 @@
 # set :domain, 'nccatch'
 set :user, 'adam'
-set :deploy_to, '/apps/nc_catch'
+set :deploy_to, '/apps/nccatch'
 
 set :default_shell, '/bin/bash --login'
 
