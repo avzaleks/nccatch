@@ -1,11 +1,11 @@
 # set :domain, 'nccatch'
 set :user, 'adam'
-set :deploy_to, '/apps/nccatch'
+set :deploy_to, '/apps/nc_catch'
 
 set :default_shell, '/bin/bash --login'
 
 set :rails_env, 'production'
-set :branch, 'master'
+
 set :unicorn_env, 'production'
 set :unicorn_pid, "#{deploy_to}/shared/tmp/pids/unicorn.pid"
 set :unicorn_config, "/apps/nccatch/current/config/unicorn-production.rb"

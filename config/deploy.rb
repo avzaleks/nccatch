@@ -3,7 +3,9 @@ lock '3.5.0'
 
 set :rvm_ruby_version, '2.2.2@nccatch'
 
-set :application, 'nccatch'
+set :application, 'nc_catch'
+
+set :branch, 'master'
 
 set :repo_url, 'git@bitbucket.org:SlobodaStudioB/nc_catch.git'
 
@@ -16,8 +18,6 @@ set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets public/system}
 set :unicorn_pid, "#{deploy_to}/shared/pids/unicorn.pid"
 
 set :keep_releases, 5
-
-
 
 namespace :unicorn do
 	desc "Rake unicorn_stop"
