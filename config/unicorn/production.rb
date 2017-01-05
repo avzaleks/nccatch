@@ -1,6 +1,6 @@
 worker_processes 1
 
-APP_DIR = '/home/ububntu/blog-deploy'
+APP_DIR = '/apps/nccatch'
 working_directory APP_DIR + '/current'
 
 pid APP_DIR + '/shared/tmp/pids/unicorn.pid'
